@@ -16,7 +16,7 @@ def render():
         os.makedirs(DOCS_DIR)
 
     # 2. Load Data
-    context = {}
+    context = {'base_asset_path': 'assets'} # Define global asset path
     for file in glob.glob(os.path.join(DATA_DIR, '*.yaml')):
         with open(file, 'r') as f:
             data = yaml.safe_load(f)
@@ -32,13 +32,13 @@ def render():
         shutil.copytree('assets', target_assets)
         print("Assets synchronized.")
 
-    # 4. Render Templates (HTML and Markdown)
+    # 4. Render HTML and Markdown
     env = Environment(loader=FileSystemLoader(SRC_DIR))
     templates = {
         'index.html.j2': 'index.html',
         'experience.html.j2': 'experience.html',
         'addendum.html.j2': 'addendum.html',
-        'markdown.j2': 'resume.md'  # Fixed comma syntax here
+        'markdown.j2': 'resume.md'
     }
 
     for template_name, output_name in templates.items():
@@ -48,7 +48,7 @@ def render():
             f.write(template.render(context))
         print(f"Generated {output_name}")
 
-    # 5. Generate PDFs from the rendered HTML
+    # 5. Generate PDFs
     pdf_map = {
         'experience.html': 'JNMansfield-Professional-CV.pdf',
         'addendum.html': 'JNMansfield-Service-History.pdf'

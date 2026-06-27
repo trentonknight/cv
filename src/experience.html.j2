@@ -26,7 +26,10 @@
             <h2>Professional Experience</h2>
             {% for job in main %}
             <div class="card">
-                <h3>{{ m.link(job.url, job.company) }}</h3>
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                    <img src="{{ base_asset_path }}/{{ job.image.split('/')[-1] }}" alt="{{ job.company }}" style="max-width: 50px; border-radius: 4px;">
+                    <h3>{{ m.link(job.url, job.company) }}</h3>
+                </div>
                 <p><strong>{{ job.role }}</strong> | {{ job.dates }}</p>
                 <ul>
                     {% for bullet in job.bullets %}

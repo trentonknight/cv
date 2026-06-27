@@ -40,9 +40,11 @@
             {% for job in addendum %}
             <div class="card">
                 <div class="company-header">
-                    <img src="assets/{{ job.image.split('/')[-1] }}" 
+                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
+                    <img src="./assets/{{ job.image.split('/')[-1] }}" 
                          alt="{{ job.company }}" 
-                         class="company-logo">
+                         class="company-logo"
+                         onerror="console.error('Failed to load image:', this.src)">
                     <h3>{{ m.link(job.url, job.company) }}</h3>
                 </div>
                 <p><strong>{{ job.role }}</strong> | {{ job.dates }} | {{ job.location }}</p>

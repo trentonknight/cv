@@ -1,75 +1,206 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Service History | Jason N Mansfield</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
+    <style>
+        @media print {
+            .web-only { display: none; }
+            .card { break-inside: avoid; margin-bottom: 20px; }
+            .terminal-nav { display: none; }
+        }
+        @media screen {
+            .print-only { display: none; }
+        }
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .company-logo {
+            display: block;
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body class="terminal">
     <div class="container">
         <nav class="terminal-nav">
-            <a href="index.html" class="btn btn-default">← Back to Main CV</a>
+            <a href="experience.html" class="btn btn-default">← Professional Experience</a>
         </nav>
+        
         <main>
-            <h2>Full Armed Forces History</h2>
+            <h2>Service History</h2>
             
             <div class="card">
-                <h3>USCG</h3>
-                <p><strong>IT Specialist 1st Class</strong> | 2021--2023</p>
+                <div class="company-header">
+                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
+                    <img src="./assets/blueteam.jpg" 
+                         alt="USCG" 
+                         class="company-logo"
+                         onerror="console.error('Failed to load image:', this.src)">
+                    <h3>
+    <a href="https://www.gocoastguard.com" class="web-only">USCG</a>
+    <span class="print-only">USCG (https://www.gocoastguard.com)</span>
+</h3>
+                </div>
+                <p><strong>IT Specialist 1st Class</strong> | 2021--2023 | CYBER COA Branch</p>
                 <ul>
-                    <li>Blue Team Analyst: Developed tactical 'Ruck Kits' for field operators.</li><li>Technical Training: Instructed Cisco switch programming, TCTO compliance, and authored guides for Nessus, Grassmarlin, Sharphound, AppDetectivePro, and Bloodhound.</li><li>Deployment: Developed bootable WIM images; assisted FINCEN with Python/Pandas data collection.</li>
+                    
+                    <li>Blue Team Analyst: Developed tactical 'Ruck Kits' for field operators.</li>
+                    
+                    <li>Technical Training: Instructed Cisco switch programming, TCTO compliance, and authored guides for Nessus, Grassmarlin, Sharphound, AppDetectivePro, and Bloodhound.</li>
+                    
+                    <li>Deployment: Developed bootable WIM images; assisted FINCEN with Python/Pandas data collection.</li>
+                    
                 </ul>
             </div>
             
             <div class="card">
-                <h3>USCG</h3>
-                <p><strong>IT Specialist 1st Class</strong> | 2017--2021</p>
+                <div class="company-header">
+                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
+                    <img src="./assets/cgcyber.png" 
+                         alt="USCG" 
+                         class="company-logo"
+                         onerror="console.error('Failed to load image:', this.src)">
+                    <h3>
+    <a href="https://www.gocoastguard.com" class="web-only">USCG</a>
+    <span class="print-only">USCG (https://www.gocoastguard.com)</span>
+</h3>
+                </div>
+                <p><strong>IT Specialist 1st Class</strong> | 2017--2021 | NOSC EOC</p>
                 <ul>
-                    <li>Watch Supervisor: Responsible for DODIN operations and bi-weekly leadership briefs.</li><li>Leadership: Supervised junior analysts, managed global mission scheduling, and provided continuous technical training.</li>
+                    
+                    <li>Watch Supervisor: Responsible for DODIN operations and bi-weekly leadership briefs.</li>
+                    
+                    <li>Leadership: Supervised junior analysts, managed global mission scheduling, and provided continuous technical training.</li>
+                    
                 </ul>
             </div>
             
             <div class="card">
-                <h3>USCG</h3>
-                <p><strong>IT Specialist 2nd Class</strong> | 2014--2017</p>
+                <div class="company-header">
+                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
+                    <img src="./assets/uscg.png" 
+                         alt="USCG" 
+                         class="company-logo"
+                         onerror="console.error('Failed to load image:', this.src)">
+                    <h3>
+    <a href="https://www.gocoastguard.com" class="web-only">USCG</a>
+    <span class="print-only">USCG (https://www.gocoastguard.com)</span>
+</h3>
+                </div>
+                <p><strong>IT Specialist 2nd Class</strong> | 2014--2017 | CGC DILIGENCE</p>
                 <ul>
-                    <li>Independent Network Admin: Managed dual Cisco 3750G stacks, Server 2008 R2, Exchange, TACLANE encryption, and KVH Satellite systems.</li><li>Operations: Stood security watches for Law Enforcement and Anti-Terrorism Force Protection.</li>
+                    
+                    <li>Independent Network Admin: Managed dual Cisco 3750G stacks, Server 2008 R2, Exchange, TACLANE encryption, and KVH Satellite systems.</li>
+                    
+                    <li>Operations: Stood security watches for Law Enforcement and Anti-Terrorism Force Protection.</li>
+                    
                 </ul>
             </div>
             
             <div class="card">
-                <h3>USCG</h3>
-                <p><strong>IT Specialist 2nd Class</strong> | 2010--2014</p>
+                <div class="company-header">
+                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
+                    <img src="./assets/uscg.png" 
+                         alt="USCG" 
+                         class="company-logo"
+                         onerror="console.error('Failed to load image:', this.src)">
+                    <h3>
+    <a href="https://www.gocoastguard.com" class="web-only">USCG</a>
+    <span class="print-only">USCG (https://www.gocoastguard.com)</span>
+</h3>
+                </div>
+                <p><strong>IT Specialist 2nd Class</strong> | 2010--2014 | Finance Center</p>
                 <ul>
-                    <li>Trusted Agent Security Manager (TASM): Managed Oracle database clients, Java environments, and financial software suites.</li><li>Infrastructure: Administrated Avaya CS1000 PBX systems.</li><li>Recognition: Awarded Commandant’s Letter of Commendation.</li>
+                    
+                    <li>Trusted Agent Security Manager (TASM): Managed Oracle database clients, Java environments, and financial software suites.</li>
+                    
+                    <li>Infrastructure: Administrated Avaya CS1000 PBX systems.</li>
+                    
+                    <li>Recognition: Awarded Commandant’s Letter of Commendation.</li>
+                    
                 </ul>
             </div>
             
             <div class="card">
-                <h3>USCG</h3>
-                <p><strong>IT Specialist 3rd Class</strong> | 2007--2010</p>
+                <div class="company-header">
+                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
+                    <img src="./assets/uscg.png" 
+                         alt="USCG" 
+                         class="company-logo"
+                         onerror="console.error('Failed to load image:', this.src)">
+                    <h3>
+    <a href="https://www.gocoastguard.com" class="web-only">USCG</a>
+    <span class="print-only">USCG (https://www.gocoastguard.com)</span>
+</h3>
+                </div>
+                <p><strong>IT Specialist 3rd Class</strong> | 2007--2010 | CGC LEGARE</p>
                 <ul>
-                    <li>VMWare Admin: Managed Linux/Windows environments for guest nations during 2009 Africa mission.</li><li>Systems: Maintained SCCS (UNIX platform) and shipboard alarm systems; Radio and Combat watchstander.</li>
+                    
+                    <li>VMWare Admin: Managed Linux/Windows environments for guest nations during 2009 Africa mission.</li>
+                    
+                    <li>Systems: Maintained SCCS (UNIX platform) and shipboard alarm systems; Radio and Combat watchstander.</li>
+                    
                 </ul>
             </div>
             
             <div class="card">
-                <h3>US Navy</h3>
-                <p><strong>Aviation Ordnanceman 3rd Class</strong> | 2003--2005</p>
+                <div class="company-header">
+                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
+                    <img src="./assets/VFA-81.png" 
+                         alt="US Navy" 
+                         class="company-logo"
+                         onerror="console.error('Failed to load image:', this.src)">
+                    <h3>
+    <a href="https://www.navy.com" class="web-only">US Navy</a>
+    <span class="print-only">US Navy (https://www.navy.com)</span>
+</h3>
+                </div>
+                <p><strong>Aviation Ordnanceman 3rd Class</strong> | 2003--2005 | VFA-81 Sunliners</p>
                 <ul>
-                    <li>Deployment: USS John F. Kennedy (CV-67) for CVW-17 strike operations.</li><li>Operations: Managed ordnance loading and arming for F/A-18 Hornets during Operations Iraqi Freedom and Al Fajr (Fallujah).</li>
+                    
+                    <li>Deployment: USS John F. Kennedy (CV-67) for CVW-17 strike operations.</li>
+                    
+                    <li>Operations: Managed ordnance loading and arming for F/A-18 Hornets during Operations Iraqi Freedom and Al Fajr (Fallujah).</li>
+                    
                 </ul>
             </div>
             
             <div class="card">
-                <h3>US Navy</h3>
-                <p><strong>Aviation Ordnanceman 3rd Class</strong> | 2001--2003</p>
+                <div class="company-header">
+                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
+                    <img src="./assets/VFA-125.png" 
+                         alt="US Navy" 
+                         class="company-logo"
+                         onerror="console.error('Failed to load image:', this.src)">
+                    <h3>
+    <a href="https://www.navy.com" class="web-only">US Navy</a>
+    <span class="print-only">US Navy (https://www.navy.com)</span>
+</h3>
+                </div>
+                <p><strong>Aviation Ordnanceman 3rd Class</strong> | 2001--2003 | VFA-125</p>
                 <ul>
-                    <li>Ordnance loading team lead and flight deck operations at NAS Lemoore.</li><li>Recognition: Awarded Letter of Commendation.</li>
+                    
+                    <li>Ordnance loading team lead and flight deck operations at NAS Lemoore.</li>
+                    
+                    <li>Recognition: Awarded Letter of Commendation.</li>
+                    
                 </ul>
             </div>
             
         </main>
+
+        <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e1e1e1;">
+            <a href="JNMansfield-Service-History.pdf" class="btn btn-ghost">Download Service History PDF</a>
+        </footer>
     </div>
 </body>
 </html>

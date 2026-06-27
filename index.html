@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason N Mansfield | Platform Engineer & DevOps Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Basic styles to make the page look better */
+        .section-title-underline {
+            border-bottom: 2px solid #2E5A5E; /* Using slateteal for consistency */
+            padding-bottom: 5px;
+        }
+        .skill-group h3 {
+            color: #2E5A5E; /* Matching primary color */
+            margin-top: 30px;
+        }
+        .tech-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tech-list li {
+            margin-bottom: 8px;
+            padding: 5px 10px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .expertise-box, .skill-group {
+            margin-bottom: 40px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="text-align: center; padding: 50px 0; background-color: #1A2E40;">
+        <h1 class="section-title-underline" style="font-size: 3em; color: white;">Jason N Mansfield</h1>
+        <h2 style="font-size: 1.5em; color: #cccccc;">Platform Engineer | DevOps Architect | Cloud-Native AI Infrastructure</h2>
+    </header>
+
+    <!-- ====================================================================== -->
+    <!-- EXPERTISE SUMMARY -->
+    <!-- ================================================================== -->
+    <section class="expertise-box">
+        <h3 class="section-title-underline">Core Engineering Capability</h3>
+        <p style="font-size: 1.1em;">Dedicated architect focused on designing, implementing, and maintaining resilient, scalable cloud-native systems. Proficient across the entire CI/CD lifecycle, utilizing advanced Infrastructure as Code (IaC) methodologies to reduce operational risk and accelerate deployment velocity in regulated, high-stakes environments.</p>
+    </section>
+
+    <!-- ========================================================================== -->
+    <!-- SKILL DOMAIN 1: CLOUD & INFRASTRUCTURE -->
+    <!-- ========================================================================== -->
+    <section class="skill-group">
+        <h3 class="section-title-underline"><i class="fas fa-cloud"></i> Cloud & Infrastructure Engineering</h3>
+        <p>Expert-level proficiency in multi-cloud environments, guaranteeing infrastructure consistency and optimal resource utilization using declarative principles.</p>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px;">
+                <h4 style="color: #ff9800;">Cloud Providers (Multi-Cloud)</h4>
+                <ul class="tech-list">
+                    <li><i class="fab fa-aws"></i> AWS (EC2, S3, Lambda, VPC)</li>
+                    <li>Google Cloud Platform (GCP)</li>
+                    <li>Azure AD/Enterprise Services</li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <h4 style="color: #00bcd4;">Containerization & Orchestration</h4>
+                <ul class="tech-list">
+                    <li>Kubernetes (k8s) Clusters & Custom Controllers</li>
+                    <li>Docker (Image building, optimization)</li>
+                    <li>Helm Charts & Kustomize</li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <h4 style="color: #2196f3;">Compliance & Security</h4>
+                <ul class="tech-list">
+                    <li>GitOps (ArgoCD, Flux)</li>
+                    <li>Security Baselines (STIG, CIS Benchmarks)</li>
+                    <li>Vault/Secrets Management</li>
+                    <li>Vulnerability Scanning (Anchore)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================-->
+    <!-- SKILL DOMAIN 2: CI/CD & DEVOPS -->
+    <!-- ========================================================================== -->
+    <section class="skill-group">
+        <h3 class="section-title-underline"><i class="fas fa-cogs"></i> CI/CD & DevOps Automation</h3>
+        <p>Establishing robust, fully automated pipelines from commit to production. Focus on speed, repeatability, and auditability.</p>
+        <div class="tech-list">
+            <li><i class="fas fa-stream"></i> **GitOps Principles:** Using Git as the single source of truth for cluster state.</li>
+            <li>Automated Testing & Validation (Integration, Unit, Security checks).</li>
+            <li>Infrastructure as Code (IaC) Management via Terraform and Ansible.</li>
+            <li>Platform tool development in Python/Bash for webhook handling and API integration.</li>
+        </div>
+    </section>
+    
+    <!-- ========================================================================== -->
+    <!-- SKILL DOMAIN 3: DATA & AI INFRASTRUCTURE -->
+    <!-- ========================================================================== -->
+    <section class="skill-group">
+        <h3 class="section-title-underline"><i class="fas fa-microchip"></i> AI/ML & Data Infrastructure</h3>
+        <p>Designing and deploying scalable ML/AI pipelines, focusing on both data pipeline reliability and efficient, low-latency model inference.</p>
+        <div class="tech-list">
+            <li><i class="fab fa-python"></i> **LLMOps:** Building Retrieval Augmented Generation (RAG) pipelines and fine-tuning processes.</li>
+            <li>Vector Databases (Pinecone, Chroma) and Embedding Generation.</li>
+            <li>Streaming Data Processing using Kafka/Kinesis.</li>
+            <li>Data Quality and Validation (Pydantic, Schema enforcement) and Data Governance.</li>
+        </div>
+    </section>
+    
+    <!-- ========================== EXPERIENCE HISTORY ========================== -->
+    <!-- ========================================================================== -->
+    <section class="section">
+        <div class="section-content">
+            <h2 class="section-title-underline"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+
+            <div class="job-entry" style="border-color: #2E5A5E;">
+                <h3 style="color: #1A2E40;">2024 - Present: Platform Engineer / Lead (24x7 Systems)</h3>
+                <p>Architecting and maintaining highly available, mission-critical cloud-native systems. Expertise in modern cloud practices and AI integration.</p>
+                <ul class="key-achievements">
+                    <li style="color: #2E5A5E;"><i class="fas fa-check-circle"></i> **K8s & IaC:** Managed K8s patching and compliance using **rafay** blueprints and **Terraform**, ensuring zero-downtime updates across regions.</li>
+                    <li style="color: #2E5A5E;"><i class="fas fa-robot"></i> **AI Integration:** Accelerated root-cause analysis using **Vertex AI** and **Gemini** for complex networking and state drift diagnosis.</li>
+                    <li style="color: #2E5A5E;"><i class="fas fa-code-branch"></i> **Tooling:** Developed type-safe tooling using **Pydantic** to enforce complex Kubernetes manifest validation standards.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry" style="border-color: #2E5A5E;">
+                <h3 style="color: #1A2E40;">2023–2024: DevOps Engineer (CACI International)</h3>
+                <p>Implementing scalable DevOps practices across multi-tenant, regulated government and commercial environments.</p>
+                <ul class="key-achievements">
+                    <li style="color: #2E5A5E;"><i class="fas fa-check-circle"></i> **GitOps Implementation:** Led the adoption of **ArgoCD** for declarative delivery, making Git the single source of truth for infrastructure and applications.</li>
+                    <li style="color: #2E5A5E;"><i class="fas fa-thumbs-up"></i> **State Management:** Designed resilient operational pipelines guaranteeing infrastructure configuration parity across cloud boundaries.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact-footer" style="background-color: #1A2E40;">
+        <div class="container text-center">
+            <h3 style="margin-bottom: 20px; color: white;">Ready to discuss how modern cloud architecture can elevate your platform?</h3>
+            <div class="social-links" style="gap: 30px;">
+                <a href="https://gitlab.com/" class="social-link" style="color: white;"><i class="fab fa-gitlab"></i></a>
+                <a href="https://github.com/" class="social-link" style="color: white;"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/" class="social-link" style="color: white;"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -4,151 +4,311 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason N Mansfield | Platform Engineer & DevOps Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- STYLING: Pure CSS, no external libraries -->
     <style>
-        /* Basic styles to make the page look better */
-        .section-title-underline {
-            border-bottom: 2px solid #2E5A5E; /* Using slateteal for consistency */
-            padding-bottom: 5px;
+        :root {
+            --primary-color: #007acc;
+            /* Using professional, slightly muted tones for a clean look */
+            --secondary-bg: #f4f7f9;
+            --text-color: #333;
+            --dark-bg: #2c3e50;
+            --card-bg: #ffffff;
+            --hover-text: #0056b3;
         }
-        .skill-group h3 {
-            color: #2E5A5E; /* Matching primary color */
-            margin-top: 30px;
-        }
-        .tech-list {
-            list-style: none;
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--secondary-bg);
+            color: var(--text-color);
+            margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
-        .tech-list li {
-            margin-bottom: 8px;
-            padding: 5px 10px;
-            border-bottom: 1px dashed #ccc;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .expertise-box, .skill-group {
+
+        /* 1. Header/Navigation Styling */
+        header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: var(--hover-text);
+        }
+
+        /* 2. General Section Styling */
+        section {
+            padding: 50px 20px;
             margin-bottom: 40px;
-            padding: 25px;
-            border: 1px solid #ddd;
+            background-color: var(--card-bg);
             border-radius: 8px;
-            background-color: #f9f9f9;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            color: #333;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        /* 3. Hero Section Styling */
+        .hero {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: var(--hover-text);
+        }
+
+        /* 4. Grid and Card Layouts */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 122, 204, 0.2);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        /* 5. Skill List Styling */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background-color: #e7f3ff;
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border: 1px solid var(--primary-color);
+        }
+
+        .skill-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Utility for two-column balance */
+        .flex-group {
+            display: flex;
+            gap: 30px;
+        }
+
+        .section-half {
+            flex: 1;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .flex-group {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            header .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header style="text-align: center; padding: 50px 0; background-color: #1A2E40;">
-        <h1 class="section-title-underline" style="font-size: 3em; color: white;">Jason N Mansfield</h1>
-        <h2 style="font-size: 1.5em; color: #cccccc;">Platform Engineer | DevOps Architect | Cloud-Native AI Infrastructure</h2>
+    <!-- HEADER/NAV Bar -->
+    <header>
+        <div class="container">
+            <div class="logo">John Doe</div>
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div >
     </header>
 
-    <!-- ====================================================================== -->
-    <!-- EXPERTISE SUMMARY -->
-    <!-- ================================================================== -->
-    <section class="expertise-box">
-        <h3 class="section-title-underline">Core Engineering Capability</h3>
-        <p style="font-size: 1.1em;">Dedicated architect focused on designing, implementing, and maintaining resilient, scalable cloud-native systems. Proficient across the entire CI/CD lifecycle, utilizing advanced Infrastructure as Code (IaC) methodologies to reduce operational risk and accelerate deployment velocity in regulated, high-stakes environments.</p>
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hi, I'm John Doe.</h1>
+            <p>Cloud-Native Platform Engineer specializing in scalable DevOps Architecture and AI Infrastructure.</p>
+            <a href="#projects" class="cta-button">View My Work &rarr;</a>
+        </div >
     </section>
 
-    <!-- ========================================================================== -->
-    <!-- SKILL DOMAIN 1: CLOUD & INFRASTRUCTURE -->
-    <!-- ========================================================================== -->
-    <section class="skill-group">
-        <h3 class="section-title-underline"><i class="fas fa-cloud"></i> Cloud & Infrastructure Engineering</h3>
-        <p>Expert-level proficiency in multi-cloud environments, guaranteeing infrastructure consistency and optimal resource utilization using declarative principles.</p>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 250px;">
-                <h4 style="color: #ff9800;">Cloud Providers (Multi-Cloud)</h4>
-                <ul class="tech-list">
-                    <li><i class="fab fa-aws"></i> AWS (EC2, S3, Lambda, VPC)</li>
-                    <li>Google Cloud Platform (GCP)</li>
-                    <li>Azure AD/Enterprise Services</li>
-                </ul>
-            </div>
-            <div style="flex: 1; min-width: 250px;">
-                <h4 style="color: #00bcd4;">Containerization & Orchestration</h4>
-                <ul class="tech-list">
-                    <li>Kubernetes (k8s) Clusters & Custom Controllers</li>
-                    <li>Docker (Image building, optimization)</li>
-                    <li>Helm Charts & Kustomize</li>
-                </ul>
-            </div>
-            <div style="flex: 1; min-width: 250px;">
-                <h4 style="color: #2196f3;">Compliance & Security</h4>
-                <ul class="tech-list">
-                    <li>GitOps (ArgoCD, Flux)</li>
-                    <li>Security Baselines (STIG, CIS Benchmarks)</li>
-                    <li>Vault/Secrets Management</li>
-                    <li>Vulnerability Scanning (Anchore)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <!-- 2. PROJECTS SECTION -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="grid-container">
+                
+                <!-- Project Card -->
+                <div class="card">
+                    <h3>Microservice Architecture API</h3>
+                    <p class="text-muted">A dedicated, secure RESTful API handling user authentication and data validation utilizing type-safe data models.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Pydantic</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Redis</span>
+                    </div >
+                    <p style="margin-top: 15px;"><a href="#" style="color: var(--primary-color); text-decoration: none;">View Details &rarr;</a></p>
+                </div >
+                
+                <!-- Project Card -->
+                <div class="card">
+                    <h3>DevOps Pipeline Automation</h3>
+                    <p class="text-muted">Built and maintained multi-stage CI/CD pipelines using GitOps principles, guaranteeing reproducible deployments.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="skill-tag">ArgoCD</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">GitLab CI</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div >
+                    <p style="margin-top: 15px;"><a href="#" style="color: var(--primary-color); text-decoration: none;">View Pipeline Flow &rarr;</a></p>
+                </div >
+                
+                <!-- Project Card -->
+                <div class="card">
+                    <h3>RAG Knowledge Search Engine</h3>
+                    <p class="text-muted">Implemented a Retrieval Augmented Generation (RAG) system to query and summarize complex, proprietary documents.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="skill-tag">LlamaIndex</span>
+                        <span class="skill-tag">Pinecone</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">Python</span>
+                    </div >
+                    <p style="margin-top: 15px;"><a href="#" style="color: var(--primary-color); text-decoration: none;">Demo Prototype &rarr;</a></p>
+                </div >
 
-    <!-- ====================================================================-->
-    <!-- SKILL DOMAIN 2: CI/CD & DEVOPS -->
-    <!-- ========================================================================== -->
-    <section class="skill-group">
-        <h3 class="section-title-underline"><i class="fas fa-cogs"></i> CI/CD & DevOps Automation</h3>
-        <p>Establishing robust, fully automated pipelines from commit to production. Focus on speed, repeatability, and auditability.</p>
-        <div class="tech-list">
-            <li><i class="fas fa-stream"></i> **GitOps Principles:** Using Git as the single source of truth for cluster state.</li>
-            <li>Automated Testing & Validation (Integration, Unit, Security checks).</li>
-            <li>Infrastructure as Code (IaC) Management via Terraform and Ansible.</li>
-            <li>Platform tool development in Python/Bash for webhook handling and API integration.</li>
-        </div>
-    </section>
-    
-    <!-- ========================================================================== -->
-    <!-- SKILL DOMAIN 3: DATA & AI INFRASTRUCTURE -->
-    <!-- ========================================================================== -->
-    <section class="skill-group">
-        <h3 class="section-title-underline"><i class="fas fa-microchip"></i> AI/ML & Data Infrastructure</h3>
-        <p>Designing and deploying scalable ML/AI pipelines, focusing on both data pipeline reliability and efficient, low-latency model inference.</p>
-        <div class="tech-list">
-            <li><i class="fab fa-python"></i> **LLMOps:** Building Retrieval Augmented Generation (RAG) pipelines and fine-tuning processes.</li>
-            <li>Vector Databases (Pinecone, Chroma) and Embedding Generation.</li>
-            <li>Streaming Data Processing using Kafka/Kinesis.</li>
-            <li>Data Quality and Validation (Pydantic, Schema enforcement) and Data Governance.</li>
-        </div>
+            </div >
+        </div >
     </section>
     
-    <!-- ========================== EXPERIENCE HISTORY ========================== -->
-    <!-- ========================================================================== -->
-    <section class="section">
-        <div class="section-content">
-            <h2 class="section-title-underline"><i class="fas fa-briefcase"></i> Professional Experience</h2>
-
-            <div class="job-entry" style="border-color: #2E5A5E;">
-                <h3 style="color: #1A2E40;">2024 - Present: Platform Engineer / Lead (24x7 Systems)</h3>
-                <p>Architecting and maintaining highly available, mission-critical cloud-native systems. Expertise in modern cloud practices and AI integration.</p>
-                <ul class="key-achievements">
-                    <li style="color: #2E5A5E;"><i class="fas fa-check-circle"></i> **K8s & IaC:** Managed K8s patching and compliance using **rafay** blueprints and **Terraform**, ensuring zero-downtime updates across regions.</li>
-                    <li style="color: #2E5A5E;"><i class="fas fa-robot"></i> **AI Integration:** Accelerated root-cause analysis using **Vertex AI** and **Gemini** for complex networking and state drift diagnosis.</li>
-                    <li style="color: #2E5A5E;"><i class="fas fa-code-branch"></i> **Tooling:** Developed type-safe tooling using **Pydantic** to enforce complex Kubernetes manifest validation standards.</li>
-                </ul>
+    <!-- 3. SKILLS & EXPERTISE SECTION -->
+    <section id="skills">
+        <div class="container">
+            <h2>Core Technical Skill Domains</h2>
+            
+            <!-- Sub-Section 1: Cloud & Infra -->
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Cloud & Infrastructure Engineering</h3>
+                <p>Expert-level proficiency in multi-cloud environments, guaranteeing infrastructure consistency and optimal resource utilization using declarative principles.</p>
+                <div class="skills-list">
+                    <div class="skill-tag">Kubernetes (k8s)</div>
+                    <div class="skill-tag">Terraform / CloudFormation</div>
+                    <div class="skill-tag">AWS / GCP Multi-cloud</div>
+                    <div class="skill-tag">Helm / Kustomize</div>
+                    <div class="skill-tag">ArgoCD (GitOps)</div>
+                </div>
             </div>
-
-            <div class="job-entry" style="border-color: #2E5A5E;">
-                <h3 style="color: #1A2E40;">2023–2024: DevOps Engineer (CACI International)</h3>
-                <p>Implementing scalable DevOps practices across multi-tenant, regulated government and commercial environments.</p>
-                <ul class="key-achievements">
-                    <li style="color: #2E5A5E;"><i class="fas fa-check-circle"></i> **GitOps Implementation:** Led the adoption of **ArgoCD** for declarative delivery, making Git the single source of truth for infrastructure and applications.</li>
-                    <li style="color: #2E5A5E;"><i class="fas fa-thumbs-up"></i> **State Management:** Designed resilient operational pipelines guaranteeing infrastructure configuration parity across cloud boundaries.</li>
-                </ul>
+            
+            <!-- Sub-Section 2: Data & AI -->
+            <div>
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Data & AI Infrastructure (LLMOps)</h3>
+                <p>Designing and deploying scalable ML/AI pipelines, focusing on both data lineage reliability and efficient, low-latency model inference.</p>
+                <div class="skills-list">
+                    <div class="skill-tag">RAG Implementation</div>
+                    <div class="skill-tag">Vector Databases</div>
+                    <div class="skill-tag">Stream Processing (Kafka)</div>
+                    <div class="skill-tag">Pydantic Data Validation</div>
+                    <div class="skill-tag">Vertex AI / Llama Stack</div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <footer id="contact-footer" style="background-color: #1A2E40;">
-        <div class="container text-center">
-            <h3 style="margin-bottom: 20px; color: white;">Ready to discuss how modern cloud architecture can elevate your platform?</h3>
-            <div class="social-links" style="gap: 30px;">
-                <a href="https://gitlab.com/" class="social-link" style="color: white;"><i class="fab fa-gitlab"></i></a>
-                <a href="https://github.com/" class="social-link" style="color: white;"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/" class="social-link" style="color: white;"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+            
+             <!-- Sub-Section 3: Core Programming -->
+            <div>
+                <h3 style="color: var(--primary-color); margin-bottom: 20px; margin-top: 40px;">Core Languages & Methodologies</h3>
+                <p>Foundational expertise in writing high-quality, maintainable, and scalable code.</p>
+                <div class="skills-list">
+                    <span style="display: inline-block; margin: 5px 10px; padding: 8px 15px; border: 1px solid #ccc; border-radius: 4px;">Python/Go</span>
+                    <span style="display: inline-block; margin: 5px 10px; padding: 8px 15px; border: 1px solid #ccc; border-radius: 4px;">REST APIs</span>
+                    <span style="display: inline-block; margin: 5px 10px; padding: 8px 15px; border: 1px solid #ccc; border-radius: 4px;">Docker/Containers</span>
+                </span>
+            </section>
+        </style>
+        </head>
+    </div>
+</div>

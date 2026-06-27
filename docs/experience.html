@@ -14,6 +14,19 @@
         @media screen {
             .print-only { display: none; }
         }
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .company-logo {
+            display: block;
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="terminal">
@@ -26,8 +39,10 @@
             <h2>Professional Experience</h2>
             
             <div class="card">
-                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
-                    <img src="assets/24x7sys.png" alt="24x7Systems" style="max-width: 50px; border-radius: 4px;">
+                <div class="company-header">
+                    <img src="assets/24x7sys.png" 
+                         alt="24x7Systems" 
+                         class="company-logo">
                     <h3>
     <a href="https://www.24x7systems.com" class="web-only">24x7Systems</a>
     <span class="print-only">24x7Systems (https://www.24x7systems.com)</span>
@@ -58,8 +73,10 @@
             </div>
             
             <div class="card">
-                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
-                    <img src="assets/caci.jpg" alt="CACI International" style="max-width: 50px; border-radius: 4px;">
+                <div class="company-header">
+                    <img src="assets/caci.jpg" 
+                         alt="CACI International" 
+                         class="company-logo">
                     <h3>
     <a href="https://www.caci.com" class="web-only">CACI International</a>
     <span class="print-only">CACI International (https://www.caci.com)</span>

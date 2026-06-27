@@ -1,0 +1,4 @@
+{% macro link(url, text) %}
+    <a href="{{ url }}" class="web-only">{{ text }}</a>
+    <span class="print-only">{{ text }} ({{ url }})</span>
+{% endmacro %}

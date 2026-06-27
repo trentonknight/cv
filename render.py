@@ -3,6 +3,7 @@ import glob
 import os
 import shutil
 from jinja2 import Environment, FileSystemLoader
+from weasyprint import HTML
 
 # --- Configuration ---
 DATA_DIR = 'data'
@@ -10,49 +11,57 @@ SRC_DIR = 'src'
 DOCS_DIR = 'docs'
 
 def render():
-    # 1. Ensure docs directory exists
+    # 1. Setup Environment
     if not os.path.exists(DOCS_DIR):
         os.makedirs(DOCS_DIR)
 
-    # 2. Aggregate ALL YAML files into a single context
+    # 2. Load Data
     context = {}
-    data_files = glob.glob(os.path.join(DATA_DIR, '*.yaml'))
-    
-    print(f"--- Loading data from {DATA_DIR}/ ---")
-    for file in data_files:
+    for file in glob.glob(os.path.join(DATA_DIR, '*.yaml')):
         with open(file, 'r') as f:
-            file_data = yaml.safe_load(f)
-            if file_data:
-                context.update(file_data)
-                print(f"Loaded {os.path.basename(file)}: {list(file_data.keys())}")
+            data = yaml.safe_load(f)
+            if data:
+                context.update(data)
+                print(f"Loaded {os.path.basename(file)}")
 
-    # 3. Setup Jinja Environment
+    # 3. Synchronize Assets
+    if os.path.exists('assets'):
+        target_assets = os.path.join(DOCS_DIR, 'assets')
+        if os.path.exists(target_assets):
+            shutil.rmtree(target_assets)
+        shutil.copytree('assets', target_assets)
+        print("Assets synchronized.")
+
+    # 4. Render Templates (HTML and Markdown)
     env = Environment(loader=FileSystemLoader(SRC_DIR))
+    templates = {
+        'index.html.j2': 'index.html',
+        'experience.html.j2': 'experience.html',
+        'addendum.html.j2': 'addendum.html',
+        'markdown.j2': 'resume.md'  # Fixed comma syntax here
+    }
 
-    # 4. Define mapping (Template -> Output)
-    render_map = {
-        'main.tex.j2': 'docs/JNMansfield-Main-CV.tex',
-        'addendum.tex.j2': 'docs/JNMansfield-Addendum.tex',
-        'index.html.j2': 'docs/index.html',
-        'experience.html.j2': 'docs/experience.html', # New subpage
-        'addendum.html.j2': 'docs/addendum.html'
-}
-
-    # 5. Render Templates
-    for template_name, output_path in render_map.items():
+    for template_name, output_name in templates.items():
         template = env.get_template(template_name)
+        output_path = os.path.join(DOCS_DIR, output_name)
         with open(output_path, 'w') as f:
             f.write(template.render(context))
-            print(f"Generated {output_path}")
+        print(f"Generated {output_name}")
 
-    # 6. Asset Sync (Optional: Ensure docs/assets exists for your HTML/PDFs)
-    if os.path.exists('assets'):
-        if os.path.exists(os.path.join(DOCS_DIR, 'assets')):
-            shutil.rmtree(os.path.join(DOCS_DIR, 'assets'))
-        shutil.copytree('assets', os.path.join(DOCS_DIR, 'assets'))
-        print("Synchronized assets/ to docs/assets/")
+    # 5. Generate PDFs from the rendered HTML
+    pdf_map = {
+        'experience.html': 'JNMansfield-Professional-CV.pdf',
+        'addendum.html': 'JNMansfield-Service-History.pdf'
+    }
 
-    print("--- Build Complete ---")
+    for html_file, pdf_file in pdf_map.items():
+        print(f"Generating {pdf_file}...")
+        HTML(
+            filename=os.path.join(DOCS_DIR, html_file),
+            base_url=DOCS_DIR
+        ).write_pdf(os.path.join(DOCS_DIR, pdf_file))
+
+    print("--- Build Complete: All artifacts generated. ---")
 
 if __name__ == "__main__":
     render()

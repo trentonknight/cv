@@ -1,5 +1,6 @@
 main:
   - company: "24x7Systems"
+    url: "https://www.24x7systems.com"
     role: "Platform Engineer / Lead"
     dates: "2024-Pres"
     location: "CME"
@@ -16,6 +17,7 @@ main:
       - "GitOps: Built many CI/CD pipelines via GitLab and Harness."
 
   - company: "CACI International"
+    url: "https://www.caci.com"
     role: "DevOps Engineer"
     dates: "2023-2024"
     location: "EPT"
@@ -27,6 +29,7 @@ main:
 
 addendum:
   - company: "USCG"
+    url: "https://www.gocoastguard.com"
     role: "IT Specialist 1st Class"
     dates: "2021--2023"
     location: "CYBER COA Branch"
@@ -37,6 +40,7 @@ addendum:
       - "Deployment: Developed bootable WIM images; assisted FINCEN with Python/Pandas data collection."
 
   - company: "USCG"
+    url: "https://www.gocoastguard.com"
     role: "IT Specialist 1st Class"
     dates: "2017--2021"
     location: "NOSC EOC"
@@ -46,6 +50,7 @@ addendum:
       - "Leadership: Supervised junior analysts, managed global mission scheduling, and provided continuous technical training."
 
   - company: "USCG"
+    url: "https://www.gocoastguard.com"
     role: "IT Specialist 2nd Class"
     dates: "2014--2017"
     location: "CGC DILIGENCE"
@@ -55,6 +60,7 @@ addendum:
       - "Operations: Stood security watches for Law Enforcement and Anti-Terrorism Force Protection."
 
   - company: "USCG"
+    url: "https://www.gocoastguard.com"
     role: "IT Specialist 2nd Class"
     dates: "2010--2014"
     location: "Finance Center"
@@ -65,6 +71,7 @@ addendum:
       - "Recognition: Awarded Commandant’s Letter of Commendation."
 
   - company: "USCG"
+    url: "https://www.gocoastguard.com"
     role: "IT Specialist 3rd Class"
     dates: "2007--2010"
     location: "CGC LEGARE"
@@ -74,6 +81,7 @@ addendum:
       - "Systems: Maintained SCCS (UNIX platform) and shipboard alarm systems; Radio and Combat watchstander."
 
   - company: "US Navy"
+    url: "https://www.navy.com"
     role: "Aviation Ordnanceman 3rd Class"
     dates: "2003--2005"
     location: "VFA-81 Sunliners"
@@ -83,6 +91,7 @@ addendum:
       - "Operations: Managed ordnance loading and arming for F/A-18 Hornets during Operations Iraqi Freedom and Al Fajr (Fallujah)."
 
   - company: "US Navy"
+    url: "https://www.navy.com"
     role: "Aviation Ordnanceman 3rd Class"
     dates: "2001--2003"
     location: "VFA-125"

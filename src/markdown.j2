@@ -1,0 +1,22 @@
+# {{ personal.name }}
+{{ personal.title }} | {{ personal.location }}
+
+## Core Competencies
+Platform Engineering, AI Infrastructure, GitOps, and Small Language Models (SLM).
+
+## Current Research Focus
+{% for r in research %}
+- **{{ r.topic }}**: {{ r.desc }}
+{% endfor %}
+
+## Professional Experience
+{% for job in main %}
+### {{ job.company }}
+**{{ job.role }}** | {{ job.dates }}
+{% for bullet in job.bullets %}- {{ bullet }}{% endfor %}
+{% endfor %}
+
+## Service History
+{% for job in addendum %}
+- **{{ job.company }}**: {{ job.role }} ({{ job.dates }})
+{% endfor %}

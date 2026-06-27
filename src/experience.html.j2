@@ -1,20 +1,38 @@
+{% import 'macros.html.j2' as m %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Experience | {{ personal.name }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
+    <style>
+        @media print {
+            .web-only { display: none; }
+            .card { break-inside: avoid; margin-bottom: 20px; }
+            .terminal-nav { display: none; }
+        }
+        @media screen {
+            .print-only { display: none; }
+        }
+    </style>
 </head>
 <body class="terminal">
     <div class="container">
-        <nav class="terminal-nav"><a href="index.html" class="btn btn-default">← Home</a></nav>
+        <nav class="terminal-nav">
+            <a href="index.html" class="btn btn-default">← Home</a>
+        </nav>
+        
         <main>
             <h2>Professional Experience</h2>
             {% for job in main %}
             <div class="card">
-                <h3>{{ job.company }}</h3>
+                <h3>{{ m.link(job.url, job.company) }}</h3>
                 <p><strong>{{ job.role }}</strong> | {{ job.dates }}</p>
-                <ul>{% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}</ul>
+                <ul>
+                    {% for bullet in job.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
             </div>
             {% endfor %}
         </main>

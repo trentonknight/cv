@@ -26,17 +26,14 @@
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
         /* 1. Header/Navigation Styling */
         header {
             background-color: white;
             padding: 15px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky; /* Makes the nav bar sticky */
+            top: 0;
+            z-index: 10;
         }
         header .container {
             display: flex;
@@ -52,6 +49,7 @@
             margin-left: 20px;
             text-decoration: none;
             color: #333;
+            transition: color 0.2s;
         }
         nav a:hover {
             color: var(--hover-text);
@@ -160,6 +158,14 @@
             color: white;
             transform: translateY(-2px);
         }
+        
+        /* Additional styling for the text-muted class used in cards */
+        .text-muted {
+            color: #555;
+            font-size: 1.0em;
+            margin-bottom: 15px;
+        }
+
 
         /* Utility for two-column balance */
         .flex-group {
@@ -185,130 +191,84 @@
             .hero p {
                 font-size: 1.2em;
             }
-            header .container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            nav a {
-                margin: 0 10px;
-            }
         }
     </style>
 </head>
-<body>
+<body class="script-ready">
 
     <!-- HEADER/NAV Bar -->
     <header>
         <div class="container">
             <div class="logo">John Doe</div>
             <nav>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+                <!-- Using data-section attribute for improved JavaScript targeting -->
+                <a href="#projects" data-section>Projects</a>
+                <a href="#skills" data-section>Skills</a>
+                <a href="#contact" data-section style="color: var(--primary-color); font-weight: bold;">Contact</a>
             </nav>
         </div >
     </header>
 
     <!-- 1. HERO SECTION -->
     <section class="hero">
-        <div class="container">
-            <h1>Hi, I'm John Doe.</h1>
-            <p>Cloud-Native Platform Engineer specializing in scalable DevOps Architecture and AI Infrastructure.</p>
-            <a href="#projects" class="cta-button">View My Work &rarr;</a>
-        </div >
+        <h1>John Doe</h1>
+        <p class="subtitle">Full Stack Developer | Building Scalable and Intuitive Web Applications</p>
+        <a href="#contact" class="button">Get In Touch</a>
     </section>
 
-    <!-- 2. PROJECTS SECTION -->
-    <section id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="grid-container">
-                
-                <!-- Project Card -->
-                <div class="card">
-                    <h3>Microservice Architecture API</h3>
-                    <p class="text-muted">A dedicated, secure RESTful API handling user authentication and data validation utilizing type-safe data models.</p>
-                    <div style="margin-top: 15px;">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Pydantic</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Redis</span>
-                    </div >
-                    <p style="margin-top: 15px;"><a href="#" style="color: var(--primary-color); text-decoration: none;">View Details &rarr;</a></p>
-                </div >
-                
-                <!-- Project Card -->
-                <div class="card">
-                    <h3>DevOps Pipeline Automation</h3>
-                    <p class="text-muted">Built and maintained multi-stage CI/CD pipelines using GitOps principles, guaranteeing reproducible deployments.</p>
-                    <div style="margin-top: 15px;">
-                        <span class="skill-tag">ArgoCD</span>
-                        <span class="skill-tag">Terraform</span>
-                        <span class="skill-tag">GitLab CI</span>
-                        <span class="skill-tag">Kubernetes</span>
-                    </div >
-                    <p style="margin-top: 15px;"><a href="#" style="color: var(--primary-color); text-decoration: none;">View Pipeline Flow &rarr;</a></p>
-                </div >
-                
-                <!-- Project Card -->
-                <div class="card">
-                    <h3>RAG Knowledge Search Engine</h3>
-                    <p class="text-muted">Implemented a Retrieval Augmented Generation (RAG) system to query and summarize complex, proprietary documents.</p>
-                    <div style="margin-top: 15px;">
-                        <span class="skill-tag">LlamaIndex</span>
-                        <span class="skill-tag">Pinecone</span>
-                        <span class="skill-tag">LangChain</span>
-                        <span class="skill-tag">Python</span>
-                    </div >
-                    <p style="margin-top: 15px;"><a href="#" style="color: var(--primary-color); text-decoration: none;">Demo Prototype &rarr;</a></p>
-                </div >
+    <!-- Added padding for better scrolling and spacing -->
+    <section id="section-padding" style="padding: 60px 0;"></section>
 
-            </div >
-        </div >
-    </section>
+    <main>
+        <section id="main-content" style="padding: 40px 0;">
+            <!-- Content will be dynamically generated here -->
+        </section>
+    </main>
+
+    <footer id="contact" style="padding: 60px 0; text-align: center; background-color: #f8f9fa;">
+        <h2>Ready to build something amazing?</h2>
+        <p class="lead">Connect with me to discuss your next big project.</p>
+        <a href="mailto:john.doe@email.com" class="button" style="margin-top: 20px;">Email Me</a>
+    </footer>
     
-    <!-- 3. SKILLS & EXPERTISE SECTION -->
-    <section id="skills">
-        <div class="container">
-            <h2>Core Technical Skill Domains</h2>
-            
-            <!-- Sub-Section 1: Cloud & Infra -->
-            <div style="margin-bottom: 40px;">
-                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Cloud & Infrastructure Engineering</h3>
-                <p>Expert-level proficiency in multi-cloud environments, guaranteeing infrastructure consistency and optimal resource utilization using declarative principles.</p>
-                <div class="skills-list">
-                    <div class="skill-tag">Kubernetes (k8s)</div>
-                    <div class="skill-tag">Terraform / CloudFormation</div>
-                    <div class="skill-tag">AWS / GCP Multi-cloud</div>
-                    <div class="skill-tag">Helm / Kustomize</div>
-                    <div class="skill-tag">ArgoCD (GitOps)</div>
-                </div>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mainContent = document.getElementById('main-content');
+
+    // Dummy content load (simulate dynamic loading)
+    mainContent.innerHTML = `
+        <h2 style="text-align: center; margin-bottom: 40px;">My Professional Experience & Skills</h2>
+        
+        <!-- Skills Section -->
+        <section id="skills-section" style="padding: 40px 0;">
+            <h3 style="border-bottom: 2px solid #007bff; padding-bottom: 10px;">Technical Skills</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">JavaScript / TypeScript</span>
+                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">React</span>
+                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Node.js</span>
+                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Python</span>
+                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">React Hooks</span>
+                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">SQL</span>
             </div>
-            
-            <!-- Sub-Section 2: Data & AI -->
-            <div>
-                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Data & AI Infrastructure (LLMOps)</h3>
-                <p>Designing and deploying scalable ML/AI pipelines, focusing on both data lineage reliability and efficient, low-latency model inference.</p>
-                <div class="skills-list">
-                    <div class="skill-tag">RAG Implementation</div>
-                    <div class="skill-tag">Vector Databases</div>
-                    <div class="skill-tag">Stream Processing (Kafka)</div>
-                    <div class="skill-tag">Pydantic Data Validation</div>
-                    <div class="skill-tag">Vertex AI / Llama Stack</div>
-                </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience-section" style="padding: 40px 0;">
+            <h3 style="border-bottom: 2px solid #007bff; padding-bottom: 10px;">Professional Experience</h3>
+            <div style="border-left: 4px solid #007bff; padding-left: 20px; margin-bottom: 30px;">
+                <h4 style="margin: 0;">Senior Software Engineer at Tech Solutions Inc.</h4>
+                <p style="margin: 5px 0;">*Jan 2021 - Present</p>
+                <p style="margin: 5px 0;">Developed and maintained high-throughput microservices using Node.js and TypeScript, improving system resilience and reducing latency by 25%.</p>
+                <p style="margin: 5px 0;">Led junior developers in code reviews and architectural decision-making, focusing on best practices and clean code architecture.</p>
             </div>
-            
-             <!-- Sub-Section 3: Core Programming -->
-            <div>
-                <h3 style="color: var(--primary-color); margin-bottom: 20px; margin-top: 40px;">Core Languages & Methodologies</h3>
-                <p>Foundational expertise in writing high-quality, maintainable, and scalable code.</p>
-                <div class="skills-list">
-                    <span style="display: inline-block; margin: 5px 10px; padding: 8px 15px; border: 1px solid #ccc; border-radius: 4px;">Python/Go</span>
-                    <span style="display: inline-block; margin: 5px 10px; padding: 8px 15px; border: 1px solid #ccc; border-radius: 4px;">REST APIs</span>
-                    <span style="display: inline-block; margin: 5px 10px; padding: 8px 15px; border: 1px solid #ccc; border-radius: 4px;">Docker/Containers</span>
-                </span>
-            </section>
-        </style>
-        </head>
-    </div>
-</div>
+            <div style="border-left: 4px solid #28a745; padding-left: 20px; margin-bottom: 30px;">
+                <h4 style="margin: 0;">Junior Developer at Startup Innovations</h4>
+                <p style="margin: 5px 0;">*Jun 2019 - Dec 2020</p>
+                <p style="margin: 5px 0;">Built initial client dashboard using React and simple API integration, handling user authentication and state management.</p>
+            </div>
+        </section>
+    `;
+});
+</script>

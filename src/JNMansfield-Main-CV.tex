@@ -1,0 +1,136 @@
+\documentclass[lighthipster]{simplehipstercv}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+% custom color definitions for a "Deep Tech" look
+\definecolor{deepnavy}{HTML}{1A2E40} 
+\definecolor{slateteal}{HTML}{2E5A5E} 
+\definecolor{techpurple}{HTML}{5A4E8C} 
+\definecolor{softgrey}{HTML}{F2F2F2} 
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+\begin{document}
+\thispagestyle{empty}
+
+\simpleheader{deepnavy}{Jason N}{Mansfield}{Platform Engineer and DevOps}{white}
+
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.26}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+\backgroundcolor{c[0]}[rgb]{0.96,0.97,0.98} 
+\paracolbackgroundoptions
+
+\footnotesize
+{\setasidefontcolour
+\flushright  
+\begin{center}
+    \roundpic{id.jpg}
+\end{center}
+
+\bg{slateteal}{white}{About me}\\[0.5em]
+Platform Engineer with expertise in designing secure, cloud-native systems. Specialized in GitOps, infrastructure automation, and LLMOps workflows.\\[1em]
+\textbf{Stack Highlights:}\\
+Kubernetes | Helm\\
+ArgoCD | Terraform\\
+Llama Stack | Ollama\\
+Docling | Pandas\\
+Keycloak | Vault\\[1em]
+\textbf{Languages:}\\
+Python | Bash | JS | Rust\\[1em]
+\textbf{AI/ML:}\\
+Vertex AI | LLMOps\\
+Diffusers | SDXL
+
+\bigskip
+
+\bg{slateteal}{white}{Bluf} \\[0.5em]
+Jason Mansfield\\
+USN 2001 - 2005\\
+USCG 2005 - 2023
+
+\bigskip
+
+\bg{slateteal}{white}{Specialization} \\[0.5em]
+GitOps / DevOps\\
+Platform Engineering\\
+LLMOps / AI Infra\\
+DevSecOps
+
+\bigskip
+
+\bg{slateteal}{white}{Clearance}\\[0.5em]
+\textbf{TS/SCI w CI Poly}
+
+\begin{flushleft} 
+\vspace{4em}
+\infobubble{\faEnvelope}{slateteal}{white}{\scriptsize{trentonknight@gmail.com}}
+\infobubble{\faGitlab}{slateteal}{white}{\href{https://gitlab.com/trentonknight}{trentonknight}}
+\infobubble{\faGithub}{slateteal}{white}{\href{https://github.com/trentonknight}{trentonknight}}
+\infobubble{\faLinkedin}{slateteal}{white}{\href{https://www.linkedin.com/in/trentonknight/}{trentonknight}}
+\infobubble{\faMobile}{slateteal}{white}{(757)753-0085}
+\infobubble{\faCompass}{slateteal}{white}{Clayton, NC}
+\end{flushleft}
+}
+
+\switchcolumn
+\small
+
+\section*{Professional Experience}
+\begin{tabular}{r| p{0.48\textwidth} c}
+\cvevent{2024-Pres}{24x7Systems}{Platform Engineer / Lead}{CME \color{cvred}}{
+\begin{itemize}
+\item \textbf{Operations Leadership:} Manage K8s cluster stability and emergency response for high-stakes outages.
+\item \textbf{AI Augmentation:} Integrated \textbf{Vertex AI} and \textbf{Gemini} to accelerate root-cause analysis for complex K8s networking and Terraform state drift.
+\item \textbf{Automated Documentation:} Leveraged \textbf{Python Sphinx} and AI-assisted workflows to build self-service documentation pipelines.
+\item \textbf{Security Automation:} Developed custom Anchore/Harness integrations to automate vulnerability scanning for containerized workloads.
+\item \textbf{Artifact Governance:} Managed JFrog Artifactory lifecycles to enforce security standards for hardened UBI images.
+\end{itemize}}{24x7sys.png}\\
+
+\cvevent{2023-2024}{CACI International}{DevOps Engineer}{EPT \color{cvred}}{
+\begin{itemize}
+\item \textbf{GitOps Orchestration:} Led infrastructure engineering for GitLab and Vault; managed automated \textbf{Kubernetes} delivery via \textbf{ArgoCD}.
+\item \textbf{State Enforcement:} Ensured 100\% state-sync across cloud environments using ArgoCD and GitOps best practices.
+\item \textbf{Custom Tooling:} Built Python and Bash automation for platform API integrations and dynamic resource scaling.
+\end{itemize}}{caci.jpg}\\
+\end{tabular}
+
+\section*{Technical Research \& Applied AI}
+\begin{tabular}{r| p{0.48\textwidth}}
+\textbf{LLMOps} & Orchestrating local model deployments via \textbf{Llama Stack} and \textbf{Ollama}. Engineering custom \textbf{Modelfiles} and external prompting strategies to tune model behaviors. \\
+\textbf{RAG \& ETL} & Utilizing \textbf{Docling} for high-fidelity document parsing and \textbf{Pandas} for structured data transformation to optimize RAG context-window precision. \\
+\textbf{Generative Art} & Exploring \textbf{Hugging Face Diffusers} for game asset creation; utilizing SDXL pipelines for procedural textures and automated concept generation. \\
+\textbf{Systems} & Implementing high-performance utility tools in \textbf{Rust} to enhance existing Python-based infrastructure automation and CLI tooling. \\
+\end{tabular}
+
+\section*{Military History (Selected Highlights)}
+\begin{tabular}{r| p{0.48\textwidth} c}
+\cvevent{2021--2023}{USCG CYBER}{IT Specialist 1st Class}{COA Branch}{
+Blue Team Analyst. Developed tactical "Ruck Kits" for field operators. Taught \textbf{Cisco} switch programming and authored technical guides.}{blueteam.jpg} \\
+
+\cvevent{2014--2017}{USCG}{IT Specialist 2nd Class}{CGC DILIGENCE}{
+Independent Network Admin. Managed \textbf{Cisco 3750G} switches, Server 2008 R2, and TACLANE encryption systems.}{uscg.png} \\
+\end{tabular}
+
+\section*{Degrees \& Certs}
+\begin{tabular}{r p{0.6\textwidth}}
+\textbf{BS Computer Science} & Regis University (ABET Accredited) \\
+\textbf{CompTIA Security+} & DoD 8570 Baseline (Expired) \\
+\textbf{CompTIA CySA+} & Cybersecurity Analyst (Expired) \\
+\end{tabular}
+
+\vfill
+\begin{center}
+{\footnotesize \color{black!70} Full Detailed History \& Professional References Available in Career Addendum}
+\end{center}
+
+\end{paracol}
+\end{document}

@@ -1,0 +1,44 @@
+# --- LaTeX Build Files ---
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.lof
+*.lot
+*.bbl
+*.blg
+*.ilg
+*.ind
+*.idx
+*.ist
+*.tdo
+*.glo
+*.gls
+*.glsdefs
+
+# --- OS Specific Files ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# --- Editor/IDE Files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Misc ---
+# Keep your final PDF if you want, but if you intend 
+# to build it automatically via GitHub Actions, 
+# you can comment this line out:
+# cv.pdf 
+
+# --- Build/Temp Directories ---
+build/
+dist/
+temp/

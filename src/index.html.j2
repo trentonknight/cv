@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>{{ personal.name }} | Resume</title>
+</head>
+<body>
+    <header>
+        <h1>{{ personal.name }}</h1>
+        <p>{{ personal.title }}</p>
+        <p>{{ personal.location }} | {{ personal.phone }}</p>
+    </header>
+    
+    <main>
+        <h2>Professional Experience</h2>
+        {% for job in main %}
+        <div class="card">
+            <h3>{{ job.company }}</h3>
+            <p><strong>{{ job.role }}</strong> | {{ job.dates }}</p>
+            <ul>
+                {% for bullet in job.bullets %}
+                <li>{{ bullet }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+</html>

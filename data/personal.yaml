@@ -1,0 +1,15 @@
+personal:
+  name: "Jason N Mansfield"
+  title: "Platform Engineer and DevOps"
+  phone: "(757)753-0085"
+  email: "trentonknight@gmail.com"
+  location: "Clayton, NC"
+  linkedin: "linkedin.com/in/trentonknight/"
+  github: "github.com/trentonknight"
+  gitlab: "gitlab.com/trentonknight"
+  clearance: "TS/SCI w CI Poly"
+  profile_pic: "../assets/id.jpg"
+  education:
+    degree: "BS Computer Science"
+    institution: "Regis University (ABET Accredited)"
+  certs: ["CompTIA Security+", "CompTIA CySA+ (Expired)"]

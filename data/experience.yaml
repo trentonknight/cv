@@ -1,0 +1,92 @@
+main:
+  - company: "24x7Systems"
+    role: "Platform Engineer / Lead"
+    dates: "2024-Pres"
+    location: "CME"
+    image: "../assets/24x7sys.png"
+    bullets:
+      - "Runtime team member: Managed K8s cluster patching via rafay blueprints and helmfiles."
+      - "Operations Leadership: Managed K8s cluster stability and emergency response for high-stakes outages."
+      - "Python tooling: Built Pydantic type safe tooling for running a suite of validation tools such as conftest, kubeconform and istioctl."
+      - "AI Augmentation: Integrated Vertex AI and Gemini for automated root-cause analysis for complex K8s networking and Terraform state drift."
+      - "Terraform: Performed changes in Terraform primarily for resources in AWS architecture, k8s and associated application needs."
+      - "Automated Documentation: Leveraged Python Sphinx and Jinja templating to enhance specific pages requiring advanced features."
+      - "Security Automation: Developed custom Anchore/Harness integrations to automate vulnerability scanning."
+      - "Artifact Governance: Managed JFrog Artifactory lifecycles for UBI images."
+      - "GitOps: Built many CI/CD pipelines via GitLab and Harness."
+
+  - company: "CACI International"
+    role: "DevOps Engineer"
+    dates: "2023-2024"
+    location: "EPT"
+    image: "../assets/caci.jpg"
+    bullets:
+      - "GitOps Orchestration: Led infrastructure engineering for GitLab and Vault; managed automated Kubernetes delivery via ArgoCD."
+      - "State Enforcement: Ensured 100% state-sync across cloud environments using ArgoCD and GitOps best practices."
+      - "Custom Tooling: Built Python and Bash automation for platform API integrations and dynamic resource scaling."
+
+addendum:
+  - company: "USCG"
+    role: "IT Specialist 1st Class"
+    dates: "2021--2023"
+    location: "CYBER COA Branch"
+    image: "../assets/blueteam.jpg"
+    bullets:
+      - "Blue Team Analyst: Developed tactical 'Ruck Kits' for field operators."
+      - "Technical Training: Instructed Cisco switch programming, TCTO compliance, and authored guides for Nessus, Grassmarlin, Sharphound, AppDetectivePro, and Bloodhound."
+      - "Deployment: Developed bootable WIM images; assisted FINCEN with Python/Pandas data collection."
+
+  - company: "USCG"
+    role: "IT Specialist 1st Class"
+    dates: "2017--2021"
+    location: "NOSC EOC"
+    image: "../assets/cgcyber.png"
+    bullets:
+      - "Watch Supervisor: Responsible for DODIN operations and bi-weekly leadership briefs."
+      - "Leadership: Supervised junior analysts, managed global mission scheduling, and provided continuous technical training."
+
+  - company: "USCG"
+    role: "IT Specialist 2nd Class"
+    dates: "2014--2017"
+    location: "CGC DILIGENCE"
+    image: "../assets/uscg.png"
+    bullets:
+      - "Independent Network Admin: Managed dual Cisco 3750G stacks, Server 2008 R2, Exchange, TACLANE encryption, and KVH Satellite systems."
+      - "Operations: Stood security watches for Law Enforcement and Anti-Terrorism Force Protection."
+
+  - company: "USCG"
+    role: "IT Specialist 2nd Class"
+    dates: "2010--2014"
+    location: "Finance Center"
+    image: "../assets/uscg.png"
+    bullets:
+      - "Trusted Agent Security Manager (TASM): Managed Oracle database clients, Java environments, and financial software suites."
+      - "Infrastructure: Administrated Avaya CS1000 PBX systems."
+      - "Recognition: Awarded Commandant’s Letter of Commendation."
+
+  - company: "USCG"
+    role: "IT Specialist 3rd Class"
+    dates: "2007--2010"
+    location: "CGC LEGARE"
+    image: "../assets/uscg.png"
+    bullets:
+      - "VMWare Admin: Managed Linux/Windows environments for guest nations during 2009 Africa mission."
+      - "Systems: Maintained SCCS (UNIX platform) and shipboard alarm systems; Radio and Combat watchstander."
+
+  - company: "US Navy"
+    role: "Aviation Ordnanceman 3rd Class"
+    dates: "2003--2005"
+    location: "VFA-81 Sunliners"
+    image: "../assets/VFA-81.png"
+    bullets:
+      - "Deployment: USS John F. Kennedy (CV-67) for CVW-17 strike operations."
+      - "Operations: Managed ordnance loading and arming for F/A-18 Hornets during Operations Iraqi Freedom and Al Fajr (Fallujah)."
+
+  - company: "US Navy"
+    role: "Aviation Ordnanceman 3rd Class"
+    dates: "2001--2003"
+    location: "VFA-125"
+    image: "../assets/VFA-125.png"
+    bullets:
+      - "Ordnance loading team lead and flight deck operations at NAS Lemoore."
+      - "Recognition: Awarded Letter of Commendation."

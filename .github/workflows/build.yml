@@ -1,0 +1,28 @@
+name: Build Resume Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: astral-sh/setup-uv@v3
+      
+      - name: Generate Source Files
+        run: |
+          uv sync
+          uv run render.py
+          
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            docs/JNMansfield-Main-CV.tex
+            docs/JNMansfield-Addendum.tex
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

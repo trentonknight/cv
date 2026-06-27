@@ -1,0 +1,7 @@
+\section*{Full Armed Forces History}
+\begin{tabular}{r| p{0.45\textwidth} c}
+{% for job in addendum %}
+\cvevent{ {{ job.dates }} }{ {{ job.company }} }{ {{ job.role }} }{ {{ job.location }} }{
+{{ job.bullets | join(' ') }} }{ {{ job.image }} } \\
+{% endfor %}
+\end{tabular}

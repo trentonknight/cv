@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Experience | Jason N Mansfield</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
+    <style>
+        @media print {
+            .web-only { display: none; }
+            .card { break-inside: avoid; margin-bottom: 20px; }
+            .terminal-nav { display: none; }
+        }
+        @media screen {
+            .print-only { display: none; }
+        }
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .company-logo {
+            display: block;
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="terminal">
+    <div class="container">
+        <nav class="terminal-nav">
+            <a href="index.html" class="btn btn-default">← Home</a>
+        </nav>
+        
+        <main>
+            <h2>Professional Experience</h2>
+            
+            <div class="card">
+                <div class="company-header">
+                    <img src="assets/24x7sys.png" 
+                         alt="24x7Systems" 
+                         class="company-logo">
+                    <h3>
+    <a href="https://www.24x7systems.com" class="web-only">24x7Systems</a>
+    <span class="print-only">24x7Systems (https://www.24x7systems.com)</span>
+</h3>
+                </div>
+                <p><strong>Platform Engineer / Lead</strong> | 2024-Pres</p>
+                <ul>
+                    
+                    <li>Runtime team member: Managed K8s cluster patching via rafay blueprints and helmfiles.</li>
+                    
+                    <li>Operations Leadership: Managed K8s cluster stability and emergency response for high-stakes outages.</li>
+                    
+                    <li>Python tooling: Built Pydantic type safe tooling for running a suite of validation tools such as conftest, kubeconform and istioctl.</li>
+                    
+                    <li>AI Augmentation: Integrated Vertex AI and Gemini for automated root-cause analysis for complex K8s networking and Terraform state drift.</li>
+                    
+                    <li>Terraform: Performed changes in Terraform primarily for resources in AWS architecture, k8s and associated application needs.</li>
+                    
+                    <li>Automated Documentation: Leveraged Python Sphinx and Jinja templating to enhance specific pages requiring advanced features.</li>
+                    
+                    <li>Security Automation: Developed custom Anchore/Harness integrations to automate vulnerability scanning.</li>
+                    
+                    <li>Artifact Governance: Managed JFrog Artifactory lifecycles for UBI images.</li>
+                    
+                    <li>GitOps: Built many CI/CD pipelines via GitLab and Harness.</li>
+                    
+                </ul>
+            </div>
+            
+            <div class="card">
+                <div class="company-header">
+                    <img src="assets/caci.jpg" 
+                         alt="CACI International" 
+                         class="company-logo">
+                    <h3>
+    <a href="https://www.caci.com" class="web-only">CACI International</a>
+    <span class="print-only">CACI International (https://www.caci.com)</span>
+</h3>
+                </div>
+                <p><strong>DevOps Engineer</strong> | 2023-2024</p>
+                <ul>
+                    
+                    <li>GitOps Orchestration: Led infrastructure engineering for GitLab and Vault; managed automated Kubernetes delivery via ArgoCD.</li>
+                    
+                    <li>State Enforcement: Ensured 100% state-sync across cloud environments using ArgoCD and GitOps best practices.</li>
+                    
+                    <li>Custom Tooling: Built Python and Bash automation for platform API integrations and dynamic resource scaling.</li>
+                    
+                </ul>
+            </div>
+            
+        </main>
+
+        <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e1e1e1;">
+            <p>Looking for the complete background?</p>
+            <a href="addendum.html" class="btn btn-ghost">View Service History</a>
+            <a href="JNMansfield-Service-History.pdf" class="btn btn-ghost">Download Service History PDF</a>
+        </footer>
+    </div>
+</body>
+</html>

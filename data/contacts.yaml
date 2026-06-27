@@ -1,0 +1,12 @@
+corporate_contacts:
+  - { name: "Holland Turner", company: "CACI", role: "Supervisor", contact: "Email: holland.turner@caci.com" }
+  - { name: "Steven Long", company: "CACI", role: "Project Manager", contact: "Email: steven.long@caci.com -- Mob: (910) 551-8424" }
+  - { name: "Nick Saba", company: "ARSIEM", role: "Supervisor", contact: "Email: saba_nick@arsiem.com -- Mob: (410) 562-1050" }
+  - { name: "Keith Pabst", company: "ARSIEM", role: "COO", contact: "Email: keith@arsiem.com -- Mob: (850) 972-9225" }
+
+military_contacts:
+  - { name: "Austin Favor", company: "USCG", role: "Assessment Lead", contact: "Email: Austin.J.Favor@uscg.mil -- Mob: (208) 946-8878" }
+  - { name: "Zane LaMountain", company: "USCG", role: "Supervisor", contact: "Email: zane.b.lamountain@uscg.mil -- Mob: (410) 409-1453" }
+  - { name: "Drew Cheneler", company: "USCG", role: "Watch Captain", contact: "Email: Drew.M.Cheneler@uscg.mil -- Mob: (571) 529-0035" }
+  - { name: "Kurt Kuppert", company: "USCG", role: "Watch Captain", contact: "Email: Kurt.M.Kuppert@uscg.mil -- Mob: (540) 729-3534" }
+  - { name: "Jason Southworth", company: "USCG", role: "Supervisor", contact: "Email: Jason.S.Southworth@uscg.mil -- Mob: (740) 876-1154" }

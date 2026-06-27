@@ -1,0 +1,9 @@
+research:
+  - topic: "LLMOps"
+    desc: "Orchestrating local model deployments via Llama Stack and Ollama. Engineering custom Modelfiles and external prompting strategies to tune model behaviors."
+  - topic: "RAG & ETL"
+    desc: "Utilizing Docling for high-fidelity document parsing and Pandas for structured data transformation to optimize RAG context-window precision."
+  - topic: "Generative Art"
+    desc: "Exploring Hugging Face Diffusers for game asset creation; utilizing SDXL pipelines for procedural textures and automated concept generation."
+  - topic: "Systems"
+    desc: "Implementing high-performance utility tools in Rust to enhance existing Python-based infrastructure automation and CLI tooling."

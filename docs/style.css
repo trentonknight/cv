@@ -1,0 +1,23 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #1A2E40; /* deepnavy */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #F2F2F2; /* softgrey */
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #2E5A5E; /* slateteal */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 { color: #1A2E40; }
+h2 { color: #2E5A5E; border-bottom: 2px solid #5A4E8C; /* techpurple */ }
+ul { list-style-type: none; padding-left: 0; }
+li { margin-bottom: 10px; }
+

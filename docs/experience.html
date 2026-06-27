@@ -1,42 +1,74 @@
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Experience | Jason N Mansfield</title>
+    <title>Experience | </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
-    <style>
-        @media print {
-            .web-only { display: none; }
-            .card { break-inside: avoid; margin-bottom: 20px; }
-            .terminal-nav { display: none; }
-        }
-        @media screen {
-            .print-only { display: none; }
-        }
-        .company-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-        .company-logo {
-            display: block;
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body class="terminal">
-    <div class="container">
-        <nav class="terminal-nav">
-            <a href="index.html" class="btn btn-default">← Home</a>
-        </nav>
+    <div class="container page-wrapper">
         
+        
+<aside class="terminal sidebar web-only"
+       style="width: 240px; flex-shrink: 0; border-right: 2px solid #4ade80; padding-right: 16px;">
+    <a href="index.html" class="sidebar-logo"
+       style="color: #4ade80; font-size: 1.2em; font-family: monospace; text-decoration: none; margin-bottom: 16px; display: block;">
+        
+    </a>
+    <nav style="margin-bottom: 16px;">
+        
+            <a href="index.html" class="btn btn-default btn-block"
+               style="text-align: left;"> Home </a>
+        
+
+        
+            <a href="experience.html" class="btn btn-primary btn-block"
+               style="text-align: left;"> Experience </a>
+        
+
+        
+            <a href="addendum.html" class="btn btn-default btn-block"
+               style="text-align: left;"> Service History </a>
+        
+    </nav>
+
+    <div style="border-top: 1px solid #4ade80; margin: 14px 0;"></div>
+
+    <nav style="margin-bottom: 16px;">
+        <a href="JNMansfield-Professional-CV.pdf" class="btn btn-ghost btn-block"
+           style="text-align: left; font-size: 0.85em; color: #8a9b96;">
+            ⤓ Professional CV (PDF)
+        </a>
+        <a href="JNMansfield-Service-History.pdf" class="btn btn-ghost btn-block"
+           style="text-align: left; font-size: 0.85em; color: #8a9b96;">
+            ⤓ Service History (PDF)
+        </a>
+    </nav>
+
+    <div style="border-top: 1px solid #4ade80; margin: 14px 0;"></div>
+
+    
+    <div style="font-family: monospace; font-size: 0.8em; color: #8a9b96; line-height: 1.6;">
+        <div style="margin-bottom: 4px;"></div>
+        <a href="mailto:"
+           style="color: #4ade80; text-decoration: none;"></a><br>
+        <span style="display: block; margin-bottom: 8px;"></span>
+        
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+            <a href="https://" style="color: #666; text-decoration: none;">LinkedIn</a>
+            <a href="https://" style="color: #666; text-decoration: none;">GitHub</a>
+            <a href="https://" style="color: #666; text-decoration: none;">GitLab</a>
+        </div>
+    </div>
+</aside>
+
         <main>
             <h2>Professional Experience</h2>
+            
             
             <div class="card">
                 <div class="company-header">
@@ -94,13 +126,15 @@
                 </ul>
             </div>
             
-        </main>
 
-        <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e1e1e1;">
-            <p>Looking for the complete background?</p>
-            <a href="addendum.html" class="btn btn-ghost">View Service History</a>
-            <a href="JNMansfield-Service-History.pdf" class="btn btn-ghost">Download Service History PDF</a>
-        </footer>
+            <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e1e1e1;">
+                <p>Looking for the complete background?</p>
+                <a href="addendum.html" class="btn btn-ghost">View Service History</a>
+                <a href="" class="btn btn-ghost">
+                    Download 
+                </a>
+            </footer>
+        </main>
     </div>
 </body>
 </html>

@@ -8,8 +8,13 @@ personal:
   github: "github.com/trentonknight"
   gitlab: "gitlab.com/trentonknight"
   clearance: "TS/SCI w CI Poly"
-  profile_pic: "../assets/id.jpg"
+  profile_pic: "id.jpg"
   education:
     degree: "BS Computer Science"
     institution: "Regis University (ABET Accredited)"
   certs: ["CompTIA Security+", "CompTIA CySA+ (Expired)"]
+  pdf_main: "JNMansfield-Professional-CV.pdf"
+  pdf_addendum: "JNMansfield-Service-History.pdf"
+  links:
+    website: "https://jnmansfield.dev"
+    profile: "{{ personal.github }}/profile"

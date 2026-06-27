@@ -34,17 +34,15 @@
         <nav class="terminal-nav">
             <a href="experience.html" class="btn btn-default">← Professional Experience</a>
         </nav>
-        
+
         <main>
             <h2>Service History</h2>
             {% for job in addendum %}
             <div class="card">
                 <div class="company-header">
-                    <!-- Added './' for explicit path resolution and 'onerror' for debugging -->
-                    <img src="./assets/{{ job.image.split('/')[-1] }}" 
-                         alt="{{ job.company }}" 
-                         class="company-logo"
-                         onerror="console.error('Failed to load image:', this.src)">
+                    <img src="assets/{{ job.image.split('/')[-1] }}"
+                         alt="{{ job.company }}"
+                         class="company-logo">
                     <h3>{{ m.link(job.url, job.company) }}</h3>
                 </div>
                 <p><strong>{{ job.role }}</strong> | {{ job.dates }} | {{ job.location }}</p>
@@ -58,7 +56,7 @@
         </main>
 
         <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e1e1e1;">
-            <a href="JNMansfield-Service-History.pdf" class="btn btn-ghost">Download Service History PDF</a>
+            <a href="{{ personal.pdf_addendum }}" class="btn btn-ghost">Download {{ personal.pdf_addendum | replace('.pdf', '') }}</a>
         </footer>
     </div>
 </body>

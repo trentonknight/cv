@@ -1,23 +1,74 @@
-body {
-    font-family: 'Raleway', sans-serif;
-    color: #1A2E40; /* deepnavy */
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #F2F2F2; /* softgrey */
+/* --- Global Layout --- */
+/* We remove the 'container' constraint from the body or use a wrapper */
+.page-wrapper {
+    display: flex !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #2E5A5E; /* slateteal */
+main {
+    flex: 1 !important;
+    min-width: 0; /* Prevents main content from overflowing or wrapping */
+    padding-left: 40px;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    border-right: 2px solid #4ade80;
+    padding-right: 16px;
+}
+
+.sidebar-logo {
+    color: #4ade80;
+    font-size: 1.2em;
+    font-family: monospace;
+    text-decoration: none;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.sidebar-nav { margin-bottom: 16px; }
+.sidebar-divider { border-top: 1px solid #4ade80; margin: 14px 0; }
+.sidebar-contact { 
+    font-family: monospace; 
+    font-size: 0.8em; 
+    color: #8a9b96; 
+    line-height: 1.6; 
+}
+.sidebar-links { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
+.sidebar-links a { color: #666; text-decoration: none; }
+
+/* --- Component Specifics --- */
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Fix for image_dd18fe.png and other logos */
+.company-logo {
+    display: block;
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain; /* Ensures the logo image fits without distortion */
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-shrink: 0; /* Prevents the image from being squished */
 }
 
-h1 { color: #1A2E40; }
-h2 { color: #2E5A5E; border-bottom: 2px solid #5A4E8C; /* techpurple */ }
-ul { list-style-type: none; padding-left: 0; }
-li { margin-bottom: 10px; }
+/* --- Responsive & Print --- */
+@media print {
+    .sidebar, .web-only { display: none !important; }
+    main { padding-left: 0 !important; }
+}
 
+@media (max-width: 768px) {
+    .page-wrapper { flex-direction: column; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 2px solid #4ade80; margin-bottom: 20px; }
+    main { padding-left: 0; }
+}

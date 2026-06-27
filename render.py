@@ -8,11 +8,15 @@ os.makedirs('docs', exist_ok=True)
 
 # 1. Aggregate ALL YAML files into a single context
 context = {}
-for file in glob.glob('data/*.yaml'):
+data_files = glob.glob('data/*.yaml')
+print(f"--- Loading data from: {data_files} ---")
+
+for file in data_files:
     with open(file, 'r') as f:
-        data = yaml.safe_load(f)
-        if data:
-            context.update(data)
+        file_data = yaml.safe_load(f)
+        if file_data:
+            context.update(file_data)
+            print(f"Loaded {os.path.basename(file)}: Keys found -> {list(file_data.keys())}")
 
 # 2. Setup Jinja
 env = Environment(loader=FileSystemLoader('src'))
@@ -29,5 +33,6 @@ for template_file, output_file in render_map.items():
     template = env.get_template(template_file)
     with open(output_file, 'w') as f:
         f.write(template.render(context))
+        print(f"Generated {output_file}")
 
-print("Build complete: Generated source files in /docs")
+print("--- Build Complete ---")

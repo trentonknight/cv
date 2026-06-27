@@ -8,19 +8,39 @@
     <header>
         <h1>{{ personal.name }}</h1>
         <p>{{ personal.title }}</p>
-        <p>{{ personal.location }} | {{ personal.phone }}</p>
+        <p>{{ personal.location }} | {{ personal.email }} | {{ personal.phone }}</p>
+        <p>Clearance: {{ personal.clearance }}</p>
     </header>
     
     <main>
+        <!-- Main Experience -->
         <h2>Professional Experience</h2>
         {% for job in main %}
         <div class="card">
             <h3>{{ job.company }}</h3>
             <p><strong>{{ job.role }}</strong> | {{ job.dates }}</p>
             <ul>
-                {% for bullet in job.bullets %}
-                <li>{{ bullet }}</li>
-                {% endfor %}
+                {% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+
+        <!-- Research -->
+        <h2>Technical Research & Applied AI</h2>
+        <ul>
+            {% for r in research %}
+            <li><strong>{{ r.topic }}</strong>: {{ r.desc }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Military History -->
+        <h2>Full Armed Forces History</h2>
+        {% for job in addendum %}
+        <div class="card">
+            <h3>{{ job.company }} - {{ job.role }}</h3>
+            <p>{{ job.dates }} | {{ job.location }}</p>
+            <ul>
+                {% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}
             </ul>
         </div>
         {% endfor %}

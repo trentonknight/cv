@@ -1,45 +1,82 @@
 :root {
-    --primary-color: #007acc;
-    --secondary-bg: #f4f7f9;
-    --text-color: #333;
-    --dark-bg: #2c3e50;
-    --card-bg: #ffffff;
-    --hover-text: #0056b3;
+    /* Earth-Tone Palette */
+    --primary-color: #5D6D7E; /* Muted Slate */
+    --accent-color: #D35400;   /* Terracotta Pop */
+    --bg-color: #FDFEFE;       /* Off-white */
+    --section-bg: #F4F6F6;     /* Light Grey-Green tint */
+    --dark-bg: #273746;       /* Deep Forest/Charcoal */
+    --text-color: #2C3E50;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--secondary-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
-/* Header & Nav */
+/* 1. Header: Now centered and clean */
 header {
     background-color: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--primary-color);
 }
-header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 20px; }
-header .logo { font-size: 1.5em; font-weight: bold; color: var(--primary-color); }
-nav a { margin-left: 20px; text-decoration: none; color: #333; transition: color 0.2s; }
-nav a:hover { color: var(--hover-text); }
+header .container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-/* Sections */
-section { padding: 50px 20px; margin-bottom: 40px; background-color: var(--card-bg); border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); }
-h2 { border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; color: #333; margin-bottom: 30px; display: inline-block; }
+/* 2. Centered Content Layout */
+main, section {
+    max-width: 800px;
+    margin: 40px auto; /* This centers the sections */
+    padding: 40px;
+    background-color: var(--section-bg);
+    border-radius: 12px;
+}
 
-/* Hero */
-.hero { background-color: var(--dark-bg); color: white; padding: 80px 20px; text-align: center; border-radius: 8px; margin-bottom: 60px; }
-.hero h1 { font-size: 3.5em; margin-bottom: 10px; }
-.hero p { font-size: 1.5em; margin-bottom: 30px; }
-.button { background-color: var(--primary-color); color: white; padding: 12px 25px; border: none; border-radius: 5px; text-decoration: none; display: inline-block; transition: 0.3s; }
-.button:hover { background-color: var(--hover-text); }
+/* 3. Hero: Dramatic Earth Tones */
+.hero {
+    background: linear-gradient(135deg, var(--dark-bg), var(--primary-color));
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 60px;
+}
 
-/* Responsive */
-@media (max-width: 600px) { .hero h1 { font-size: 2.5em; } }
+.button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px; /* Pill shape for a modern pop */
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #A04000;
+}
+
+/* 4. Typographic "Pop" */
+h2 {
+    color: var(--dark-bg);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skill-tag {
+    background-color: #D5DBDB;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border-left: 3px solid var(--accent-color);
+    font-weight: 500;
+}

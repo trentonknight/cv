@@ -33,8 +33,10 @@ def render():
     render_map = {
         'main.tex.j2': 'docs/JNMansfield-Main-CV.tex',
         'addendum.tex.j2': 'docs/JNMansfield-Addendum.tex',
-        'index.html.j2': 'docs/index.html'
-    }
+        'index.html.j2': 'docs/index.html',
+        'experience.html.j2': 'docs/experience.html', # New subpage
+        'addendum.html.j2': 'docs/addendum.html'
+}
 
     # 5. Render Templates
     for template_name, output_path in render_map.items():

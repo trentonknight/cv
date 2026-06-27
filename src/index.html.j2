@@ -2,39 +2,30 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{ personal.name }} | Resume</title>
-    <!-- TerminalCSS CDN -->
+    <title>{{ personal.name }} | Architect</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
-    <style>
-        .card { border: 1px solid #e1e1e1; padding: 1rem; margin-bottom: 1rem; }
-    </style>
 </head>
 <body class="terminal">
     <div class="container">
-        <header class="terminal-nav">
-            <div class="terminal-logo">
-                <div class="logo terminal-prompt">{{ personal.name }}</div>
+        <header>
+            <h1>{{ personal.name }}</h1>
+            <p>{{ personal.title }} | {{ personal.location }}</p>
+            <div class="terminal-nav">
+                <a href="experience.html" class="btn btn-primary">Professional Experience</a>
+                <a href="addendum.html" class="btn btn-default">Service History</a>
             </div>
-            <nav class="terminal-menu">
-                <ul>
-                    <li><a href="mailto:{{ personal.email }}">{{ personal.email }}</a></li>
-                </ul>
-            </nav>
         </header>
-
+        
         <main>
-            <section>
-                <h2>Professional Experience</h2>
-                {% for job in main %}
-                <div class="card">
-                    <h3>{{ job.company }}</h3>
-                    <p><strong>{{ job.role }}</strong> | {{ job.dates }}</p>
-                    <ul>
-                        {% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}
-                    </ul>
-                </div>
+            <h2>Core Competencies</h2>
+            <p>Platform Engineering, AI Infrastructure, GitOps, and Small Language Models (SLM).</p>
+            
+            <h2>Current Research Focus</h2>
+            <ul>
+                {% for r in research %}
+                <li><strong>{{ r.topic }}</strong>: {{ r.desc }}</li>
                 {% endfor %}
-            </section>
+            </ul>
         </main>
     </div>
 </body>

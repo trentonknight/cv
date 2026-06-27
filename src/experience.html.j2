@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Experience | {{ personal.name }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
+</head>
+<body class="terminal">
+    <div class="container">
+        <nav class="terminal-nav"><a href="index.html" class="btn btn-default">← Home</a></nav>
+        <main>
+            <h2>Professional Experience</h2>
+            {% for job in main %}
+            <div class="card">
+                <h3>{{ job.company }}</h3>
+                <p><strong>{{ job.role }}</strong> | {{ job.dates }}</p>
+                <ul>{% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}</ul>
+            </div>
+            {% endfor %}
+        </main>
+    </div>
+</body>
+</html>

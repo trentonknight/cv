@@ -2,51 +2,36 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Jason N Mansfield | Resume</title>
-    <!-- TerminalCSS CDN -->
+    <title>Jason N Mansfield | Architect</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
-    <style>
-        .card { border: 1px solid #e1e1e1; padding: 1rem; margin-bottom: 1rem; }
-    </style>
 </head>
 <body class="terminal">
     <div class="container">
-        <header class="terminal-nav">
-            <div class="terminal-logo">
-                <div class="logo terminal-prompt">Jason N Mansfield</div>
+        <header>
+            <h1>Jason N Mansfield</h1>
+            <p>Platform Engineer and DevOps | Clayton, NC</p>
+            <div class="terminal-nav">
+                <a href="experience.html" class="btn btn-primary">Professional Experience</a>
+                <a href="addendum.html" class="btn btn-default">Service History</a>
             </div>
-            <nav class="terminal-menu">
-                <ul>
-                    <li><a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></li>
-                </ul>
-            </nav>
         </header>
-
+        
         <main>
-            <section>
-                <h2>Professional Experience</h2>
+            <h2>Core Competencies</h2>
+            <p>Platform Engineering, AI Infrastructure, GitOps, and Small Language Models (SLM).</p>
+            
+            <h2>Current Research Focus</h2>
+            <ul>
                 
-                <div class="card">
-                    <h3>24x7Systems</h3>
-                    <p><strong>Platform Engineer / Lead</strong> | 2024-Pres</p>
-                    <ul>
-                        <li>Runtime team member: Managed K8s cluster patching via rafay blueprints and helmfiles.</li><li>Operations Leadership: Managed K8s cluster stability and emergency response for high-stakes outages.</li><li>Python tooling: Built Pydantic type safe tooling for running a suite of validation tools such as conftest, kubeconform and istioctl.</li><li>AI Augmentation: Integrated Vertex AI and Gemini for automated root-cause analysis for complex K8s networking and Terraform state drift.</li><li>Terraform: Performed changes in Terraform primarily for resources in AWS architecture, k8s and associated application needs.</li><li>Automated Documentation: Leveraged Python Sphinx and Jinja templating to enhance specific pages requiring advanced features.</li><li>Security Automation: Developed custom Anchore/Harness integrations to automate vulnerability scanning.</li><li>Artifact Governance: Managed JFrog Artifactory lifecycles for UBI images.</li><li>GitOps: Built many CI/CD pipelines via GitLab and Harness.</li>
-                    </ul>
-                </div>
+                <li><strong>LLMOps</strong>: Orchestrating local model deployments via Llama Stack and Ollama. Engineering custom Modelfiles and external prompting strategies to tune model behaviors.</li>
                 
-                <div class="card">
-                    <h3>CACI International</h3>
-                    <p><strong>DevOps Engineer</strong> | 2023-2024</p>
-                    <ul>
-                        <li>GitOps Orchestration: Led infrastructure engineering for GitLab and Vault; managed automated Kubernetes delivery via ArgoCD.</li><li>State Enforcement: Ensured 100% state-sync across cloud environments using ArgoCD and GitOps best practices.</li><li>Custom Tooling: Built Python and Bash automation for platform API integrations and dynamic resource scaling.</li>
-                    </ul>
-                </div>
+                <li><strong>RAG & ETL</strong>: Utilizing Docling for high-fidelity document parsing and Pandas for structured data transformation to optimize RAG context-window precision.</li>
                 
-            </section>
-				<section>
-            <hr>
-            <a href="addendum.html" class="btn btn-primary">View Full Military Service History</a>
-        </section>
+                <li><strong>Generative Art</strong>: Exploring Hugging Face Diffusers for game asset creation; utilizing SDXL pipelines for procedural textures and automated concept generation.</li>
+                
+                <li><strong>Systems</strong>: Implementing high-performance utility tools in Rust to enhance existing Python-based infrastructure automation and CLI tooling.</li>
+                
+            </ul>
         </main>
     </div>
 </body>

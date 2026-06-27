@@ -1,156 +1,45 @@
-/* ================================================================= 
- * Global Variables / Color Palette (From LaTeX)
- * ================================================================= */
 :root {
-    --deepnavy: #1A2E40;
-    --slateteal: #2E5A5E;
-    --techpurple: #5A4E8C;
-    --softgrey: #F2F2F2;
-    --main-text-color: #333;
-    --secondary-text-color: #666;
-}
-
-/* ================================================================= 
- * Base Typography & Layout Reset 
- * ================================================================= */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    --primary-color: #007acc;
+    --secondary-bg: #f4f7f9;
+    --text-color: #333;
+    --dark-bg: #2c3e50;
+    --card-bg: #ffffff;
+    --hover-text: #0056b3;
 }
 
 body {
-    font-family: 'Raleway', sans-serif; /* Matching the original LaTeX choice */
-    background-color: #f9f9f9;
-    color: var(--main-text-color);
+    font-family: 'Arial', sans-serif;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    scroll-behavior: smooth;
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-/* ================================================================= 
- * Header and Profile Area 
- * ================================================================= */
-.header-container {
-    background-color: var(--deepnavy);
-    padding: 40px 0;
-    border-bottom: 8px solid var(--slateteal);
-}
-
-#profile-summary h1 {
-    font-size: 3em;
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-#profile-summary p {
-    font-size: 1.2em;
-    color: #cccccc;
-}
-
-/* ================================================================= 
- * Section Styling 
- * ================================================================= */
-.section {
-    padding: 60px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.section-content {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-size: 2em;
-    color: var(--deepnavy);
-    border-left: 5px solid var(--slateteal);
-    padding-left: 15px;
-    margin-bottom: 40px;
-}
-
-.deep-bg {
-    background-color: var(--softgrey);
-}
-.tech-bg {
-    background-color: #eef;
-}
-
-/* Grid Layout for general sections (e.g., About Me) */
-.grid-layout {
-    display: grid;
-    grid-template-columns: 1.5fr 2.5fr; /* Image/Visual on left, Text on right */
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.col-image {
-    text-align: center;
-}
-
-.col-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* ================================================================= 
- * Experience/Job Entry Styling 
- * ================================================================= */
-.job-entry {
-    margin-bottom: 35px;
-    padding: 20px;
-    border-left: 5px solid var(--slateteal);
-    background-color: #fcfcfc;
+/* Header & Nav */
+header {
+    background-color: white;
+    padding: 15px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
+header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 20px; }
+header .logo { font-size: 1.5em; font-weight: bold; color: var(--primary-color); }
+nav a { margin-left: 20px; text-decoration: none; color: #333; transition: color 0.2s; }
+nav a:hover { color: var(--hover-text); }
 
-.job-entry h3 {
-    font-size: 1.4em;
-    color: var(--deepnavy);
-    margin-bottom: 10px;
-}
+/* Sections */
+section { padding: 50px 20px; margin-bottom: 40px; background-color: var(--card-bg); border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); }
+h2 { border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; color: #333; margin-bottom: 30px; display: inline-block; }
 
-.job-entry p {
-    padding-left: 10px;
-}
+/* Hero */
+.hero { background-color: var(--dark-bg); color: white; padding: 80px 20px; text-align: center; border-radius: 8px; margin-bottom: 60px; }
+.hero h1 { font-size: 3.5em; margin-bottom: 10px; }
+.hero p { font-size: 1.5em; margin-bottom: 30px; }
+.button { background-color: var(--primary-color); color: white; padding: 12px 25px; border: none; border-radius: 5px; text-decoration: none; display: inline-block; transition: 0.3s; }
+.button:hover { background-color: var(--hover-text); }
 
-.job-entry ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 5px;
-}
-
-/* ================================================================= 
- * Footer / Contact Area 
- * ================================================================= */
-#contact-footer {
-    background-color: var(--deepnavy);
-    color: #ffffff;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.social-link {
-    color: #ffffff;
-    font-size: 2em;
-    transition: color 0.3s;
-}
-
-.social-link:hover {
-    color: var(--slateteal);
-}
+/* Responsive */
+@media (max-width: 600px) { .hero h1 { font-size: 2.5em; } }

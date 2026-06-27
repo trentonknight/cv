@@ -1,274 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jason N Mansfield | Platform Engineer & DevOps Portfolio</title>
-    
-    <!-- STYLING: Pure CSS, no external libraries -->
-    <style>
-        :root {
-            --primary-color: #007acc;
-            /* Using professional, slightly muted tones for a clean look */
-            --secondary-bg: #f4f7f9;
-            --text-color: #333;
-            --dark-bg: #2c3e50;
-            --card-bg: #ffffff;
-            --hover-text: #0056b3;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: var(--secondary-bg);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        /* 1. Header/Navigation Styling */
-        header {
-            background-color: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            position: sticky; /* Makes the nav bar sticky */
-            top: 0;
-            z-index: 10;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: var(--hover-text);
-        }
-
-        /* 2. General Section Styling */
-        section {
-            padding: 50px 20px;
-            margin-bottom: 40px;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        h2 {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            color: #333;
-            margin-bottom: 30px;
-            display: inline-block;
-        }
-
-        /* 3. Hero Section Styling */
-        .hero {
-            background-color: var(--dark-bg);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 60px;
-        }
-
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            background-color: var(--hover-text);
-        }
-
-        /* 4. Grid and Card Layouts */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background-color: var(--secondary-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 122, 204, 0.2);
-        }
-
-        .card h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-        
-        /* 5. Skill List Styling */
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .skill-tag {
-            background-color: #e7f3ff;
-            color: var(--primary-color);
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            border: 1px solid var(--primary-color);
-        }
-
-        .skill-tag:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        /* Additional styling for the text-muted class used in cards */
-        .text-muted {
-            color: #555;
-            font-size: 1.0em;
-            margin-bottom: 15px;
-        }
-
-
-        /* Utility for two-column balance */
-        .flex-group {
-            display: flex;
-            gap: 30px;
-        }
-
-        .section-half {
-            flex: 1;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .flex-group {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            .hero p {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+    <title>Jason N Mansfield | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="script-ready">
+<body>
 
-    <!-- HEADER/NAV Bar -->
     <header>
         <div class="container">
-            <div class="logo">John Doe</div>
+            <div class="logo">Jason Mansfield</div>
             <nav>
-                <!-- Using data-section attribute for improved JavaScript targeting -->
-                <a href="#projects" data-section>Projects</a>
-                <a href="#skills" data-section>Skills</a>
-                <a href="#contact" data-section style="color: var(--primary-color); font-weight: bold;">Contact</a>
+                <a href="#main-content">Experience</a>
+                <a href="#contact">Contact</a>
             </nav>
-        </div >
+        </div>
     </header>
 
-    <!-- 1. HERO SECTION -->
     <section class="hero">
-        <h1>John Doe</h1>
-        <p class="subtitle">Full Stack Developer | Building Scalable and Intuitive Web Applications</p>
+        <h1>Jason Mansfield</h1>
+        <p>Platform Engineer | DevOps Architect</p>
         <a href="#contact" class="button">Get In Touch</a>
     </section>
 
-    <!-- Added padding for better scrolling and spacing -->
-    <section id="section-padding" style="padding: 60px 0;"></section>
+    <main id="main-content"></main>
 
-    <main>
-        <section id="main-content" style="padding: 40px 0;">
-            <!-- Content will be dynamically generated here -->
-        </section>
-    </main>
-
-    <footer id="contact" style="padding: 60px 0; text-align: center; background-color: #f8f9fa;">
+    <footer id="contact" style="text-align: center; padding: 40px;">
         <h2>Ready to build something amazing?</h2>
-        <p class="lead">Connect with me to discuss your next big project.</p>
-        <a href="mailto:john.doe@email.com" class="button" style="margin-top: 20px;">Email Me</a>
+        <a href="mailto:your-email@email.com" class="button">Email Me</a>
     </footer>
-    
-</main>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const mainContent = document.getElementById('main-content');
-
-    // Dummy content load (simulate dynamic loading)
-    mainContent.innerHTML = `
-        <h2 style="text-align: center; margin-bottom: 40px;">My Professional Experience & Skills</h2>
-        
-        <!-- Skills Section -->
-        <section id="skills-section" style="padding: 40px 0;">
-            <h3 style="border-bottom: 2px solid #007bff; padding-bottom: 10px;">Technical Skills</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">JavaScript / TypeScript</span>
-                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">React</span>
-                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Node.js</span>
-                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Python</span>
-                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">React Hooks</span>
-                <span style="background-color: #e9ecef; padding: 10px 20px; border-radius: 5px; cursor: pointer;">SQL</span>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience-section" style="padding: 40px 0;">
-            <h3 style="border-bottom: 2px solid #007bff; padding-bottom: 10px;">Professional Experience</h3>
-            <div style="border-left: 4px solid #007bff; padding-left: 20px; margin-bottom: 30px;">
-                <h4 style="margin: 0;">Senior Software Engineer at Tech Solutions Inc.</h4>
-                <p style="margin: 5px 0;">*Jan 2021 - Present</p>
-                <p style="margin: 5px 0;">Developed and maintained high-throughput microservices using Node.js and TypeScript, improving system resilience and reducing latency by 25%.</p>
-                <p style="margin: 5px 0;">Led junior developers in code reviews and architectural decision-making, focusing on best practices and clean code architecture.</p>
-            </div>
-            <div style="border-left: 4px solid #28a745; padding-left: 20px; margin-bottom: 30px;">
-                <h4 style="margin: 0;">Junior Developer at Startup Innovations</h4>
-                <p style="margin: 5px 0;">*Jun 2019 - Dec 2020</p>
-                <p style="margin: 5px 0;">Built initial client dashboard using React and simple API integration, handling user authentication and state management.</p>
-            </div>
-        </section>
-    `;
-});
-</script>
+    <script src="script.js"></script>
+</body>
+</html>

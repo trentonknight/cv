@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
     <title>{{ personal.name }} | Resume</title>
+    <!-- TerminalCSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
+    <style>
+        .card { border: 1px solid #e1e1e1; padding: 1rem; margin-bottom: 1rem; }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>{{ personal.name }}</h1>
-        <p>{{ personal.title }}</p>
-        <p>{{ personal.location }} | {{ personal.email }} | {{ personal.phone }}</p>
-        <p>Clearance: {{ personal.clearance }}</p>
-    </header>
-    
-    <main>
-        <!-- Main Experience -->
-        <h2>Professional Experience</h2>
-        {% for job in main %}
-        <div class="card">
-            <h3>{{ job.company }}</h3>
-            <p><strong>{{ job.role }}</strong> | {{ job.dates }}</p>
-            <ul>
-                {% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}
-            </ul>
-        </div>
-        {% endfor %}
+<body class="terminal">
+    <div class="container">
+        <header class="terminal-nav">
+            <div class="terminal-logo">
+                <div class="logo terminal-prompt">{{ personal.name }}</div>
+            </div>
+            <nav class="terminal-menu">
+                <ul>
+                    <li><a href="mailto:{{ personal.email }}">{{ personal.email }}</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <!-- Research -->
-        <h2>Technical Research & Applied AI</h2>
-        <ul>
-            {% for r in research %}
-            <li><strong>{{ r.topic }}</strong>: {{ r.desc }}</li>
-            {% endfor %}
-        </ul>
-
-        <!-- Military History -->
-        <h2>Full Armed Forces History</h2>
-        {% for job in addendum %}
-        <div class="card">
-            <h3>{{ job.company }} - {{ job.role }}</h3>
-            <p>{{ job.dates }} | {{ job.location }}</p>
-            <ul>
-                {% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}
-            </ul>
-        </div>
-        {% endfor %}
-    </main>
+        <main>
+            <section>
+                <h2>Professional Experience</h2>
+                {% for job in main %}
+                <div class="card">
+                    <h3>{{ job.company }}</h3>
+                    <p><strong>{{ job.role }}</strong> | {{ job.dates }}</p>
+                    <ul>
+                        {% for bullet in job.bullets %}<li>{{ bullet }}</li>{% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </section>
+        </main>
+    </div>
 </body>
 </html>

@@ -1,5 +1,4 @@
 /* --- Global Layout --- */
-/* We remove the 'container' constraint from the body or use a wrapper */
 .page-wrapper {
     display: flex !important;
     align-items: flex-start !important;
@@ -11,8 +10,23 @@
 
 main {
     flex: 1 !important;
-    min-width: 0; /* Prevents main content from overflowing or wrapping */
+    min-width: 0;
     padding-left: 40px;
+}
+
+/* --- Added Spacing --- */
+main h2 {
+    margin-top: 3rem;   /* Spacing above headers */
+    margin-bottom: 1.5rem; /* Spacing below headers */
+    color: #4ade80;
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+main ul {
+    margin-bottom: 2rem;
 }
 
 /* --- Sidebar Styling --- */
@@ -23,25 +37,7 @@ main {
     padding-right: 16px;
 }
 
-.sidebar-logo {
-    color: #4ade80;
-    font-size: 1.2em;
-    font-family: monospace;
-    text-decoration: none;
-    margin-bottom: 16px;
-    display: block;
-}
-
-.sidebar-nav { margin-bottom: 16px; }
-.sidebar-divider { border-top: 1px solid #4ade80; margin: 14px 0; }
-.sidebar-contact { 
-    font-family: monospace; 
-    font-size: 0.8em; 
-    color: #8a9b96; 
-    line-height: 1.6; 
-}
-.sidebar-links { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
-.sidebar-links a { color: #666; text-decoration: none; }
+/* ... (Keep your existing sidebar-logo, nav, and contact styles) ... */
 
 /* --- Component Specifics --- */
 .company-header {
@@ -51,14 +47,13 @@ main {
     margin-bottom: 10px;
 }
 
-/* Fix for image_dd18fe.png and other logos */
 .company-logo {
     display: block;
     width: 50px !important;
     height: 50px !important;
-    object-fit: contain; /* Ensures the logo image fits without distortion */
+    object-fit: contain;
     border-radius: 4px;
-    flex-shrink: 0; /* Prevents the image from being squished */
+    flex-shrink: 0;
 }
 
 /* --- Responsive & Print --- */

@@ -4,7 +4,12 @@
     </a>
     
     <nav class="sidebar-nav">
-        {% set nav_items = [('index', 'Home', 'index.html'), ('exp', 'Experience', 'experience.html'), ('svc', 'Service History', 'service.html'), ('con', 'Contacts', 'contacts.html')] %}
+        {% set nav_items = [
+            ('index', 'Home', 'index.html'), 
+            ('exp', 'Experience', 'experience.html'), 
+            ('svc', 'Service History', 'service.html'), 
+            ('con', 'Contacts', 'contacts.html')
+        ] %}
         {% for id, label, url in nav_items %}
             <a href="{{ url }}" class="btn {{ 'btn-primary' if page == id else 'btn-default' }} btn-block">
                 {{ label }}
@@ -12,15 +17,14 @@
         {% endfor %}
     </nav>
 
-    <div class="sidebar-divider divider-accent"></div>
+    <div class="sidebar-divider"></div>
 
     <nav class="sidebar-pdfs">
         <a href="{{ personal.pdf_main }}" class="btn btn-ghost btn-block"> ⤓ Professional CV (PDF) </a>
         <a href="{{ personal.pdf_addendum }}" class="btn btn-ghost btn-block"> ⤓ Service History (PDF) </a>
-        {# If you add a contacts PDF to your YAML later, you can map it here #}
     </nav>
 
-    <div class="sidebar-divider divider-accent"></div>
+    <div class="sidebar-divider"></div>
 
     <div class="sidebar-contact">
         <div>{{ personal.location }}</div>

@@ -25,7 +25,6 @@ Direct access to my professional credentials:
 * [Professional CV (PDF)](https://trentonknight.github.io/cv/JNMansfield-Professional-CV.pdf)
 * [Service History (PDF)](https://trentonknight.github.io/cv/JNMansfield-Service-History.pdf)
 
----
 
 ## 📬 Connect
 * **LinkedIn:** [linkedin.com/in/trentonknight/](https://linkedin.com/in/trentonknight/)

@@ -6,28 +6,32 @@
         {{ personal.name }}
     </a>
     <nav style="margin-bottom: 16px;">
+        {# Home #}
         {% if page == "index" %}
-            <a href="index.html" class="btn btn-primary btn-block"
-               style="text-align: left;"> Home </a>
+            <a href="index.html" class="btn btn-primary btn-block" style="text-align: left;"> Home </a>
         {% else %}
-            <a href="index.html" class="btn btn-default btn-block"
-               style="text-align: left;"> Home </a>
+            <a href="index.html" class="btn btn-default btn-block" style="text-align: left;"> Home </a>
         {% endif %}
 
+        {# Experience #}
         {% if page == "exp" %}
-            <a href="experience.html" class="btn btn-primary btn-block"
-               style="text-align: left;"> Experience </a>
+            <a href="experience.html" class="btn btn-primary btn-block" style="text-align: left;"> Experience </a>
         {% else %}
-            <a href="experience.html" class="btn btn-default btn-block"
-               style="text-align: left;"> Experience </a>
+            <a href="experience.html" class="btn btn-default btn-block" style="text-align: left;"> Experience </a>
         {% endif %}
 
-        {% if page == "add" %}
-            <a href="addendum.html" class="btn btn-primary btn-block"
-               style="text-align: left;"> Service History </a>
+        {# Service History #}
+        {% if page == "svc" %}
+            <a href="service.html" class="btn btn-primary btn-block" style="text-align: left;"> Service History </a>
         {% else %}
-            <a href="addendum.html" class="btn btn-default btn-block"
-               style="text-align: left;"> Service History </a>
+            <a href="service.html" class="btn btn-default btn-block" style="text-align: left;"> Service History </a>
+        {% endif %}
+
+        {# Contacts #}
+        {% if page == "con" %}
+            <a href="contacts.html" class="btn btn-primary btn-block" style="text-align: left;"> Contacts </a>
+        {% else %}
+            <a href="contacts.html" class="btn btn-default btn-block" style="text-align: left;"> Contacts </a>
         {% endif %}
     </nav>
 

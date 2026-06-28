@@ -40,7 +40,8 @@ def render():
     pages = [
         {'template': 'index.html.j2', 'output': 'index.html', 'page_id': 'index'},
         {'template': 'experience.html.j2', 'output': 'experience.html', 'page_id': 'exp'},
-        {'template': 'addendum.html.j2', 'output': 'addendum.html', 'page_id': 'add'}
+        {'template': 'service.html.j2', 'output': 'service.html', 'page_id': 'svc'},
+        {'template': 'contacts.html.j2', 'output': 'contacts.html', 'page_id': 'con'}
     ]
 
     for p in pages:
@@ -58,7 +59,7 @@ def render():
     # 5. Generate PDFs
     pdf_map = {
         'experience.html': 'JNMansfield-Professional-CV.pdf',
-        'addendum.html': 'JNMansfield-Service-History.pdf'
+        'contacts.html': 'JNMansfield-Service-History.pdf'
     }
 
     for html_file, pdf_file in pdf_map.items():

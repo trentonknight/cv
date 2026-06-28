@@ -1,0 +1,56 @@
+{% import 'macros.html.j2' as m %}
+{# Set the page variable for sidebar highlighting #}
+{% set page = "add" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Service History | {{ personal.name }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .contact-card { margin-bottom: 15px; }
+        .company-header h3 { margin: 0; }
+    </style>
+</head>
+<body class="terminal">
+    <div class="page-wrapper">
+        
+        {% include 'sidebar.html.j2' %}
+
+        <main>
+            <h2>Service History & Contacts</h2>
+            
+            {# Loop through Military Contacts #}
+            <h3>Military Contacts</h3>
+            {% for person in contacts.military_contacts %}
+            <div class="card contact-card">
+                <div class="company-header">
+                    <h3>{{ person.company }}</h3>
+                </div>
+                <p><strong>{{ person.role }}</strong> | {{ person.name }}</p>
+                <p><em>{{ person.contact }}</em></p>
+            </div>
+            {% endfor %}
+
+            {# Loop through Corporate Contacts #}
+            <h3>Corporate Contacts</h3>
+            {% for person in contacts.corporate_contacts %}
+            <div class="card contact-card">
+                <div class="company-header">
+                    <h3>{{ person.company }}</h3>
+                </div>
+                <p><strong>{{ person.role }}</strong> | {{ person.name }}</p>
+                <p><em>{{ person.contact }}</em></p>
+            </div>
+            {% endfor %}
+
+            <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e1e1e1;">
+                <a href="{{ personal.pdf_addendum }}" class="btn btn-ghost">
+                    Download {{ personal.pdf_addendum | replace('.pdf', '') }}
+                </a>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

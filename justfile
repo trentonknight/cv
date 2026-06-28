@@ -30,4 +30,5 @@ dev: render
 
 # Clean up build artifacts
 clean:
-    rm -rf docs/
+    rm -rf docs/*.html
+    rm -rf docs/*.pdf

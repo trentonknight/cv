@@ -1,0 +1,66 @@
+{# src/sidebar.html.j2 #}
+<aside class="terminal sidebar web-only"
+       style="width: 240px; flex-shrink: 0; border-right: 2px solid #4ade80; padding-right: 16px;">
+    <a href="index.html" class="sidebar-logo"
+       style="color: #4ade80; font-size: 1.2em; font-family: monospace; text-decoration: none; margin-bottom: 16px; display: block;">
+        {{ personal.name }}
+    </a>
+    <nav style="margin-bottom: 16px;">
+        {# Home #}
+        {% if page == "index" %}
+            <a href="index.html" class="btn btn-primary btn-block" style="text-align: left;"> Home </a>
+        {% else %}
+            <a href="index.html" class="btn btn-default btn-block" style="text-align: left;"> Home </a>
+        {% endif %}
+
+        {# Experience #}
+        {% if page == "exp" %}
+            <a href="experience.html" class="btn btn-primary btn-block" style="text-align: left;"> Experience </a>
+        {% else %}
+            <a href="experience.html" class="btn btn-default btn-block" style="text-align: left;"> Experience </a>
+        {% endif %}
+
+        {# Service History #}
+        {% if page == "svc" %}
+            <a href="service.html" class="btn btn-primary btn-block" style="text-align: left;"> Service History </a>
+        {% else %}
+            <a href="service.html" class="btn btn-default btn-block" style="text-align: left;"> Service History </a>
+        {% endif %}
+
+        {# Contacts #}
+        {% if page == "con" %}
+            <a href="contacts.html" class="btn btn-primary btn-block" style="text-align: left;"> Contacts </a>
+        {% else %}
+            <a href="contacts.html" class="btn btn-default btn-block" style="text-align: left;"> Contacts </a>
+        {% endif %}
+    </nav>
+
+    <div style="border-top: 1px solid #4ade80; margin: 14px 0;"></div>
+
+    <nav style="margin-bottom: 16px;">
+        <a href="JNMansfield-Professional-CV.pdf" class="btn btn-ghost btn-block"
+           style="text-align: left; font-size: 0.85em; color: #8a9b96;">
+            ⤓ Professional CV (PDF)
+        </a>
+        <a href="JNMansfield-Service-History.pdf" class="btn btn-ghost btn-block"
+           style="text-align: left; font-size: 0.85em; color: #8a9b96;">
+            ⤓ Service History (PDF)
+        </a>
+    </nav>
+
+    <div style="border-top: 1px solid #4ade80; margin: 14px 0;"></div>
+
+    {# Personal Contact Info #}
+    <div style="font-family: monospace; font-size: 0.8em; color: #8a9b96; line-height: 1.6;">
+        <div style="margin-bottom: 4px;">{{ personal.location }}</div>
+        <a href="mailto:{{ personal.email }}"
+           style="color: #4ade80; text-decoration: none;">{{ personal.email }}</a><br>
+        <span style="display: block; margin-bottom: 8px;">{{ personal.phone }}</span>
+        
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+            <a href="https://{{ personal.linkedin }}" style="color: #666; text-decoration: none;">LinkedIn</a>
+            <a href="https://{{ personal.github }}" style="color: #666; text-decoration: none;">GitHub</a>
+            <a href="https://{{ personal.gitlab }}" style="color: #666; text-decoration: none;">GitLab</a>
+        </div>
+    </div>
+</aside>

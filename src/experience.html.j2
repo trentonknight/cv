@@ -1,43 +1,23 @@
 {% import 'macros.html.j2' as m %}
+{# Set the page variable for sidebar highlighting #}
+{% set page = "exp" %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Experience | {{ personal.name }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/terminal.css@0.7.4/dist/terminal.min.css" />
-    <style>
-        @media print {
-            .web-only { display: none; }
-            .card { break-inside: avoid; margin-bottom: 20px; }
-            .terminal-nav { display: none; }
-        }
-        @media screen {
-            .print-only { display: none; }
-        }
-        .company-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-        .company-logo {
-            display: block;
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body class="terminal">
-    <div class="container">
-        <nav class="terminal-nav">
-            <a href="index.html" class="btn btn-default">← Home</a>
-        </nav>
+    <div class="container page-wrapper">
         
+        {% include 'sidebar.html.j2' %}
+
         <main>
             <h2>Professional Experience</h2>
-            {% for job in main %}
+            {# Corrected loop to point to experience.main #}
+            {% for job in experience.main %}
             <div class="card">
                 <div class="company-header">
                     <img src="assets/{{ job.image.split('/')[-1] }}" 
@@ -53,13 +33,10 @@
                 </ul>
             </div>
             {% endfor %}
-        </main>
 
-        <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e1e1e1;">
-            <p>Looking for the complete background?</p>
-            <a href="addendum.html" class="btn btn-ghost">View Service History</a>
-            <a href="JNMansfield-Service-History.pdf" class="btn btn-ghost">Download Service History PDF</a>
-        </footer>
+            <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e1e1e1;">
+            </footer>
+        </main>
     </div>
 </body>
 </html>

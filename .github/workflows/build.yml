@@ -3,8 +3,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      # WeasyPrint requires Pango and Cairo libraries
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0
+        
       - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true # Speeds up subsequent runs
+          
       - name: Build
         run: |
           uv sync
           just render
+          
+      # Optional: Deploy to GitHub Pages
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs/'

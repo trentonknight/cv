@@ -25,11 +25,9 @@ Direct access to my professional credentials:
 * [Professional CV (PDF)](https://trentonknight.github.io/cv/JNMansfield-Professional-CV.pdf)
 * [Service History (PDF)](https://trentonknight.github.io/cv/JNMansfield-Service-History.pdf)
 
----
 
 ## 📬 Connect
 * **LinkedIn:** [linkedin.com/in/trentonknight/](https://linkedin.com/in/trentonknight/)
 * **GitHub:** [@trentonknight](https://github.com/trentonknight)
 * **Email:** [trentonknight@gmail.com](mailto:trentonknight@gmail.com)
 
-*“Bridging the gap between legacy infrastructure and the future of AI.”*

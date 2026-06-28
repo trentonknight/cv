@@ -32,4 +32,3 @@ Direct access to my professional credentials:
 * **GitHub:** [@trentonknight](https://github.com/trentonknight)
 * **Email:** [trentonknight@gmail.com](mailto:trentonknight@gmail.com)
 
-*“Bridging the gap between legacy infrastructure and the future of AI.”*

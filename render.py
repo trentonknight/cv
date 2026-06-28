@@ -9,6 +9,7 @@ from weasyprint import HTML
 DATA_DIR = 'data'
 SRC_DIR = 'src'
 DOCS_DIR = 'docs'
+ASSETS_DIR = 'assets'
 
 def render():
     # 1. Setup Environment
@@ -19,24 +20,24 @@ def render():
     context = {'base_asset_path': 'assets'}
     for file in glob.glob(os.path.join(DATA_DIR, '*.yaml')):
         filename = os.path.basename(file)
-        key = os.path.splitext(filename)[0] # 'personal.yaml' -> 'personal'
+        key = os.path.splitext(filename)[0]
         with open(file, 'r') as f:
             data = yaml.safe_load(f)
             
+            # Smart unwrapping
             if isinstance(data, dict) and key in data and len(data) == 1 and not isinstance(data[key], list):
                 context[key] = data[key]
             else:
                 context[key] = data
-
             print(f"Loaded {filename} into context['{key}']")
 
-    # 3. Synchronize Assets
-    if os.path.exists('assets'):
-        target_assets = os.path.join(DOCS_DIR, 'assets')
-        if os.path.exists(target_assets):
-            shutil.rmtree(target_assets)
-        shutil.copytree('assets', target_assets)
-        print("Assets synchronized.")
+    # 3. Synchronize Assets (Always happens so docs/ stays self-contained)
+    target_assets = os.path.join(DOCS_DIR, ASSETS_DIR)
+    if os.path.exists(target_assets):
+        shutil.rmtree(target_assets)
+    if os.path.exists(ASSETS_DIR):
+        shutil.copytree(ASSETS_DIR, target_assets)
+        print("Assets synchronized to docs/assets/.")
 
     # 4. Render HTML
     env = Environment(loader=FileSystemLoader(SRC_DIR))
@@ -52,7 +53,6 @@ def render():
         template = env.get_template(p['template'])
         output_path = os.path.join(DOCS_DIR, p['output'])
         
-        # Merge page-specific ID into context
         page_context = context.copy()
         page_context['page'] = p['page_id']
         

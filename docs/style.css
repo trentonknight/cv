@@ -1,3 +1,10 @@
+/* --- Root Variables: Orange Theme --- */
+:root {
+    --terminal-accent: #FF9800; /* Vibrant Orange */
+    --terminal-bg: #1a1a1a;
+    --terminal-grey: #a0a0a0;
+}
+
 /* --- Global Layout --- */
 .page-wrapper {
     display: flex !important;
@@ -14,37 +21,117 @@ main {
     padding-left: 40px;
 }
 
-/* --- Added Spacing --- */
+/* --- Typography & Headers --- */
 main h2 {
-    margin-top: 3rem;   /* Spacing above headers */
-    margin-bottom: 1.5rem; /* Spacing below headers */
-    color: #4ade80;
+    color: var(--terminal-accent);
+    border-bottom: 2px solid var(--terminal-accent);
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
-main section {
+/* --- Hero Container (Watermark) --- */
+.hero-container {
+    position: relative;
+    padding: 2rem;
+    border: 2px solid var(--terminal-accent);
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 
-main ul {
-    margin-bottom: 2rem;
+.hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/index.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
 }
 
-/* --- Sidebar Styling --- */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Sidebar --- */
 .sidebar {
     width: 240px;
     flex-shrink: 0;
-    border-right: 2px solid #4ade80;
+    border-right: 2px solid var(--terminal-accent);
     padding-right: 16px;
 }
 
-/* ... (Keep your existing sidebar-logo, nav, and contact styles) ... */
+.sidebar-logo {
+    color: var(--terminal-accent);
+    font-size: 1.2em;
+    font-family: monospace;
+    text-decoration: none;
+    margin-bottom: 16px;
+    display: block;
+}
 
-/* --- Component Specifics --- */
-.company-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
+.sidebar-divider {
+    border-top: 1px solid var(--terminal-accent);
+    margin: 14px 0;
+}
+
+/* Sidebar PDF nav spacing */
+.sidebar-pdfs { 
+    margin-bottom: 16px; 
+}
+
+/* Ensure the link container forces a vertical stack */
+.sidebar-links { 
+    display: flex !important; 
+    flex-direction: column !important; 
+    align-items: flex-start !important; 
+    gap: 0.5rem; /* Adds space between the links */
+    margin-top: 10px; 
+}
+
+/* Ensure individual links don't try to stay inline */
+.sidebar-links a { 
+    display: block !important; 
+    width: 100%; 
+    text-decoration: none; 
+}
+
+/* Sidebar phone display */
+.phone-display { 
+    display: block; 
+    margin-bottom: 8px; 
+}
+
+/* --- Buttons --- */
+.btn.btn-primary {
+    background-color: var(--terminal-accent) !important;
+    border-color: var(--terminal-accent) !important;
+    color: #fff !important;
+}
+
+.btn.btn-default {
+    border-color: var(--terminal-accent) !important;
+    color: var(--terminal-accent) !important;
+}
+
+/* --- Skills & Cards --- */
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+
+.skill-card {
+    border: 1px solid var(--terminal-accent);
+    padding: 1rem;
+    text-align: center;
+    font-family: monospace;
 }
 
 .company-logo {
@@ -54,7 +141,11 @@ main ul {
     object-fit: contain;
     border-radius: 4px;
     flex-shrink: 0;
+    padding: 2px;
 }
+
+/* --- Utility Classes --- */
+.text-accent { color: var(--terminal-accent); }
 
 /* --- Responsive & Print --- */
 @media print {
@@ -64,6 +155,6 @@ main ul {
 
 @media (max-width: 768px) {
     .page-wrapper { flex-direction: column; }
-    .sidebar { width: 100%; border-right: none; border-bottom: 2px solid #4ade80; margin-bottom: 20px; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 2px solid var(--terminal-accent); margin-bottom: 20px; }
     main { padding-left: 0; }
 }

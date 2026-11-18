@@ -1,0 +1,376 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Jason N}{Mansfield}{Platform Engineer}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.26}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{id.jpg}
+\end{center}
+
+\bg{cvgreen}{white}{About me}\\[0.5em]
+Highly accomplished Platform Engineer and Site Reliability Engineer (SRE) with expertise in designing, implementing, and managing scalable and secure systems. Proven track record of successfully managing and integrating critical applications, including Keycloak, Hashicorp Vault, Terraform, GitLab, and Anchore. Skilled in scripting languages such as Bash, Python, and JavaScript, with a strong foundation in systems programming. Additionally, experienced in harnessing the power of Artificial Intelligence (AI) with various models, including Olama Models, Google Vertex AI Models and whatever is useful in Hugging Face, to drive innovation and efficiency. With a strong technical background and a passion for delivering high-quality solutions, I excel in complex technical environments and drive technical excellence in fast-paced and dynamic settings.
+{\footnotesize
+
+\bigskip
+
+
+\bg{cvgreen}{white}{Bluf} \\[0.5em]
+Jason Mansfield
+
+USN 2001 - 2005
+
+USCG 2005 - 2023
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+GitOps ~•~ DevOps ~•~ Platform Engineer ~•~ DevSecOps
+
+\bigskip
+
+\bg{cvgreen}{white}{Clearance}\\[0.5em]
+TS/SCI w CI Poly
+
+\begin{flushleft}
+\vspace{4em}
+\infobubble{\faEnvelope}{cvgreen}{white}{\scriptsize{trentonknight@gmail.com}}
+\infobubble{\faGitlab}{cvgreen}{white}{\href{https://gitlab.com/trentonknight}{trentonknight}}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/trentonknight}{trentonknight}}
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/trentonknight/}{trentonknight}}
+\infobubble{\faMobile}{cvgreen}{white}{(757)753-0085}
+\infobubble{\faCompass}{cvgreen}{white}{\href{https://goo.gl/maps/B68pRogKoad3rUmT8?coh=178573&entry=tt}{Clayton, NC}}
+\end{flushleft}
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Degrees}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2013}{Bachelor of Science}{Computer Science}{Regis University \color{headerblue}}{
+The `Bachelor of Science in Computer Science` degree program offered at `REGIS University` covers areas of Computer architecture, Object-Oriented Analysis and Design, Software Engineering, and Operating Systems. Additionally, the B.S. in Computer Science degree program (CPS) is accredited by the `Computing Commission of ABET` and is listed by the
+NSA as one of the select few National Centers of Academic Excellence.
+   }{regis.png} 
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Language Experience}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{html, css} &  \barrule{0.25}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{YAML} & \barrule{0.55}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.55}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.20}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Rust} & \barrule{0.10}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.30}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{C++} & \barrule{0.10}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{java} & \barrule{0.10}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{powershell} & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{bash} & \barrule{0.55}{0.5em}{cvpurple} \\
+\end{tabular}
+\end{minipage}
+
+\section*{Certifications}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2020}{CompTIA}{Security+ ce}{Exp 02/04/25 \color{cvred}}{CompTIA Security+ is a global certification that validates the baseline skills necessary to perform core security functions and pursue an IT security career. }{logosecurityplus.png} \\
+    \cvevent{2022}{CompTIA}{CySA+ ce}{Exp 02/04/25 \color{cvred}}{CompTIA Cybersecurity Analyst (CySA+) is a certification for cyber professionals tasked with incident detection, prevention and response through continuous security monitoring.}{logocysa.png} \\
+\end{tabular}
+%\vspace{3em}
+
+
+\section*{Detailed work history}
+
+
+\vspace{4em}
+
+
+\begin{tabular}{r| p{0.4\textwidth} c}
+
+
+\cvevent{2024-Current}{24x7Systems}{Platform Engineer}{ CME \color{cvred}}{At this time I am employed by \href{https://24x7systems.com/}{24x7 Systems} at this time.  }{24x7.png} \\
+
+\cvevent{2023-2024}{Caci International Inc}{DevOps Engineer}{EPT \color{cvred}}{
+At this time I am employed by \href{https://www.caci.com}{CACI}. My Official Title is: Software Development T5 which consists of efforts in DevOps, GitOps and a lot of k8 building, troubleshooting within primarily Gitlab, ArgoCD, KeyCloak, Vault and much more. I spend some time scripting with whatever works best at the time such as Python, Bash, Javascript with a variety of efforts with APIs. This is an amazing job with amazing teams located on base FT. Liberty.}{caci.jpg} \\
+
+\cvevent{2023}{Arsiem}{DevSecOps intern}{DoD Skillbridge \color{cvred}}{
+ During my final 6 months of service I participated in an amazing program called DoD Skillbridge with the \href{https://www.arsiem.com/}{ARSIEM Corporation}. As an intern I used Gitlab Actions to provide secure code to a Azure env using CI/CD.}{arsiem.png} \\
+
+\cvevent{2021--2023}{United States Coast Guard}{Information Technology Specialist 1st class}{USCG CYBER COA Branch \color{cvred}}{ As a member of the Assessments Blue Team I Developed Ruck kits to ensure operators each have a fully functional ruck with enough resources to perform their tasks even if other rucks are lost during operation. Taught the majority of new blue team members on accessing and programming cisco switches using the latest USCG TCTOs and firmware along with serial devices or ssh. Developed a single location for COAB members to access and understand existing licensed software and a keypass database for collaborating with authentication and account management on Teams. Developed guidance for web.git.mil. Developed several guides to assist members with installation of selected software tools such as: Nessus, Grassmarlin, Pentest WS Offline Scanner, Sharphound, AppDetectivePro, Chainsaw, Bloodhound. Served as a Blue Team analyst on several missions collecting data for reports to determine units posture. Assisted with development of bootable WIMs images for deployment of laptops as well as outline apt packages for Kali. Provided assistance to USCG FINCEN via use of Python Pandas library for collection of billing data external to CGCYBER efforts.}{blueteam.jpg} \\
+
+\cvevent{2017--2021}{United States Coast Guard}{Information Technology Specialist 1st class}{USCG CYBER NOSC EOC\color{cvred}}{
+ As a Watch Supervisor I would develop and perform the DODIN and bi-weekly briefs to Leadership directly, supervise junior analysts, provide training to analysts, maintain analyst scheduling and many other duties.}{cgcyber.png} \\
+
+\cvevent{2014--2017}{United States Coast Guard}{Information Technology Specialist 2nd class}{USCGC DILIGENCE WMEC-616 \color{cvred}}{
+I Independently Managed the entire cutters onboard LAN network, this included cabling, and security for two Cisco 3750G switches.
+Troubleshoot shore side cabling issues connecting to WAN infrastructure in multiple locations such as Wilmington, NC, Key West
+Florida, Naval Station Guantanamo Bay Cuba, Naval Station Mayport Florida. Shipboard administrator for two host servers each
+containing multiple virtual servers including Microsoft Server 2008 R2 and Microsoft Exchange and others. I Managed both
+CGONE and SIPR networks and all associated equipment such as TACLANE, Routers, HDSL modems, and all cabling onboard
+and to the WAN. Administrated, repaired and replaced several satellite systems such as KVH (KU-Band) and Fleet Broadband
+(Inmarsat B). Maintained all shipboard workstations on both CGONE and SIPR networks handling installing, updating, recap, drmo
+and secure destruction of all associated hardware. Supported all shipboard printers including CGONE and SIPR side hardware.
+Maintained shipboard phone systems. Above duties as the only onboard technician, I was expected to qualify and stand watch as a
+"boatswain mate of the watch," "gangway petty officer of the watch," and "sounding and security watch." I volunteered for and
+stood security watch for law enforcement operations dealing with illegal migrants and drug trafficking detainees and "Anti Terrorist
+Force Protection."}{uscg.png} 
+
+\end{tabular}
+
+\vspace{4em}
+%\medskip
+
+\begin{tabular}{r| p{0.4\textwidth} c}
+
+
+ \cvevent{2010--2014}{United States Coast Guard}{Information Technology Specialist 2nd class}{US Coast Guard Finance Center \color{cvred}}{
+ESD Chesapeake is located at the US Coast Guard Finance Center in Chesapeake Virginia. During my time at the
+Finance Center, the Electronic Support Detachment Chesapeake stood up. Initially, I was attached to the Finance Center itself. When
+billeted to the Finance Center I performed many tasks related to IT related inventory. I spent almost 75\% of my time involved in
+Custodian associated functions during my first two years at FinCEN. I was assigned the responsibility of TASM or Trusted Agent
+Security Manager for a period. The TASM duty required me to manage our Trusted Agents and monitor their Certification Training
+and other needs. The Finance Center has two buildings, one consisting of primary accountants and financial type managers, while
+the second building annex houses primarily Database Administrators. The DBA's develop and maintain the business application, and
+we as Information Technology Specialists support Standardized workstations. Due to the vast variety of software used, the need for
+a solid understanding of Oracle database clients, Java environments, ODBC drivers and other financial suites needed. I also
+administrated a Nortel/Avaya CS1000 Public Branch Exchange and its associated premise, circuits and designated phones. 
+I was awarded the Commandant’s Letter of Commendation upon my departure from the USCG Finance center.
+ }{uscg.png} \\
+
+\cvevent{2007--2010}{United States Coast Guard}{Information Technology Specialist 3rd class}{USCGC LEGARE WMEC-912 \color{cvred}}{
+During my service with the USCGC LEGARE WMEC-912 and after USCG IT A school. I was a Surface swimmer, Combat Watchstander, Radio Watchstander,
+Bearing taker, Anti Terrorism Force Protection and many other responsibilities. Our primary missions were Law Enforcement
+related. Technician wise I administrated a Windows Exchange server and our Windows based customers as well as maintained an
+eON PBX and associated cabling. Satellite connectivity was always an issue and required constant adjustments and maintenance.
+During a 2009 mission to Africa I was appointed to administrate a VMWare based Linux server which hosted our guest nations
+using virtual Windows Servers and physical windows based non-standard laptops, this was part of an ongoing effort to improve
+various African countries maritime security forces. I also installed and administrated our SCCS or Shipboard Command and Control
+System a UNIX based platform. Due to my responsibilities as a surface swimmer, it was imperative to me that the SCCS was
+performing well amongst many other operational needs. Working with my fellow technicians we rebuilt cabling areas that
+degraded on a reasonably consistent basis. The ships alarm system although extremely basic had constant issues and needed to
+be rewire on many occasions. I received a Letter of Commendation at the end of this tour.
+}{uscg.png} 
+\end{tabular}
+
+\vspace{4em}
+
+\begin{tabular}{r| p{0.4\textwidth} c}
+    \cvevent{2003--2005}{United States Navy}{Aviation Ordnanceman 3rd class}{VFA-81 Sunliners\color{cvred}}{In 2004 VFA-81 deployed with Carrier Air Wing Seventeen CVW-17 on the USS John F. Kennedy CV-67 for its final cruise before decommissioning. My time in the Mediterranean and the Arabian Sea consisting of standard Aviation Ordnanceman tasks such as
+weapons systems maintenance, loading team member and other flight operation related efforts on the flight deck. During the course
+of operations in Iraq, 54,000 pounds of ordnance were dropped by the jets of CVW-17 squadrons, including F/A-18s Hornets from
+the Blue blaster of Strike Fighter Squadron (VFA) 34, the Rampagers of VFA-83, the Sunliners of VFA-81 and F-14 Tomcats from
+the Jolly Rogers of Fighter Squadron (VF) 103. The John F. Kennedy Strike group supported Operations "Iraqi Freedom,"
+"Enduring Freedom," and "Al Fajr." During flight operations, I spend the majority of my time (arming) and retrieving (de-arming if
+needed) several jets, something which became critical near the end of this patrol during Al Fajr or the second battle of Fallujah.}{VFA-81.png} \\
+
+      \cvevent{2001--2003}{United States Navy}{Aviation Ordnanceman 3rd class}{VFA-125 Rough Raiders \color{cvred}}{Began military career at Naval Air Station Lemoore (NASL) directly after boot camp and A school. I learned how to load and lead ordnance loading teams in a professional manner, work on a flight deck, safety and many other basics during this time. I had the pleasure of working with, and for, US Marines during my time with the Rough Raiders. I was awarded a Letter of Commendation at the end of this tour.
+      }{VFA-125.png} 
+
+\end{tabular}
+\vspace{4em}
+
+%\newpage
+
+\section*{Professional Contacts}
+\begin{tabular}{r| p{0.5\textwidth} c}
+\cvevent{2023-2024}{Caci International Inc}{DevOps Engineer}{DoD Skillbridge \color{cvred}}{
+   \begin{tabular}{l | ll}
+ Contact & \textbf{Holland Turner} \\ 
+ Corporation & Caci International Inc \\
+ Contact Role &  Supervisor \\
+ Timeframe & 2023 - 2024 \\
+ Contact Email & holland.turner@caci.com \\
+  & \infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/holland-turner-91901b25a/}{holland-turner-91901b25a}}
+ \\
+ \hline
+ \\
+ Contact & \textbf{} \\
+ Corporation & Caci International Inc \\
+ Contact Role & Project Manager \\
+ Timeframe & 2023 - 2024\\
+ Contact Email & steven.long@caci.com \\
+   Contact Mobile & (910) 551-8424\\
+  & \infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/steve-long-a8731569/}{steve-long-a8731569}}
+   \end{tabular}
+ 
+ }{caci.jpg} \\
+
+\cvevent{2023}{Arsiem}{DevSecOps intern}{DoD Skillbridge \color{cvred}}{
+   \begin{tabular}{l | ll}
+ Contact & \textbf{Nick Saba} \\ 
+ Corporation & ARSIEM \\
+ Contact Role &  Supervisor \\
+ Timeframe & 2023 \\
+ Contact Email & saba\_nick@arsiem.com \\
+ Contact Mobile & (410) 562-1050 \\
+  & \infobubble{\faGlobe}{cvgreen}{white}{\href{https://www.arsiem.com/about/}{Arsiem about}}
+ \\
+ \hline
+ \\
+ Contact & \textbf{Keith Pabst} \\
+ Corporation & ARSIEM \\
+ Contact Role & Chief Operation Officer \\
+ Timeframe & 2023 \\
+ Contact Email & keith@arsiem.com \\
+   Contact Mobile & (850) 972-9225 \\
+  & \infobubble{\faGlobe}{cvgreen}{white}{\href{https://www.arsiem.com/about/}{Keith Pabst, President}}
+   \end{tabular}
+ 
+ }{arsiem.png} \\
+
+    \cvevent{2021--2023}{United States Coast Guard}{Information Technology Specialist 1st class}{USCG CYBER COA Branch \color{cvred}}{ 
+\begin{tabular}{l | ll}
+ \\
+ \hline
+ \\
+ Contact & \textbf{Austin Favor} \\
+ UNIT & USCG CYBER COA Branch \\
+ Contact Role & Assessment Team Lead \\
+ Timeframe & 2022 \\
+ Contact Email & Austin.J.Favor@uscg.mil \\
+ Contact Mobile & (208) 946-8878 \\
+ \\ & \infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/austin-favor-8b52b0187/}{austin-favor-8b52b0187}}
+ \\
+ \hline
+ \\
+ Contact & \textbf{Zain LaMountain} \\
+ UNIT & USCG CYBER COA Branch \\
+ Contact Role & Assessment Team Lead \ Supervisor \\
+ Timeframe & 2022 \\
+ Contact Email & zane.b.lamountain@uscg.mil \\
+ Contact Mobile & (410) 409-1453 
+ \end{tabular}
+    
+    }{blueteam.jpg} 
+
+
+\end{tabular}
+
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+
+\cvevent{2017--2021}{United States Coast Guard}{Information Technology Specialist 1st class}{USCG CYBER NOSC EOC\color{cvred}}{
+ \begin{tabular}{l | ll}
+ \\
+ \hline
+ \\
+ Contact & \textbf{Drew Cheneler} \\
+ UNIT & USCG CYBER C-SOC \\
+ Contact Role & Battle Watch Captain \\
+ Timeframe & 2021 \\
+ Contact Email & Drew.M.Cheneler@uscg.mil \\
+ Contact Mobile & (571) 529-0035 \\
+ \\ & \infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/drew-cheneler-0a19a2177/}{drew-cheneler-0a19a2177}}
+ \\
+ \hline
+ \\
+ Contact & \textbf{Kurt Kuppert} \\
+ UNIT & USCG CYBER EOC \\
+ Contact Role & Battle Watch Captain \ Supervisor \\
+ Timeframe & 2018 \\
+ Contact Email & Kurt.M.Kuppert@uscg.mil \\
+ Contact Mobile & (540) 729-3534 \\
+ \\ & \infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/kurt-kuppert-8637331a4/}{kurt-kuppert-8637331a4}}
+ \\
+ \hline
+ \\
+ Contact & \textbf{Jason S Southworth} \\
+ UNIT & USCG CYBER EOC \\
+ Contact Role & Battle Watch Captain \ Supervisor \\
+ Timeframe & 2020 \\
+ Contact Email & Jason.S.Southworth@uscg.mil \\
+ Contact Mobile & (740) 876-1154 \\
+ \\ & \infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/jason-southworth-109a25bb/}{jason-southworth-109a25bb}}
+
+ \\
+ \hline
+ \\
+ Contact & \textbf{Nick Armstrong} \\
+ UNIT & USCG CYBER EOC \\
+ Contact Role &  Cyber Analyst\\
+ Timeframe & 2020 \\
+ Contact Email & Nickolas.A.Armstrong@uscg.mil \\
+ Contact Mobile & (843) 877-6390 \\
+ \\ & \infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/nick-armstrong-1476a819a/}{nick-armstrong-1476a819a}}
+ \end{tabular}
+
+ 
+ }{cgcyber.png} \\
+ 
+ 
+\end{tabular}
+
+\end{paracol}
+
+
+
+
+
+\vfill
+
+\fancyfoot{
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Jason N Mansfield \icon{\faEnvelopeO}{cvgreen}{} Clayton \icon{\faMapMarker}{cvgreen}{} North Carolina \icon{\faPhone}{cvgreen}{} (757) 753-0085 \icon{\faAt}{cvgreen}{} \protect\url{trentonknight@gmail.com}
+}
+
+
+\end{document}
+

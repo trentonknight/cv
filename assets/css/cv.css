@@ -178,6 +178,54 @@ body {
   margin: 0;
 }
 
+/* Mission Briefing (About & Specialization) */
+.briefing-box {
+  padding: 0.75rem 0.95rem;
+  background: var(--surface-card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--hunter);
+  border-radius: 4px;
+}
+
+.briefing-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-bottom: 0.45rem;
+  padding-bottom: 0.38rem;
+  border-bottom: 1px dashed var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--pine-mid);
+}
+
+.briefing-box p {
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.briefing-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+}
+
+.briefing-pillars li {
+  padding: 0.14rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--pine);
+  background: rgba(27, 67, 50, 0.09);
+  border: 1px solid rgba(27, 67, 50, 0.32);
+  border-radius: 3px;
+}
+
 /* Trail Map SVG Container (Weathered USGS Quad) */
 .trail-map {
   margin: 0 0 1.25rem;
@@ -480,26 +528,205 @@ body {
   color: var(--hunter);
 }
 
-/* Skills Grid */
-.skills-grid {
-  margin: 0;
-}
-
-.skill-row {
+/* Field Loadout: Technical Stack & Gear Tags */
+.gear-manifest {
   display: grid;
-  grid-template-columns: 11rem 1fr;
-  gap: 0.5rem 1rem;
-  padding: 0.35rem 0;
+  gap: 0.7rem;
 }
 
-.skill-row dt {
+.gear-sector {
+  padding: 0.65rem 0.85rem 0.75rem;
+  background: var(--surface-card);
+  border: 1px solid var(--rule);
+  border-left: 3.5px solid var(--pine);
+  border-radius: 4px;
+}
+
+.gear-sector-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.gear-code {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--hunter);
+}
+
+.gear-sector-head h3 {
+  margin: 0;
+  font-size: 0.94rem;
   font-weight: 650;
   color: var(--pine);
 }
 
-.skill-row dd {
+.gear-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  list-style: none;
   margin: 0;
-  color: var(--muted);
+  padding: 0;
+}
+
+.gear-tags li {
+  padding: 0.16rem 0.52rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: rgba(247, 244, 235, 0.95);
+  border: 1px solid rgba(27, 67, 50, 0.28);
+  border-radius: 3px;
+}
+
+/* Primary / Anchor Tools Highlighted in Pine Tint */
+.gear-tags li.is-core {
+  font-weight: 700;
+  color: var(--pine);
+  background: rgba(27, 67, 50, 0.1);
+  border-color: rgba(27, 67, 50, 0.45);
+}
+
+/* Clickable Gear Pills (Official Sites & Docs) */
+.gear-tags li:has(> .gear-link) {
+  padding: 0;
+  overflow: hidden;
+}
+
+.gear-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.16rem 0.52rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.gear-tags li:not(.is-core) .gear-link:hover,
+.gear-tags li:not(.is-core) .gear-link:focus-visible {
+  color: #ffffff;
+  background: var(--pine);
+}
+
+.gear-tags li.is-core .gear-link:hover,
+.gear-tags li.is-core .gear-link:focus-visible {
+  color: #ffffff;
+  background: var(--hunter);
+}
+
+/* Field Recon: Applied AI & Research 2x2 Grid */
+.recon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.recon-card {
+  position: relative;
+  padding: 0.7rem 0.85rem;
+  background:
+    radial-gradient(circle at 96% 14%, rgba(27, 67, 50, 0.06) 0, rgba(27, 67, 50, 0.06) 14px, transparent 15px),
+    radial-gradient(circle at 96% 14%, transparent 22px, rgba(27, 67, 50, 0.09) 23px, transparent 24px),
+    var(--surface-card);
+  border: 1px solid var(--rule);
+  border-top: 2.5px solid var(--pine-mid);
+  border-radius: 4px;
+}
+
+.recon-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.32rem;
+}
+
+.recon-head h3 {
+  margin: 0;
+  font-size: 0.94rem;
+  font-weight: 650;
+  color: var(--pine);
+}
+
+.recon-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--hunter);
+  white-space: nowrap;
+}
+
+.recon-card p {
+  margin: 0;
+  font-size: 0.87rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+/* Academic Basecamp Quadrant (Education) */
+.edu-quad {
+  padding: 0.75rem 0.95rem;
+  background: var(--surface-card);
+  border: 1px solid var(--rule);
+  border-left: 3.5px solid var(--pine);
+  border-radius: 4px;
+}
+
+.edu-code {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--hunter);
+}
+
+.edu-quad-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.edu-specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.55rem;
+}
+
+.edu-spec-item {
+  padding: 0.45rem 0.6rem;
+  background: rgba(247, 244, 235, 0.85);
+  border: 1px solid rgba(27, 67, 50, 0.18);
+  border-radius: 3px;
+}
+
+.edu-spec-label {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--pine);
+}
+
+.edu-spec-item p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: var(--ink);
 }
 
 /* Cartographic Field Permit / Restricted Sector Frame */
@@ -537,8 +764,11 @@ body {
 }
 
 .standards-intro {
-  margin: 0 0 0.9rem;
+  margin: 0 0 1.35rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px dashed var(--rule);
   font-size: 0.93rem;
+  line-height: 1.55;
 }
 
 .compliance-grid {
@@ -637,25 +867,86 @@ body {
   text-decoration: underline;
 }
 
-/* Publications */
-.pub-list {
-  margin: 0;
-  padding-left: 1.25rem;
+/* Field Dispatches (Publications) */
+.dispatch-card {
+  padding: 0.75rem 0.95rem;
+  background: var(--surface-card);
+  border: 1px solid var(--rule);
+  border-left: 3.5px solid var(--hunter);
+  border-radius: 4px;
 }
 
-.pub-list li::marker {
+.dispatch-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px dashed var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.dispatch-code {
   color: var(--hunter);
 }
 
-.pub-list a {
+.dispatch-journal {
+  color: var(--muted);
+}
+
+.dispatch-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dispatch-title {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.dispatch-title a {
   color: var(--pine);
   text-decoration: none;
   border-bottom: 1px solid rgba(27, 67, 50, 0.35);
 }
 
-.pub-list a:hover {
+.dispatch-title a:hover {
   color: var(--hunter);
   border-bottom-color: var(--hunter);
+}
+
+.dispatch-desc {
+  margin: 0.25rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.42;
+  color: var(--muted);
+}
+
+.dispatch-btn {
+  flex: 0 0 auto;
+  padding: 0.32rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--pine);
+  background: rgba(27, 67, 50, 0.09);
+  border: 1px solid rgba(27, 67, 50, 0.35);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.dispatch-btn:hover {
+  color: #ffffff;
+  background: var(--hunter);
+  border-color: var(--hunter);
 }
 
 /* Addendum & Supervisory References */
@@ -858,7 +1149,9 @@ body {
   }
 
   .cv-header,
-  .entry-head {
+  .entry-head,
+  .edu-quad-head,
+  .dispatch-body {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -867,15 +1160,11 @@ body {
     align-items: flex-start;
   }
 
-  .skill-row,
+  .edu-specs,
+  .recon-grid,
   .compliance-grid,
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 0.15rem;
-  }
-
-  .compliance-grid,
-  .contact-grid {
     gap: 0.65rem;
   }
 
@@ -932,6 +1221,7 @@ body {
   }
 
   .print-btn,
+  .dispatch-btn,
   .quad-footer-box,
   .back-link {
     display: none;
@@ -954,6 +1244,11 @@ body {
     page-break-inside: avoid;
   }
 
+  .briefing-box,
+  .edu-quad,
+  .dispatch-card,
+  .gear-sector,
+  .recon-card,
   .compliance-card,
   .contact-card {
     padding: 0.45rem 0.6rem;
@@ -970,9 +1265,7 @@ body {
   }
 
   .stop-card,
-  .entry,
-  .skill-row,
-  .pub-list li {
+  .entry {
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -984,9 +1277,15 @@ body {
     page-break-after: avoid;
   }
 
-  .pub-list a {
-    color: #000000;
+  .gear-link,
+  .dispatch-title a {
+    color: inherit;
+    text-decoration: none;
     border-bottom: none;
+  }
+
+  .dispatch-title a {
+    color: #000000;
   }
 
   .compass-badge {

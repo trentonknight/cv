@@ -1,0 +1,49 @@
+version: '3.9'
+
+services:
+  jekyll-build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - ./.jekyll-cache:/app/.jekyll_cache
+    working_dir: /app
+    depends_on:
+      - ruby
+    networks:
+      - jekyll-network
+
+  ruby:
+    image: ruby:3.4-alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: |
+      sh -c "
+        apk add --no-cache git openssh-client
+        bundle install --jobs=3 --retry=3
+      "
+    networks:
+      - jekyll-network
+
+  jekyll-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - ./.jekyll-cache:/app/.jekyll_cache
+    working_dir: /app
+    depends_on:
+      - ruby
+    networks:
+      - jekyll-network
+    command: bundle exec jekyll build
+
+networks:
+  jekyll-network:
+    driver: bridge
+
+volumes:
+  .jekyll-cache:

@@ -1,0 +1,82 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+env:
+  JEKYLL_ENV: production
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+
+      - name: Install Jekyll dependencies
+        run: |
+          bundle install
+          gem install jekyll github-pages
+
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --trace --verbose
+          echo "Build completed with exit code $?"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-build
+          path: _site/
+          retention-days: 7
+
+  deploy:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: jekyll-build
+          path: /tmp/jekyll-build
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: /tmp/jekyll-build/_site
+
+      - name: Deploy to GitHub Pages
+        id: deploy-github-pages
+        uses: shopify/pages-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          folder: _site

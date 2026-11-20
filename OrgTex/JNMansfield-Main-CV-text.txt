@@ -1,0 +1,108 @@
+                                       Jason N Mansfield
+                                            Platform Engineer and DevOps
+
+
+                                       Professional Experience
+                                        2024-Pres   24x7Systems
+                                                    Platform Engineer / Lead · CME
+
+                                                         • Operations Leadership: Manage K8s cluster stability and emer-
+                                                           gency response for high-stakes outages.
+                                                         • AI Augmentation: Integrated Vertex AI and Gemini to accelerate
+                                                           root-cause analysis for complex K8s networking and Terraform
+                                                           state drift.
+                                                         • Automated Documentation: Leveraged Python Sphinx and
+                                                           AI-assisted workflows to build self-service documentation
+                        About me                           pipelines.
+Platform Engineer with expertise in                      • Security Automation (DoD 8140.03 Sec 3. Para 3.2.b(3) OJT):
+    designing secure, cloud-native                         Developed custom Anchore/Harness integrations to automate
+    systems. Specialized in GitOps,                        vulnerability scanning for containerized workloads [3].
+     infrastructure automation, and                      • Artifact Governance: Managed JFrog Artifactory lifecycles to
+                LLMOps workflows.                          enforce security standards for hardened UBI images.
+                  Stack Highlights:     2023-2024   CACI International
+                 Kubernetes | Helm                  DevOps Engineer · EPT
+                ArgoCD | Terraform
+              Llama Stack | Ollama                       • GitOps Orchestration: Led infrastructure engineering for GitLab
+                   Docling | Pandas                        and Vault; managed automated Kubernetes delivery via ArgoCD.
+                    Keycloak | Vault
+                                                         • State Enforcement: Ensured 100
+                      Languages:                         • Custom Tooling: Built Python and Bash automation for platform
+           Python | Bash | JS | Rust                       API integrations and dynamic resource scaling.
+                             AI/ML:                      • DoD 8140.03 Sec 1. Para 1.2(6-7) & Sec 3. Para 3.2.b(1)(b):
+                Vertex AI | LLMOps                         TS/SCI infrastructure for GitLab and Vault at CACI (Fort
+                   Diffusers | SDXL                        Bragg/JSOC) meets DoD 8140.03 enterprise reciprocity for Cy-
+                                                           berspace Operations Forces [4].
+                             BLUF
+                   Jason Mansfield
+                  USN 2001 - 2005
+                                       Technical Research & Applied AI
+                 USCG 2005 - 2023             LLMOps     Orchestrating local model deployments via Llama Stack and
+                                                         Ollama. Engineering custom Modelfiles and external prompt-
+                    Specialization                       ing strategies to tune model behaviors.
+                  GitOps / DevOps          RAG & ETL     Utilizing Docling for high-fidelity document parsing and Pan-
+              Platform Engineering                       das for structured data transformation to optimize RAG context-
+                 LLMOps / AI Infra                       window precision.
+                       DevSecOps        Generative Art   Exploring Hugging Face Diffusers for game asset creation; uti-
+                                                         lizing SDXL pipelines for procedural textures and automated
+        DoD 8140.03 Compliance                           concept generation.
+    Covered under Ref [1] (Degree
+                                             Systems     Implementing high-performance utility tools in Rust to enhance
+ recency waived via 20+ yr service)                      existing Python-based infrastructure automation and CLI tool-
+  and Ref [2] (Baseline commercial                       ing.
+  certs superseded by active-duty
+                        experience).
+                 TS/SCI w CI Poly
+                                       Military History (Selected Highlights)
+                                        2021–2023   USCG CYBER
+                                                    IT Specialist 1st Class · COA Branch
+                                                     Blue Team Analyst. Developed tactical "Ruck Kits" for field operators.
+     trentonknight@gmail.com                        Taught Cisco switch programming and authored technical guides.
+     trentonknight
+                                        2014–2017   USCG
+  trentonknight                                    IT Specialist 2nd Class · CGC DILIGENCE
+ ¯ trentonknight                                    Independent Network Admin. Managed Cisco 3750G switches, Server
+                                                    2008 R2, and TACLANE encryption systems.
+   (757)753-0085
+ ☼ Clayton, NC
+Degrees & Certifications
+ BS Computer Science          Regis University (ABET / NSA Center of Academic Ex-
+                              cellence)
+
+                              • Academics: Dean’s List (Spring 2013), GPA 3.413
+                              • Mathematics (17 Cr.): Calculus, Linear Algebra, Dis-
+                                crete Math
+                              • CS Core: Systems Architecture, Algorithms, Data
+                                Structures, Software Engineering, OOP (Java/C++)
+                              • Compliance: Covered by DoD 8140.03 § 3.2.b(1)(a)(3)
+                                (20+ yr service waives degree recency).
+     CompTIA Security+        Superseded by DoD 8140.03 Qualification
+
+                              • 22+ years continuous US Navy & USCG IT/Cyber
+                                active-duty service.
+                              • Satisfies alternative qualification criteria under
+                                DoD 8140.03 § 3.2.b(1)(a), superseding legacy DoD
+                                8570/CompTIA baseline requirements.
+        CompTIA CySA+         Cybersecurity Analyst (Superseded / Expired via Enter-
+                              prise Reciprocity & Practical Experience)
+
+
+Regulatory Reference Appendix
+[Ref 1] Department of Defense [2023] Section 3, Para 3.2.b(1)(a)(3): 20+ years of continuous qualified
+service waives initial degree recency and continuing education currency thresholds for professional
+credential maintenance.
+[Ref 2] Department of Defense [2023] Section 3, Para 3.2.b(1)(a): Establishes professional experience
+and academic qualification equivalencies that completely supersede legacy DoD 8570 baseline com-
+mercial certificates (e.g., CompTIA Security+) for senior cyber workforce elements.
+[Ref 3] Department of Defense [2023] Section 3, Para 3.2.b(3): On-the-job training (OJT) and automated
+vulnerability pipeline integration equivalency.
+[Ref 4] Department of Defense [2023] Section 1, Para 1.2(6–7) & Sec 3. Para 3.2.b(1)(b): Cyberspace
+Operations Forces enterprise reciprocity.
+
+
+References
+Department of Defense. DoD Manual 8140.03: Cyberspace Workforce Qualification and Management
+  Program. Office of the Under Secretary of Defense for Acquisition and Sustainment, 2023. Section
+  3, Paragraphs 3.2.b(1)(a), 3.2.b(1)(a)(3), and 3.2.b(3).
+
+           Full Detailed History & Professional References Available in Career Addendum
+

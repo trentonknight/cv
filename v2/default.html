@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description | default: site.title | escape }}{% endif %}">
+  <meta name="author" content="{% if site.github_username %}@{{ site.github_username }}{% endif %}">
+  
+  <title>{% if page.title %}{{ page.title }} | {{ site.title | default: 'Jason Mansfield' }}{% else %}{{ site.title | default: 'Jason Mansfield' }}{% endif %}</title>
+  
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+  
+  {% if site.google_site_verification %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+  {% endif %}
+  
+  {% if site.bing_site_verification %}
+  <meta name="msvalidate.0" content="{{ site.bing_site_verification }}">
+  {% endif %}
+  
+  {% if site.og_image %}
+  <meta property="og:image" content="{{ site.og_image }}">
+  {% endif %}
+  
+  {% if site.twitter_card %}
+  <meta name="twitter:card" content="{{ site.twitter_card }}">
+  {% endif %}
+  
+  {% if site.twitter_site %}
+  <meta name="twitter:site" content="@{{ site.twitter_site }}">
+  {% endif %}
+  
+  {% if site.author_twitter %}
+  <meta name="twitter:creator" content="@{{ site.author_twitter }}">
+  {% endif %}
+  
+  {% include head/custom.html %}
+  
+  <!-- Main Styles -->
+  <style>
+    /* Theme colors */
+    .deepnavy { color: {{ site.deepnavy | default: "#1A2E40" }} !important; }
+    .slateteal { color: {{ site.slateteal | default: "#2E5A5E" }} !important; }
+    .techpurple { color: {{ site.techpurple | default: "#5A4E8C" }} !important; }
+    .softgrey { background-color: {{ site.softgrey | default: "#F2F2F2" }} !important; }
+    .accent { color: {{ site.accent | default: "#2E5A5E" }} !important; }
+    
+    /* Gradient backgrounds */
+    .gradient-bg {
+      background: linear-gradient(135deg, {{ site.slateteal | default: "#2E5A5E" }} 0%, {{ site.deepnavy | default: "#1A2E40" }} 100%);
+    }
+    
+    /* Section gradients */
+    .section-header {
+      background: linear-gradient(135deg, {{ site.slateteal | default: "#2E5A5E" }} 0%, {{ site.deepnavy | default: "#1A2E40" }} 100%);
+    }
+    
+    /* Button gradients */
+    .btn-gradient {
+      background: linear-gradient(135deg, {{ site.deepnavy | default: "#1A2E40" }} 0%, {{ site.slateteal | default: "#2E5A5E" }} 100%);
+    }
+    
+    /* Border colors */
+    .border-slate { border-color: {{ site.slateteal | default: "#2E5A5E" }} !important; }
+    .border-deep { border-color: {{ site.deepnavy | default: "#1A2E40" }} !important; }
+    .border-purple { border-color: {{ site.techpurple | default: "#5A4E8C" }} !important; }
+    
+    /* Typography */
+    .text-navy { color: {{ site.deepnavy | default: "#1A2E40" }} !important; }
+    .text-teal { color: {{ site.slateteal | default: "#2E5A5E" }} !important; }
+    .text-purple { color: {{ site.techpurple | default: "#5A4E8C" }} !important; }
+    
+    /* Divider */
+    .gradient-divider {
+      background: linear-gradient(90deg, {{ site.slateteal | default: "#2E5A5E" }} 0%, {{ site.deepnavy | default: "#1A2E40" }} 100%);
+      height: 3px;
+      width: 100%;
+      margin-top: -4px;
+    }
+  </style>
+  
+  {% include head/custom-head.html %}
+  
+  <!-- External Styles -->
+  <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/css/custom.css" | relative_url }}">
+  {% if site.fontawesome_css %}
+  <link rel="stylesheet" href="{{ site.fontawesome_css }}">
+  {% endif %}
+  
+  <!-- Syntax Highlighting -->
+  {% if site.highlight_theme %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ site.highlight_version }}/styles/{{ site.highlight_theme | default: 'monokai' }}.min.css">
+  {% endif %}
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Navigation -->
+    {% if site.navigation %}
+    <nav class="navigation">
+      <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="nav-logo">{{ site.title | default: 'Jason Mansfield' }}</a>
+        <div class="nav-items">
+          {% for item in site.navigation %}
+          <a href="{{ item.url | relative_url }}" {% if item.new %}target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a>
+          {% endfor %}
+        </div>
+        {% if site.show_copyright_in_nav %}
+        <div class="nav-copyright">
+          <p>
+            <small>
+              &copy; {{ site.time | date: '%Y' }} {{ site.title | default: 'Jason Mansfield' }}. All rights reserved.
+            </small>
+          </p>
+        </div>
+        {% endif %}
+      </div>
+    </nav>
+    {% endif %}
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Scripts -->
+  {% if site.search_enabled %}
+  <script src="{{ "/js/search.js" | relative_url }}"></script>
+  {% endif %}
+  
+  <script src="{{ "/js/main.js" | relative_url }}"></script>
+  
+  <!-- External Scripts -->
+  {% if site.google_analytics %}
+  <!-- Google Analytics -->
+  {% include analytics.html %}
+  {% endif %}
+  
+  {% include footer.html %}
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <p class="copyright">
+          &copy; {{ site.time | date: '%Y' }} {{ site.title | default: 'Jason Mansfield' }}. All rights reserved.
+        </p>
+        <p class="theme-text">
+          Designed with <span class="deepnavy">♥</span> by Jason N. Mansfield
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

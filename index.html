@@ -74,7 +74,13 @@ title: Jason N. Mansfield — Curriculum Vitae
                 <div class="entry-head">
                   <div>
                     <h3 class="entry-title">{{ stop.title }}</h3>
-                    <p class="entry-org">{{ stop.org }}</p>
+                    <p class="entry-org">
+                      {% if stop.org_url and stop.org_url != "" %}
+                        <a href="{{ stop.org_url }}" target="_blank" rel="noopener noreferrer" class="org-link">{{ stop.org }} ↗</a>
+                      {% else %}
+                        {{ stop.org }}
+                      {% endif %}
+                    </p>
                     <p class="entry-sector">
                       {{ stop.location }}{% if stop.coords and stop.coords != "" %} · <code>{{ stop.coords }}</code>{% endif %}
                       {% if stop.compliance_anchor and stop.compliance_anchor != "" %}
@@ -105,13 +111,14 @@ title: Jason N. Mansfield — Curriculum Vitae
               <h3>Cloud, Platform &amp; GitOps</h3>
             </header>
             <ul class="gear-tags">
-              <li class="is-core"><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" class="gear-link">AWS (EC2, RDS, S3, Route 53) ↗</a></li>
+              <li class="is-core"><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" class="gear-link">AWS (EC2, RDS, S3) ↗</a></li>
               <li class="is-core"><a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer" class="gear-link">Kubernetes ↗</a></li>
               <li class="is-core"><a href="https://www.terraform.io/" target="_blank" rel="noopener noreferrer" class="gear-link">Terraform ↗</a></li>
               <li class="is-core"><a href="https://argo-cd.readthedocs.io/" target="_blank" rel="noopener noreferrer" class="gear-link">ArgoCD ↗</a></li>
+              <li class="is-core"><a href="https://helm.sh/" target="_blank" rel="noopener noreferrer" class="gear-link">Helm ↗</a></li>
+              <li><a href="https://rafay.co/" target="_blank" rel="noopener noreferrer" class="gear-link">Rafay ↗</a></li>
               <li><a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer" class="gear-link">Azure ↗</a></li>
               <li><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" class="gear-link">Docker ↗</a></li>
-              <li><a href="https://helm.sh/" target="_blank" rel="noopener noreferrer" class="gear-link">Helm ↗</a></li>
               <li><a href="https://www.keycloak.org/" target="_blank" rel="noopener noreferrer" class="gear-link">Keycloak ↗</a></li>
               <li><a href="https://www.openbao.org/" target="_blank" rel="noopener noreferrer" class="gear-link">Vault / OpenBao ↗</a></li>
               <li><a href="https://jfrog.com/" target="_blank" rel="noopener noreferrer" class="gear-link">JFrog Artifactory ↗</a></li>

@@ -1,7 +1,6 @@
 ---
 layout: null
-title: Jason N. Mansfield — Career Addendum & Professional References
-permalink: /addendum/
+title: Jason N. Mansfield — Career Addendum & Supervisory References
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,37 +15,64 @@ permalink: /addendum/
     <header class="cv-header">
       <div class="cv-header-main">
         <h1>Jason N. Mansfield</h1>
-        <p class="role-headline">Career Expedition Addendum &amp; Supervisory References</p>
-					<a href="{{ '/#compliance-clearance' | relative_url }}" class="clearance-tag">
-          {{ site.data.standards.clearance.badge_text }} ↗
+        <p class="role-headline">Extended Service Log, Systems Addendum &amp; Supervisory References</p>
+        <a href="{{ '/#compliance-clearance' | relative_url }}" class="clearance-tag">
+          {{ site.data.standards.clearance.badge_text }} ↘
         </a>
-
       </div>
-      <nav class="cv-contact" aria-label="Page sections">
+      <address class="cv-contact">
+        <span>Flowers · Clayton, NC · 35.6574° N, 78.3614° W</span>
+        <span>(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
         <span>
-          <a href="#full-log-heading">Part I · Duty Log</a> ·
-          <a href="#references-heading">Part II · References</a>
+          <a href="https://github.com/trentonknight">GitHub</a> ·
+          <a href="https://gitlab.com/trentonknight">GitLab</a> ·
+          <a href="https://www.linkedin.com/in/trentonknight/">LinkedIn</a>
         </span>
         <div class="header-actions">
           <button type="button" class="print-btn" onclick="window.print()">Print / Save PDF</button>
         </div>
-      </nav>
+      </address>
     </header>
 
     <main class="cv-body">
       <section class="cv-section" aria-labelledby="addendum-intro-heading">
-        <h2 id="addendum-intro-heading">Extended Service &amp; Systems Log (1999 – Present)</h2>
-        <p>
-          Full chronological record of shore commands, cutters, naval aviation squadrons, DoD
-          SkillBridge transition, cloud/platform engineering roles, and supervisory references—covering
-          AWS (EC2, RDS, S3, Route 53), Azure, enterprise Windows/Cisco infrastructure, and
-          Kubernetes/GitOps platforms.
-        </p>
+        <h2 id="addendum-intro-heading">Quad 02 Scope · Full Chronological Log &amp; Verifiable Contacts</h2>
+        <div class="briefing-box">
+          <div class="briefing-meta">
+            <span>SHEET // QUAD-02</span>
+            <span>SPAN // 1999–PRESENT</span>
+            <span>SCOPE // DUTY STATIONS &amp; REFS</span>
+          </div>
+          <p>
+            Companion reference sheet to the main Curriculum Vitae, providing complete duty-station
+            chronology, shore and afloat commands, systems/tooling coverage, and supervisory or
+            professional points of contact grouped by organization.
+          </p>
+        </div>
       </section>
 
       <!-- Part I: Full Chronological Duty & Systems Log -->
-      <section class="cv-section" aria-labelledby="full-log-heading">
-        <h2 id="full-log-heading">Part I · Complete Duty Stations &amp; Waypoints</h2>
+      <section class="cv-section" aria-labelledby="duty-log-heading">
+        <h2 id="duty-log-heading">Part I · Extended Service &amp; Systems Log (1999 – Present)</h2>
+        <div class="log-dossier-banner">
+          <div class="briefing-meta">
+            <span>CHRONOLOGY // 1999–PRESENT</span>
+            <span>SERVICE // USN · USCG · SKILLBRIDGE · INDUSTRY</span>
+            <span>SCOPE // AFLOAT, SHORE &amp; RUNTIME PLATFORMS</span>
+          </div>
+          <p class="log-dossier-summary">
+            Complete chronological record of duty stations, maritime patrols, shore commands,
+            security/compliance roles, and cloud/runtime engineering assignments from pre-service
+            basecamps through current <strong>24x7Systems, Inc.</strong> runtime operations.
+          </p>
+          <ul class="briefing-pillars" aria-label="Service log sectors">
+            <li>09 · Runtime &amp; DevOps (2023–Now)</li>
+            <li>06–02 · USCG Active Duty (2007–2023)</li>
+            <li>01 · USN VFA-81 (2001–2005)</li>
+            <li>00 · Basecamp (1999–2001)</li>
+          </ul>
+        </div>
+
         <ol class="route-stops">
           {% for stop in site.data.addendum %}
             <li class="stop-card" id="log-{{ stop.id }}">
@@ -55,9 +81,16 @@ permalink: /addendum/
                 <div class="entry-head">
                   <div>
                     <h3 class="entry-title">{{ stop.title }}</h3>
-                    <p class="entry-org">{{ stop.org }} · <span class="contact-role-badge">{{ stop.category }}</span></p>
+                    <p class="entry-org">
+                      {% if stop.org_url and stop.org_url != "" %}
+                        <a href="{{ stop.org_url }}" target="_blank" rel="noopener noreferrer" class="org-link">{{ stop.org }} ↗</a>
+                      {% else %}
+                        {{ stop.org }}
+                      {% endif %}
+                    </p>
                     <p class="entry-sector">
                       {{ stop.location }}{% if stop.coords and stop.coords != "" %} · <code>{{ stop.coords }}</code>{% endif %}
+                      {% if stop.category and stop.category != "" %} · <code>{{ stop.category }}</code>{% endif %}
                     </p>
                   </div>
                   <time class="entry-period">{{ stop.period }}</time>
@@ -80,8 +113,10 @@ permalink: /addendum/
         {% for group in site.data.contacts %}
           <div class="ref-group">
             <h3 class="ref-group-title">
-              {{ group.org }} — {{ group.role }}
-              <span class="ref-group-period">({{ group.period }})</span>
+              {{ group.organization }}
+              {% if group.period and group.period != "" %}
+                <span class="ref-group-period">({{ group.period }})</span>
+              {% endif %}
             </h3>
 
             <div class="contact-grid">
@@ -89,27 +124,22 @@ permalink: /addendum/
                 <article class="contact-card">
                   <div class="contact-card-head">
                     <h4>{{ person.name }}</h4>
-                    <span class="contact-role-badge">{{ person.relation }}</span>
+                    {% if person.relationship and person.relationship != "" %}
+                      <span class="contact-role-badge">{{ person.relationship }}</span>
+                    {% endif %}
                   </div>
-
                   <ul class="contact-details">
-                    {% if person.mobile and person.mobile != "" %}
-                      <li>
-                        <strong>Mobile:</strong>
-                        <a href="tel:{{ person.mobile | remove: '(' | remove: ')' | remove: ' ' | remove: '-' }}">{{ person.mobile }}</a>
-                      </li>
+                    {% if person.role and person.role != "" %}
+                      <li><strong>Role:</strong> {{ person.role }}</li>
+                    {% endif %}
+                    {% if person.phone and person.phone != "" %}
+                      <li><strong>Phone:</strong> <a href="tel:{{ person.phone | remove: ' ' | remove: '-' | remove: '(' | remove: ')' }}">{{ person.phone }}</a></li>
                     {% endif %}
                     {% if person.email and person.email != "" %}
-                      <li>
-                        <strong>Email:</strong>
-                        <a href="mailto:{{ person.email }}">{{ person.email }}</a>
-                      </li>
+                      <li><strong>Email:</strong> <a href="mailto:{{ person.email }}">{{ person.email }}</a></li>
                     {% endif %}
-                    {% if person.linkedin and person.linkedin != "" %}
-                      <li>
-                        <strong>Profile:</strong>
-                        <a href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-                      </li>
+                    {% if person.notes and person.notes != "" %}
+                      <li><strong>Note:</strong> {{ person.notes }}</li>
                     {% endif %}
                   </ul>
                 </article>
@@ -124,7 +154,7 @@ permalink: /addendum/
         <div class="quad-footer-label">QUADRANT INDEX</div>
         <div class="quad-cells">
           <a href="{{ '/' | relative_url }}" class="quad-cell is-link">
-            <span class="quad-code">← 01 · MAIN</span>
+            <span class="quad-code">01 · MAIN ←</span>
             <span class="quad-desc">Route &amp; Stack</span>
           </a>
           <div class="quad-cell is-active">

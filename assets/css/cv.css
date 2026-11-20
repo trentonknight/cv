@@ -1,15 +1,14 @@
 :root {
   --paper: #f7f4eb;
   --paper-edge: #ebe5d5;
+  --surface-card: rgba(255, 253, 248, 0.78);
   --ink: #17211d;
   --muted: #4b5a52;
   --pine: #1b4332;
   --pine-mid: #2d6a4f;
   --hunter: #c85a17;
   --rule: rgba(27, 67, 50, 0.22);
-
-  /* Seamless topographic contour tile in pine green + hunter orange */
-  --topo-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320' fill='none'%3E%3Cg stroke='%231b4332' stroke-opacity='0.22' stroke-width='1.15'%3E%3Cpath d='M-40 45 C35 15, 85 75, 155 40 C215 10, 265 65, 360 30'/%3E%3Cpath d='M-40 82 C40 52, 92 112, 162 76 C220 46, 270 102, 360 66'/%3E%3Cpath d='M-40 125 C25 105, 78 155, 140 125 C195 98, 250 148, 360 112'/%3E%3Cpath d='M-40 195 C45 165, 95 225, 170 185 C230 152, 275 210, 360 175'/%3E%3Cpath d='M-40 245 C35 220, 88 270, 160 235 C225 204, 278 258, 360 225'/%3E%3Cpath d='M-40 292 C42 268, 96 315, 168 282 C232 252, 282 302, 360 272'/%3E%3C/g%3E%3Cg stroke='%23c85a17' stroke-opacity='0.24' stroke-width='1.2'%3E%3Cpath d='M55 -20 C15 35, 30 95, 85 110 C135 124, 165 75, 130 25 C105 -10, 75 -35, 55 -20 Z'/%3E%3Cpath d='M68 -6 C38 35, 48 80, 88 92 C122 102, 142 66, 118 32 C98 5, 80 -15, 68 -6 Z'/%3E%3Cpath d='M225 165 C180 185, 175 245, 220 270 C268 296, 320 265, 310 210 C302 168, 265 148, 225 165 Z'/%3E%3Cpath d='M234 184 C200 199, 197 242, 229 260 C263 278, 298 256, 291 217 C285 186, 260 172, 234 184 Z'/%3E%3C/g%3E%3C/svg%3E");
+  --topo-svg: url("/cv/assets/img/topo.svg");
 
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -33,12 +32,14 @@ body {
   line-height: 1.5;
   background-color: var(--paper-edge);
   background-image: var(--topo-svg);
-  background-size: 320px 320px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .page {
   position: relative;
-  max-width: 54rem;
+  max-width: 56rem;
   margin: 2.5rem auto;
   padding: 2.75rem 2.75rem 4.5rem;
   border: 1px solid var(--rule);
@@ -48,11 +49,13 @@ body {
     radial-gradient(
       ellipse at center,
       rgba(247, 244, 235, 0.94) 48%,
-      rgba(247, 244, 235, 0.72) 78%,
-      rgba(247, 244, 235, 0.42) 100%
+      rgba(247, 244, 235, 0.74) 78%,
+      rgba(247, 244, 235, 0.44) 100%
     ),
     var(--topo-svg);
-  background-size: 100% 100%, 320px 320px;
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
 }
 
 /* Header */
@@ -133,7 +136,6 @@ body {
   letter-spacing: 0.09em;
   color: var(--pine);
   border-bottom: 1.5px solid var(--rule);
-  position: relative;
 }
 
 .cv-section > h2::before {
@@ -145,9 +147,187 @@ body {
   margin: 0;
 }
 
-/* Entries */
+/* Trail Map SVG Container */
+.trail-map {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 0.85rem 0.6rem;
+  background: rgba(247, 244, 235, 0.86);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--pine);
+  border-radius: 4px;
+}
+
+.trail-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.trail-casing {
+  fill: none;
+  stroke: var(--paper);
+  stroke-width: 6.5;
+  stroke-linecap: round;
+}
+
+.trail-line {
+  fill: none;
+  stroke: var(--hunter);
+  stroke-width: 2.75;
+  stroke-dasharray: 7 5;
+  stroke-linecap: round;
+}
+
+.wp-ring {
+  fill: rgba(27, 67, 50, 0.14);
+  stroke: var(--pine);
+  stroke-width: 1.2;
+}
+
+.wp-ring-active {
+  fill: rgba(200, 90, 23, 0.2);
+  stroke: var(--hunter);
+  stroke-width: 1.5;
+}
+
+.wp-dot {
+  fill: var(--pine);
+}
+
+.wp-dot-active {
+  fill: var(--hunter);
+}
+
+.wp-num {
+  fill: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.wp-label {
+  fill: var(--pine);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.wp-label-active {
+  fill: var(--hunter);
+}
+
+.wp-coord {
+  fill: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.wp-date {
+  fill: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.wp-date-active {
+  fill: var(--hunter);
+}
+
+.trail-caption {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+  padding-top: 0.45rem;
+  border-top: 1px dashed var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 1.35rem;
+  height: 0;
+  border-top: 2.5px dashed var(--hunter);
+}
+
+.legend-sep {
+  color: var(--pine-mid);
+}
+
+/* Waypoint-Linked Timeline Stops */
+.route-stops {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.route-stops::before {
+  content: "";
+  position: absolute;
+  left: 1.05rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--hunter), var(--pine-mid));
+  opacity: 0.45;
+}
+
+.stop-card {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.75rem;
+  background: var(--surface-card);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+
+.stop-card:last-child {
+  margin-bottom: 0;
+}
+
+.stop-marker {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 2.15rem;
+  height: 2.15rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pine);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 1.5px var(--pine);
+}
+
+.stop-card:first-child .stop-marker {
+  background: var(--hunter);
+  box-shadow: 0 0 0 1.5px var(--hunter);
+}
+
+.stop-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Entries & Shared Typography */
 .entry + .entry {
-  margin-top: 1.25rem;
+  margin-top: 1.1rem;
 }
 
 .entry-head {
@@ -159,7 +339,7 @@ body {
 
 .entry-title {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 650;
   color: var(--ink);
 }
@@ -167,25 +347,42 @@ body {
 .entry-org {
   margin: 0.1rem 0 0;
   color: var(--pine-mid);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
+}
+
+.entry-sector {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.entry-org code,
+.entry-sector code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--pine);
+  background: rgba(27, 67, 50, 0.08);
+  padding: 0.08rem 0.35rem;
+  border-radius: 3px;
 }
 
 .entry-period {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--hunter);
   white-space: nowrap;
 }
 
 .entry-points {
-  margin: 0.5rem 0 0;
-  padding-left: 1.25rem;
+  margin: 0.45rem 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.94rem;
 }
 
 .entry-points li + li {
-  margin-top: 0.25rem;
+  margin-top: 0.22rem;
 }
 
 .entry-points li::marker {
@@ -224,6 +421,19 @@ body {
   color: var(--hunter);
 }
 
+.pub-list a {
+  color: var(--pine);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(27, 67, 50, 0.35);
+}
+
+.pub-list a:hover {
+  color: var(--hunter);
+  border-bottom-color: var(--hunter);
+}
+
+
+
 /* Cartographic Compass Rose Badge */
 .compass-badge {
   position: absolute;
@@ -247,6 +457,16 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 720px) {
+  .trail-svg {
+    min-width: 560px;
+  }
+
+  .trail-map {
+    overflow-x: auto;
+  }
+}
+
 @media (max-width: 640px) {
   .page {
     margin: 0;
@@ -281,9 +501,13 @@ body {
 
 /* Print / PDF Export */
 @media print {
+  .pub-list a {
+    color: #000000;
+    border-bottom: none;
+  }
   @page {
     size: letter;
-    margin: 0.55in 0.6in;
+    margin: 0.5in 0.55in;
   }
 
   * {
@@ -292,17 +516,18 @@ body {
   }
 
   body {
-    font-size: 10pt;
-    line-height: 1.4;
+    font-size: 9.5pt;
+    line-height: 1.35;
     background-color: var(--paper);
     background-image: var(--topo-svg);
-    background-size: 320px 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .page {
     max-width: none;
     margin: 0;
-    padding: 0.35in 0.4in 0.75in;
+    padding: 0.3in 0.35in 0.7in;
     border: 1px solid var(--rule);
     box-shadow: none;
     background-color: var(--paper);
@@ -313,17 +538,29 @@ body {
         rgba(247, 244, 235, 0.72) 100%
       ),
       var(--topo-svg);
-    background-size: 100% 100%, 320px 320px;
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat, no-repeat;
   }
 
   .print-btn {
     display: none;
   }
 
-  .cv-section {
-    margin-top: 1.1rem;
+  .trail-map {
+    padding: 0.45rem 0.6rem;
+    margin-bottom: 0.85rem;
   }
 
+  .stop-card {
+    padding: 0.45rem 0.65rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .cv-section {
+    margin-top: 0.95rem;
+  }
+
+  .stop-card,
   .entry,
   .skill-row,
   .pub-list li {

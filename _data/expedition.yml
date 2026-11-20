@@ -1,0 +1,113 @@
+- id: "07"
+  num: "7"
+  map_label: "24x7Systems"
+  map_sub: "35.66°N, 78.36°W"
+  map_date: "2024–Now"
+  x: 778
+  y: 102
+  active: true
+  title: "Platform Engineer & Operations Team Lead"
+  org: "24x7Systems"
+  location: "Flowers · Clayton, NC (Remote)"
+  coords: "35.6574° N, 78.3614° W"
+  period: "2024 – Present"
+  highlights:
+    - "Lead platform engineering and operational execution across production environments."
+    - "Standardize deployment workflows, observability, and systems reliability practices."
+
+- id: "06"
+  num: "6"
+  map_label: "CACI DevOps"
+  map_sub: "38.95°N, 77.36°W"
+  map_date: "2023–24"
+  x: 660
+  y: 58
+  active: false
+  title: "DevOps Engineer"
+  org: "CACI International"
+  location: "Reston, VA / Hybrid"
+  coords: "38.9540° N, 77.3581° W"
+  period: "2023 – 2024"
+  highlights:
+    - "Built and maintained automated CI/CD pipelines and infrastructure-as-code workflows."
+
+- id: "05"
+  num: "5"
+  map_label: "USCG Cyber"
+  map_sub: "36.85°N, 76.29°W"
+  map_date: "2017–23"
+  x: 540
+  y: 126
+  active: false
+  title: "Cyber & Network Operations (IT1) — NOSC EOC & COA Branch"
+  org: "U.S. Coast Guard Cyber Command (Active Duty)"
+  location: "Norfolk, VA Area"
+  coords: "36.8468° N, 76.2852° W"
+  period: "2017 – 2023"
+  highlights:
+    - "Directed cyber and network operations across NOSC EOC (2017–2021) and COA Branch (2021–2023)."
+
+- id: "04"
+  num: "4"
+  map_label: "CGC Diligence"
+  map_sub: "E. Coast / Carib."
+  map_date: "2014–17"
+  x: 420
+  y: 54
+  active: false
+  title: "Information Systems Technician (IT2)"
+  org: "USCGC Diligence (Active Duty)"
+  location: "Sector: U.S. East Coast & Caribbean Patrols (Underway)"
+  coords: ""
+  period: "2014 – 2017"
+  highlights:
+    - "Maintained shipboard communications, tactical networks, and mission-critical IT systems."
+
+- id: "03"
+  num: "3"
+  map_label: "FINCEN"
+  map_sub: "36.78°N, 76.29°W"
+  map_date: "2010–14"
+  x: 300
+  y: 128
+  active: false
+  title: "Information Systems Technician (IT2)"
+  org: "U.S. Coast Guard Finance Center (FINCEN) (Active Duty)"
+  location: "Chesapeake, VA"
+  coords: "36.7759° N, 76.2869° W"
+  period: "2010 – 2014"
+  highlights:
+    - "Supported enterprise systems and financial/operational infrastructure."
+
+- id: "02"
+  num: "2"
+  map_label: "CGC Legare"
+  map_sub: "Atlantic Patrols"
+  map_date: "2007–10"
+  x: 180
+  y: 58
+  active: false
+  title: "Information Systems Technician (IT3)"
+  org: "USCGC Legare (Active Duty)"
+  location: "Sector: North Atlantic & Maritime Patrols (Underway)"
+  coords: ""
+  period: "2007 – 2010"
+  highlights:
+    - "Operated and maintained underway network, messaging, and shipboard IT infrastructure."
+
+- id: "01"
+  num: "1"
+  map_label: "USN VFA-81"
+  map_sub: "N. Atlantic / CV-67"
+  map_date: "2001–05"
+  x: 58
+  y: 124
+  active: false
+  title: "Aviation Ordnanceman (AO3) — VFA-81 Sunliners"
+  org: "U.S. Navy (Active Duty · USS John F. Kennedy CV-67)"
+  location: "Sector: North Atlantic & Fleet Operations (Underway)"
+  coords: ""
+  period: "2001 – 2005"
+  highlights:
+    - "Executed high-tempo flight deck and ordnance operations aboard USS John F. Kennedy (CV-67)."
+

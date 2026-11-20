@@ -1,0 +1,49 @@
+<figure class="trail-map" aria-label="Career timeline plotted as a topographic trail route from 2001 to present with coordinates and operating areas">
+  <svg
+    class="trail-svg"
+    viewBox="0 0 840 190"
+    role="img"
+    aria-label="Route connecting {{ site.data.expedition | size }} career milestones from 2001 to present with locations and coordinates"
+  >
+    <!-- Subtle map grid / UTM ticks -->
+    <g stroke="#1b4332" stroke-opacity="0.14" stroke-width="1">
+      <line x1="0" y1="45" x2="840" y2="45" stroke-dasharray="3 5" />
+      <line x1="0" y1="145" x2="840" y2="145" stroke-dasharray="3 5" />
+      <line x1="120" y1="0" x2="120" y2="190" stroke-dasharray="2 6" />
+      <line x1="240" y1="0" x2="240" y2="190" stroke-dasharray="2 6" />
+      <line x1="360" y1="0" x2="360" y2="190" stroke-dasharray="2 6" />
+      <line x1="480" y1="0" x2="480" y2="190" stroke-dasharray="2 6" />
+      <line x1="600" y1="0" x2="600" y2="190" stroke-dasharray="2 6" />
+      <line x1="720" y1="0" x2="720" y2="190" stroke-dasharray="2 6" />
+    </g>
+
+    <!-- Route casing & hunter-orange trail -->
+    <path
+      class="trail-casing"
+      d="M 58 124 C 115 124, 135 58, 180 58 C 230 58, 250 128, 300 128 C 350 128, 370 54, 420 54 C 470 54, 490 126, 540 126 C 590 126, 610 58, 660 58 C 708 58, 732 102, 778 102"
+    />
+    <path
+      class="trail-line"
+      d="M 58 124 C 115 124, 135 58, 180 58 C 230 58, 250 128, 300 128 C 350 128, 370 54, 420 54 C 470 54, 490 126, 540 126 C 590 126, 610 58, 660 58 C 708 58, 732 102, 778 102"
+    />
+
+    {% assign stops_chrono = site.data.expedition | reverse %}
+    {% for wp in stops_chrono %}
+      <g class="waypoint{% if wp.active %} waypoint-current{% endif %}" transform="translate({{ wp.x }}, {{ wp.y }})">
+        <circle r="{% if wp.active %}14{% else %}12.5{% endif %}" class="wp-ring{% if wp.active %} wp-ring-active{% endif %}" />
+        <circle r="{% if wp.active %}9.5{% else %}9{% endif %}" class="wp-dot{% if wp.active %} wp-dot-active{% endif %}" />
+        <text y="3.5" class="wp-num">{{ wp.num }}</text>
+        <text y="{% if wp.active %}-30{% else %}-28{% endif %}" class="wp-label{% if wp.active %} wp-label-active{% endif %}">{{ wp.map_label }}</text>
+        <text y="{% if wp.active %}-18{% else %}-16{% endif %}" class="wp-coord">{{ wp.map_sub }}</text>
+        <text y="{% if wp.active %}25{% else %}24{% endif %}" class="wp-date{% if wp.active %} wp-date-active{% endif %}">{{ wp.map_date }}</text>
+      </g>
+    {% endfor %}
+  </svg>
+  <figcaption class="trail-caption">
+    <span>LEGEND:</span>
+    <i class="legend-swatch"></i> Trail Progression (01 → {{ site.data.expedition.first.id }})
+    <span class="legend-sep">·</span>
+    <span>Coords: WGS84 / Patrol Sectors</span>
+  </figcaption>
+</figure>
+

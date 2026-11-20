@@ -12,6 +12,7 @@ highlighter: rouge
 # Keep build artifacts, source LaTeX files, and tooling out of _site
 exclude:
   - OrgTex/
+  - topo/
   - README.md
   - LICENSE
   - Gemfile

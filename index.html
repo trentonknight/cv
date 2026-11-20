@@ -19,25 +19,42 @@ title: Jason N. Mansfield — Curriculum Vitae
         <a href="#compliance-clearance" class="clearance-tag">
           {{ site.data.standards.clearance.badge_text }} ↘
         </a>
-      </div>
-      <address class="cv-contact">
-        <span>Flowers · Clayton, NC · 35.6574° N, 78.3614° W</span>
-        <span>(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
-        <span>
-          <a href="https://github.com/trentonknight">GitHub</a> ·
-          <a href="https://gitlab.com/trentonknight">GitLab</a> ·
-          <a href="https://www.linkedin.com/in/trentonknight/">LinkedIn</a>
-        </span>
         <div class="header-actions">
-          <button type="button" class="print-btn" onclick="window.print()">Print / Save PDF</button>
+          <button type="button" class="action-btn" id="copy-md-btn" data-md-url="{{ '/resume.txt' | relative_url }}">Copy Full .md</button>
         </div>
+      </div>
+      <address class="cv-contact beacon-card">
+        <span class="beacon-tag">COMMS // WAYPOINT &amp; LINKS</span>
+        <span class="beacon-line">Flowers · Clayton, NC · <code>35.6574° N, 78.3614° W</code></span>
+        <span class="beacon-line">(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
+        <span class="beacon-line beacon-links">
+          <a href="https://github.com/trentonknight" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          <a href="https://gitlab.com/trentonknight" target="_blank" rel="noopener noreferrer">GitLab</a> ·
+          <a href="https://www.linkedin.com/in/trentonknight/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </span>
       </address>
     </header>
 
+    <nav class="quick-jump" aria-label="Jump to resume section">
+      <span class="quick-jump-label">JUMP TO //</span>
+      <a href="#summary-heading">Briefing</a>
+      <a href="#route-heading">Experience</a>
+      <a href="#skills-heading">Stack</a>
+      <a href="#ai-research-heading">AI Recon</a>
+      <a href="#education-heading">Education</a>
+      <a href="#standards-heading">Clearance</a>
+      <a href="#publications-heading">Publications</a>
+      <a href="{{ '/addendum/' | relative_url }}">1999–Now &amp; Refs →</a>
+      <a href="{{ '/resume.txt' | relative_url }}">Full .md ↗</a>
+    </nav>
+
     <main class="cv-body">
       <!-- Mission Briefing: About & Specialization -->
-      <section class="cv-section" aria-labelledby="summary-heading">
-        <h2 id="summary-heading">Mission Briefing · About &amp; Specialization</h2>
+      <section class="cv-section" aria-labelledby="summary-heading" data-section-key="briefing">
+        <div class="section-head-row">
+          <h2 id="summary-heading">Mission Briefing · About &amp; Specialization</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="briefing">Copy Section</button>
+        </div>
         <div class="briefing-box">
           <div class="briefing-meta">
             <span>DATUM // WGS84</span>
@@ -60,8 +77,11 @@ title: Jason N. Mansfield — Curriculum Vitae
       </section>
 
       <!-- Cartographic Career Route Map -->
-      <section class="cv-section route-section" aria-labelledby="route-heading">
-        <h2 id="route-heading">Career Expedition Route &amp; Experience</h2>
+      <section class="cv-section route-section" aria-labelledby="route-heading" data-section-key="experience">
+        <div class="section-head-row">
+          <h2 id="route-heading">Career Expedition Route &amp; Experience</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="experience">Copy Section</button>
+        </div>
 
         {% include trail-map.html %}
 
@@ -102,8 +122,11 @@ title: Jason N. Mansfield — Curriculum Vitae
       </section>
 
       <!-- Technical Stack: Cartographic Gear Manifest -->
-      <section class="cv-section" aria-labelledby="skills-heading">
-        <h2 id="skills-heading">Field Loadout · Technical Stack &amp; Languages</h2>
+      <section class="cv-section" aria-labelledby="skills-heading" data-section-key="stack">
+        <div class="section-head-row">
+          <h2 id="skills-heading">Field Loadout · Technical Stack &amp; Languages</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="stack">Copy Section</button>
+        </div>
         <div class="gear-manifest">
           <article class="gear-sector">
             <header class="gear-sector-head">
@@ -163,8 +186,11 @@ title: Jason N. Mansfield — Curriculum Vitae
       </section>
 
       <!-- Technical Research: Field Trials Grid -->
-      <section class="cv-section" aria-labelledby="ai-research-heading">
-        <h2 id="ai-research-heading">Field Recon · Technical Research &amp; Applied AI</h2>
+      <section class="cv-section" aria-labelledby="ai-research-heading" data-section-key="recon">
+        <div class="section-head-row">
+          <h2 id="ai-research-heading">Field Recon · Technical Research &amp; Applied AI</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="recon">Copy Section</button>
+        </div>
         <div class="recon-grid">
           <article class="recon-card">
             <div class="recon-head">
@@ -215,8 +241,11 @@ title: Jason N. Mansfield — Curriculum Vitae
       </section>
 
       <!-- Academic Basecamp Quadrant: Education -->
-      <section class="cv-section" aria-labelledby="education-heading">
-        <h2 id="education-heading">Academic Basecamp · Education</h2>
+      <section class="cv-section" aria-labelledby="education-heading" data-section-key="education">
+        <div class="section-head-row">
+          <h2 id="education-heading">Academic Basecamp · Education</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="education">Copy Section</button>
+        </div>
         <article class="edu-quad">
           <div class="edu-quad-head">
             <div>
@@ -248,8 +277,11 @@ title: Jason N. Mansfield — Curriculum Vitae
       </section>
 
       <!-- Dedicated Clearance, Standards & Qualification Progression Section -->
-      <section class="cv-section standards-section" aria-labelledby="standards-heading">
-        <h2 id="standards-heading">Clearance &amp; Standards Governance (DoD 8140.03)</h2>
+      <section class="cv-section standards-section" aria-labelledby="standards-heading" data-section-key="clearance">
+        <div class="section-head-row">
+          <h2 id="standards-heading">Clearance &amp; Standards Governance (DoD 8140.03)</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="clearance">Copy Section</button>
+        </div>
         <p class="standards-intro">{{ site.data.standards.intro }}</p>
 
         <div class="compliance-grid">
@@ -271,8 +303,11 @@ title: Jason N. Mansfield — Curriculum Vitae
       </section>
 
       <!-- Field Dispatches: Publications -->
-      <section class="cv-section" aria-labelledby="publications-heading">
-        <h2 id="publications-heading">Field Dispatches · Publications</h2>
+      <section class="cv-section" aria-labelledby="publications-heading" data-section-key="publications">
+        <div class="section-head-row">
+          <h2 id="publications-heading">Field Dispatches · Publications</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="publications">Copy Section</button>
+        </div>
         <article class="dispatch-card">
           <div class="dispatch-meta">
             <span class="dispatch-code">DISPATCH // USNI-2021-11</span>
@@ -319,6 +354,57 @@ title: Jason N. Mansfield — Curriculum Vitae
 
     {% include compass.svg %}
   </div>
+
+  <script>
+    (function () {
+      if (!navigator.clipboard) return;
+
+      const fullBtn = document.getElementById("copy-md-btn");
+      if (fullBtn) {
+        fullBtn.addEventListener("click", async () => {
+          const original = fullBtn.textContent;
+          try {
+            const res = await fetch(fullBtn.dataset.mdUrl);
+            if (!res.ok) throw new Error("Failed to fetch Markdown");
+            let text = await res.text();
+            if (/^\s*</.test(text)) {
+              const doc = new DOMParser().parseFromString(text, "text/html");
+              text = doc.body.innerText.replace(/\n{3,}/g, "\n\n").trim();
+            }
+            await navigator.clipboard.writeText(text);
+            fullBtn.textContent = "Copied .md ✓";
+          } catch (_) {
+            fullBtn.textContent = "Copy Failed";
+          }
+          setTimeout(() => {
+            fullBtn.textContent = original;
+          }, 1800);
+        });
+      }
+
+      document.querySelectorAll(".section-copy-btn").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const key = btn.getAttribute("data-copy-target");
+          const section = document.querySelector('[data-section-key="' + key + '"]');
+          if (!section) return;
+          const original = btn.textContent;
+          try {
+            const heading = section.querySelector("h2")?.textContent?.trim() || "";
+            const clone = section.cloneNode(true);
+            clone.querySelectorAll(".section-copy-btn, .trail-map, .back-link").forEach((el) => el.remove());
+            const bodyText = clone.innerText.replace(/\n{3,}/g, "\n\n").trim();
+            await navigator.clipboard.writeText((heading ? "## " + heading + "\n\n" : "") + bodyText);
+            btn.textContent = "Copied ✓";
+          } catch (_) {
+            btn.textContent = "Failed";
+          }
+          setTimeout(() => {
+            btn.textContent = original;
+          }, 1600);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
 

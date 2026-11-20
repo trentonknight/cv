@@ -1,0 +1,191 @@
+# Jason N. Mansfield
+**Platform Engineer & DevOps · GitOps, LLMOps & DevSecOps**  
+Flowers · Clayton, NC (`35.6574° N, 78.3614° W`) · Remote (≤25% Travel)  
+Phone: (757) 753-0085 · Email: trentonknight@gmail.com  
+GitHub: https://github.com/trentonknight · GitLab: https://gitlab.com/trentonknight · LinkedIn: https://www.linkedin.com/in/trentonknight/
+
+---
+
+## About & Specialization
+Platform Engineer with expertise in designing secure, cloud-native systems. Specialized in **GitOps / DevOps**, **Platform Engineering**, **LLMOps / AI Infrastructure**, and **DevSecOps**, backed by 22+ years of continuous active-duty U.S. Navy and U.S. Coast Guard service.
+
+---
+
+## Experience
+
+### Platform Engineer — Runtime Team — 24x7Systems, Inc. ([https://24x7systems.com/](https://24x7systems.com/))
+*Oct 2024 – Present* | Remote · Full-time (`35.6574° N, 78.3614° W`)
+
+- Transitioned from Operations Team Lead to the Runtime Team, working closer to clusters to resolve runtime issues using Rafay, Terraform, and extensive Helm management.
+- Investigate and triage alerts stemming from customer activity affecting clusters as well as internal cluster signals, identifying root defects and driving platform improvements.
+- Architect reusable Harness CI/CD templates, manage Kustomize + ArgoCD AppSets with Terraform and Databricks validation, own JFrog Artifactory (Terraform/Ansible + custom Rust UBI audit reporting), and administer Anchore via Helm/ArgoCD.
+
+### DevOps Engineer — CACI International Inc. ([https://www.caci.com/](https://www.caci.com/))
+*Jul 2023 – Oct 2024* | Fayetteville, NC · Hybrid · Full-time (`35.1390° N, 79.0060° W`)
+
+- Spearheaded DevOps, GitOps, and Kubernetes build initiatives using GitLab, HashiCorp Vault, ArgoCD, and Keycloak.
+- Scripted in Python, Bash, and Rust for API requests and backend optimization across AWS (EC2, RDS, S3).
+
+### Information Technology Specialist (IT1) — Blue Team & DODIN Ops — U.S. Coast Guard ([https://www.uscg.mil/](https://www.uscg.mil/))
+*Jul 2017 – Jan 2023* | Alexandria, VA & DC–Baltimore Area (`38.8048° N, 77.0469° W`)
+
+- Blue Team / COA Branch (Jul 2021 – Jan 2023): Built standardized tactical Ruck Kits, trained operators on serial/SSH Cisco switch programming per USCG TCTOs, built bootable WIM images and Kali APT lists, authored web.git.mil and tool guides (Nessus, Grassmarlin, SharpHound, BloodHound, Chainsaw, AppDetectivePro), and analyzed FINCEN billing data with Python (pandas).
+- Supervisory / DODIN (Jul 2017 – Jul 2021): Delivered DODIN and biweekly leadership briefings, supervised and mentored junior analysts, managed shift schedules, and led OJT and competency assessments.
+
+### Information Technology Specialist (IT2) — USCGC Diligence & FINCEN — U.S. Coast Guard ([https://www.uscg.mil/](https://www.uscg.mil/))
+*Jul 2010 – Jul 2017* | Wilmington, NC & Chesapeake, VA (`34.2357° N, 77.9489° W`)
+
+- USCGC Diligence · Wilmington, NC (Jun 2014 – Jul 2017): Independently administered onboard LAN cabling and two Cisco 3750G switches, two host servers (Windows Server 2008 R2 / Exchange VMs), CGONE/SIPR networks (TACLANE, routers, HDSL), KVH Ku-band and Inmarsat Fleet Broadband SATCOM, and shore-side WAN faults; qualified as sole technician standing BMOW, GPOOW, Sounding & Security, LE detention, and AT/FP watches.
+- USCG Finance Center · Chesapeake, VA (Jul 2010 – Jun 2014): Managed IT asset custody/inventory (~75% of initial two years), served as Trusted Agent Security Manager (TASM), supported finance/DBA workstations (Oracle, Java, ODBC) and Nortel/Avaya CS1000 PBX, and earned the Commandant's Letter of Commendation.
+
+### Information Technology Specialist (IT3) — USCGC Legare (WMEC-912) — U.S. Coast Guard ([https://www.uscg.mil/](https://www.uscg.mil/))
+*Jul 2007 – Jul 2010* | Portsmouth, VA (`36.8268° N, 76.3372° W`)
+
+- Administered Windows Exchange Server, maintained eOn PBX and SATCOM systems, and installed/administered the UNIX-based Shipboard Command and Control System (SCCS) during law-enforcement patrols.
+- Managed a VMware Linux host during a 2009 Africa mission to provision Windows VMs and support partner-nation laptops; rebuilt ship cabling and alarm wiring, stood surface swimmer and combat/radio/bearing/AT/FP watches, and earned a Letter of Commendation.
+
+### Aviation Ordnanceman (AO3) — VFA-81 Sunliners — U.S. Navy ([https://www.navy.mil/](https://www.navy.mil/))
+*Jul 2001 – Jul 2005* | Virginia Beach, VA & Lemoore, CA (`36.8207° N, 76.0335° W`)
+
+- Virginia Beach, VA (Jul 2003 – Jul 2005): Deployed in 2004 with VFA-81 / CVW-17 aboard USS John F. Kennedy (CV-67) for its final cruise supporting Operations Iraqi Freedom, Enduring Freedom, and Al Fajr (second Battle of Fallujah), handling ordnance for F/A-18 and F-14 squadrons (~54,000 lbs delivered).
+- Lemoore, CA (Jul 2001 – Jul 2003): Trained and led ordnance loading teams on flight-deck safety and procedural compliance, supporting joint operations with U.S. Marines alongside the Rough Raiders; awarded a Letter of Commendation.
+
+---
+
+## Technical Stack & Languages
+- **Cloud, Platform & GitOps:** AWS (EC2, RDS, S3), Kubernetes, Terraform, ArgoCD, Helm, Rafay, Azure, Docker, Keycloak, Vault / OpenBao, JFrog Artifactory, Anchore, Harness
+- **AI / LLMOps:** Llama Stack, Ollama, Vertex AI, Gemini, Docling, Pandas, Hugging Face Diffusers, SDXL
+- **Languages & Markup:** Python, Rust, Bash / Shell, SQL, YAML, JavaScript, LaTeX (Sphinx)
+
+---
+
+## Technical Research & Applied AI
+- **LLMOps & Local Inference:** Orchestrating local model deployments via Llama Stack and Ollama; engineering custom Modelfiles and external prompting strategies to tune model behaviors.
+- **RAG & ETL Pipelines:** Utilizing Docling for high-fidelity document parsing and Pandas for structured data transformation to optimize RAG context-window precision.
+- **Systems Tooling:** Implementing high-performance utility tools in Rust to enhance existing Python-based infrastructure automation and CLI tooling.
+- **Generative Art Pipelines:** Exploring Hugging Face Diffusers and SDXL pipelines for procedural game textures and automated concept generation.
+
+---
+
+## Education
+### B.S. in Computer Science — Regis University
+*2007 – 2013* | Denver, CO (`39.7875° N, 105.0325° W`) · ABET Accredited · NSA Center of Academic Excellence
+- **Honors & Standing:** Dean’s List (Spring 2013) · GPA 3.413
+- **Mathematics (17 credits):** Calculus, Linear Algebra, Discrete Math
+- **Computer Science Core:** Systems Architecture, Algorithms, Data Structures, Software Engineering, OOP (Java/C++)
+
+---
+
+## Clearance & Standards Governance (DoD 8140.03)
+Transitioned from baseline commercial DoD 8570 certifications (CompTIA Security+, CompTIA CySA+) to full DoD Manual 8140.03 qualification via accredited Computer Science education, 22+ years of continuous active-duty IT/Cyber service, and documented DevSecOps engineering practice.
+
+- **Security Clearance & Vetting** (`Active TS/SCI w/ CI Poly`): Active Top Secret / Sensitive Compartmented Information (TS/SCI) with Counterintelligence Polygraph, validated across U.S. Coast Guard Cyber Command and Fort Bragg / JSOC platform operations.
+- **Academic Qualification & Recency Waiver** (`DoD 8140.03 § 3.2.b(1)(a)(3)`): ABET-accredited B.S. in Computer Science (Regis University, NSA Center of Academic Excellence). Under § 3.2.b(1)(a)(3), 20+ years of continuous qualified service waives initial degree recency and continuing education currency thresholds.
+- **Legacy Commercial Certs → Service Equivalency** (`DoD 8140.03 § 3.2.b(1)(a)`): Previously maintained CompTIA Security+ and CompTIA CySA+ under legacy DoD 8570 mandates. Under DoD 8140.03 § 3.2.b(1)(a), 22+ years of active-duty Navy and Coast Guard IT/Cyber operations supersede baseline commercial certificate renewal.
+- **Cyberspace Operations Enterprise Reciprocity** (`DoD 8140.03 § 1.2(6–7) & § 3.2.b(1)(b)`): Architected and operated TS/SCI GitLab, Vault, and ArgoCD Kubernetes infrastructure at CACI International (Fort Bragg / JSOC), satisfying enterprise reciprocity for Cyberspace Operations Forces.
+- **DevSecOps & OJT Pipeline Equivalency** (`DoD 8140.03 § 3.2.b(3)`): Engineered custom Anchore/Harness automated container vulnerability scanning and JFrog Artifactory hardened UBI governance at 24x7Systems, fulfilling on-the-job training (OJT) and automated pipeline compliance criteria.
+
+---
+
+## Publications
+- **“Monolithic IT Architecture: We’re Not Stonehenge Anymore.”** — *U.S. Naval Institute Proceedings*, Vol. 147/11/1,425 (Nov 2021): https://www.usni.org/magazines/proceedings/2021/november/monolithic-it-architecture-were-not-stonehenge-anymore
+
+---
+
+## Extended Service & Systems Log (1999 – Present)
+
+### Platform Engineer — Runtime Team (formerly Operations Team Lead) — 24x7Systems, Inc. ([https://24x7systems.com/](https://24x7systems.com/))
+*Oct 2024 – Present* | Remote · Full-time (`35.6574° N, 78.3614° W`) | Industry
+
+- Moved from Operations Team Lead to the Runtime Team, operating closer to clusters to troubleshoot and resolve runtime issues via Rafay, Terraform, and heavy Helm configuration and lifecycle management.
+- Monitor and investigate alerts across both customer-driven cluster impacts and internal cluster telemetry to surface defects, harden stability, and implement targeted improvements.
+- Previously led 24x7 operations handling L0/L1 incident response, L2 triage, SLA enforcement, ServiceNow-to-Jira automation, and AWS Connect call automations triggered by Prometheus AlertManager webhooks.
+- Architect reusable Harness CI/CD templates embedding security checks; manage deployments via Kustomize and ArgoCD AppSets orchestrated through Harness alongside Terraform and Databricks onboarding/validation.
+- Own the JFrog Artifactory supply chain (Terraform and Ansible provisioning, Harness/GitLab integration, and hardened UBI/non-UBI base images with custom Rust audit reporting) and administer Anchore via Helm in an ArgoCD AppSet.
+
+### DevOps Engineer — CACI International Inc. ([https://www.caci.com/](https://www.caci.com/))
+*Jul 2023 – Oct 2024* | Fayetteville, NC · Hybrid · Full-time (`35.1390° N, 79.0060° W`) | Industry
+
+- Spearheaded DevOps, GitOps, and Kubernetes build initiatives using GitLab, HashiCorp Vault, ArgoCD, and Keycloak.
+- Scripted in Python, Bash, and Rust for API requests and backend optimization across AWS (EC2, RDS, S3).
+
+### DoD SkillBridge Intern — ARSIEM Corporation
+*Jan 2023 – Jul 2023* | 7912 Whitewater Ct, Clinton, MD · Remote · Internship (`38.7651° N, 76.8986° W`) | SkillBridge
+
+- Built GitLab Actions CI/CD workflows to deploy secure code to an Azure server, improving development efficiency.
+- Expanded hands-on skills across Kubernetes, JavaScript, and GitHub Actions.
+
+### Information Technology Specialist (IT1) — Blue Team / COA Branch — U.S. Coast Guard ([https://www.uscg.mil/](https://www.uscg.mil/))
+*Jul 2021 – Jan 2023* | Alexandria, VA · On-site (`38.8048° N, 77.0469° W`) | USCG Active Duty
+
+- Developed standardized tactical "Ruck Kits" so operators had self-contained packs if gear or teammates were separated during operations.
+- Trained incoming Blue Team operators on serial and SSH Cisco switch access and programming per current USCG TCTOs and firmware; helped build bootable WIM images for laptop deployment and drafted Kali Linux APT package lists.
+- Built a centralized COAB software repository and implemented a KeePass database on Teams for collaborative account and credential management.
+- Authored web.git.mil guidance and installation guides for Nessus, Grassmarlin, Pentest WS Offline Scanner, SharpHound, AppDetectivePro, Chainsaw, and BloodHound; produced mission posture assessment reports.
+- Supported USCG FINCEN external to CGCYBER by using Python (pandas) to collect and analyze billing data.
+
+### Information Technology Specialist (IT1) — Supervisory / DODIN — U.S. Coast Guard ([https://www.uscg.mil/](https://www.uscg.mil/))
+*Jul 2017 – Jul 2021* | Washington DC–Baltimore Area · Hybrid (`38.8816° N, 77.0910° W`) | USCG Active Duty
+
+- Developed and delivered DODIN and biweekly operational briefings directly to leadership.
+- Supervised and mentored junior analysts, managed shift schedules and coverage, delivered OJT and performance feedback, and ran regular training and competency assessments.
+
+### Information Technology Specialist (IT2) — Independent Network Admin — U.S. Coast Guard (USCGC Diligence) ([https://www.uscg.mil/](https://www.uscg.mil/))
+*Jun 2014 – Jul 2017* | Wilmington, NC · On-site (`34.2357° N, 77.9489° W`) | USCG Active Duty
+
+- Independently managed cutter LAN cabling and security across two Cisco 3750G switches, administering two host servers with Windows Server 2008 R2 and Exchange VMs, shipboard workstations, printers, and telephones.
+- Managed CGONE and SIPR networks (TACLANE, routers, HDSL modems), maintained KVH Ku-band and Inmarsat Fleet Broadband SATCOM, and troubleshot shore-side WAN/cabling in Wilmington, Key West, Guantanamo Bay, and Mayport.
+- Handled RMA/recapitalization, DRMO processing, and secure hardware disposal; qualified as sole onboard technician standing Boatswain's Mate, Gangway Petty Officer, and Sounding & Security watches, plus LE detention and AT/FP security watches.
+
+### Information Technology Specialist (IT2) — TASM & Asset Custody — U.S. Coast Guard Finance Center (FINCEN) ([https://www.uscg.mil/](https://www.uscg.mil/))
+*Jul 2010 – Jun 2014* | Chesapeake, VA · On-site (`36.7759° N, 76.2869° W`) | USCG Active Duty
+
+- Assigned to ESD Chesapeake supporting IT operations across two buildings (Finance and DBA Annex), spending ~75% of time on IT asset custody and inventory management during the first two years.
+- Served as Trusted Agent Security Manager (TASM), managing Trusted Agents, tracking certifications, and maintaining security compliance.
+- Supported standardized finance/DBA workstations (Oracle clients, Java runtimes, ODBC drivers, financial apps), administered Nortel/Avaya CS1000 PBX systems, and earned the Commandant's Letter of Commendation upon departure.
+
+### Information Technology Specialist (IT3) — Shipboard IT & SCCS Admin — U.S. Coast Guard (USCGC Legare WMEC-912) ([https://www.uscg.mil/](https://www.uscg.mil/))
+*Jul 2007 – Jul 2010* | Portsmouth, VA · On-site (`36.8268° N, 76.3372° W`) | USCG Active Duty
+
+- Administered Windows Exchange Server, maintained eOn PBX and SATCOM systems, and installed/administered the UNIX-based Shipboard Command and Control System (SCCS) during law-enforcement patrols.
+- Managed a VMware Linux host during a 2009 Africa mission to provision Windows VMs and support partner-nation laptops; rebuilt degraded cabling and ship alarm wiring.
+- Stood surface swimmer, combat/radio/bearing watchstander, and AT/FP watches; awarded a Letter of Commendation at tour completion.
+
+### Aviation Ordnanceman (AO3) — VFA-81 Sunliners — U.S. Navy ([https://www.navy.mil/](https://www.navy.mil/))
+*Jul 2001 – Jul 2005* | Virginia Beach, VA & Lemoore, CA · On-site (`36.8207° N, 76.0335° W`) | USN Active Duty
+
+- Virginia Beach, VA (Jul 2003 – Jul 2005): Deployed in 2004 with VFA-81 / CVW-17 aboard USS John F. Kennedy (CV-67) for its final cruise supporting Operations Iraqi Freedom, Enduring Freedom, and Al Fajr (second Battle of Fallujah), handling ordnance for F/A-18 and F-14 squadrons (~54,000 lbs delivered).
+- Lemoore, CA (Jul 2001 – Jul 2003): Trained and led aviation ordnance loading teams on flight-deck safety and procedural compliance, supporting joint operations with U.S. Marines alongside the Rough Raiders; awarded a Letter of Commendation.
+
+### Rental Manager & Kayak Instructor — Sun & Ski Sports (Joe Jones) · Kitty Hawk Kites, Inc.
+*1999 – 2001* | North Conway, NH & Nags Head, NC · On-site (`44.0537° N, 71.1284° W`) | Basecamp
+
+- Rental Manager — Sun & Ski Sports / Joe Jones (2709 White Mountain Hwy, North Conway, NH, 2001): Managed snowboard shop operations, staff scheduling/training, tuning/waxing/binding adjustments, customer gear fitting, and seasonal rental fleet rotation.
+- Kayak Instructor & Outdoor Adventure Specialist — Kitty Hawk Kites, Inc. (Nags Head, NC, 1999–2001): Led ecological and recreational kayak tours across Outer Banks sounds, marshes, and creeks, managed kayak/SUP/beach rental fleets, and handled retail sales and customer education.
+
+---
+
+## Supervisory & Professional References
+
+### 24x7Systems, Inc. (2024 – Present)
+- **Warren Haskins**
+- **Elvis (Kuzong) Vusoh**
+- **Genevieve Bita** | Email: bitagenevieve@gmail.com
+- **Joel Rop**
+- **Adam Alley**
+
+### CACI International Inc. (2023 – 2024)
+- **Holland Turner** | Email: holland.turner@caci.com
+
+### ARSIEM Corporation (2023)
+- **Nick Saba** | Email: saba_nick@arsiem.com
+
+### U.S. Coast Guard — Blue Team / COA Branch (2021 – 2023)
+- **Austin Favor** | Email: Austin.J.Favor@uscg.mil
+
+### U.S. Coast Guard — DODIN / Supervisory (2017 – 2023)
+- **Drew Cheneler** | Email: Drew.M.Cheneler@uscg.mil
+- **Kurt Kuppert** | Email: Kurt.M.Kuppert@uscg.mil
+- **Jason S. Southworth** | Email: Jason.S.Southworth@uscg.mil
+- **Nick Armstrong** | Email: Nickolas.A.Armstrong@uscg.mil
+

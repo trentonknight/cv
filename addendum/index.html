@@ -19,24 +19,38 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
         <a href="{{ '/#compliance-clearance' | relative_url }}" class="clearance-tag">
           {{ site.data.standards.clearance.badge_text }} ↘
         </a>
-      </div>
-      <address class="cv-contact">
-        <span>Flowers · Clayton, NC · 35.6574° N, 78.3614° W</span>
-        <span>(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
-        <span>
-          <a href="https://github.com/trentonknight">GitHub</a> ·
-          <a href="https://gitlab.com/trentonknight">GitLab</a> ·
-          <a href="https://www.linkedin.com/in/trentonknight/">LinkedIn</a>
-        </span>
         <div class="header-actions">
-          <button type="button" class="print-btn" onclick="window.print()">Print / Save PDF</button>
+          <a href="{{ '/' | relative_url }}" class="action-btn">← Main CV</a>
+          <a href="{{ '/resume.txt' | relative_url }}" class="action-btn">Full .md ↗</a>
         </div>
+      </div>
+      <address class="cv-contact beacon-card">
+        <span class="beacon-tag">COMMS // WAYPOINT &amp; LINKS</span>
+        <span class="beacon-line">Flowers · Clayton, NC · <code>35.6574° N, 78.3614° W</code></span>
+        <span class="beacon-line">(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
+        <span class="beacon-line beacon-links">
+          <a href="https://github.com/trentonknight" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          <a href="https://gitlab.com/trentonknight" target="_blank" rel="noopener noreferrer">GitLab</a> ·
+          <a href="https://www.linkedin.com/in/trentonknight/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </span>
       </address>
     </header>
 
+    <nav class="quick-jump" aria-label="Jump to addendum section">
+      <span class="quick-jump-label">JUMP TO //</span>
+      <a href="#addendum-intro-heading">Scope</a>
+      <a href="#duty-log-heading">Service Log (1999–Now)</a>
+      <a href="#references-heading">References</a>
+      <a href="{{ '/' | relative_url }}">Main CV ←</a>
+      <a href="{{ '/resume.txt' | relative_url }}">Full .md ↗</a>
+    </nav>
+
     <main class="cv-body">
-      <section class="cv-section" aria-labelledby="addendum-intro-heading">
-        <h2 id="addendum-intro-heading">Quad 02 Scope · Full Chronological Log &amp; Verifiable Contacts</h2>
+      <section class="cv-section" aria-labelledby="addendum-intro-heading" data-section-key="scope">
+        <div class="section-head-row">
+          <h2 id="addendum-intro-heading">Quad 02 Scope · Full Chronological Log &amp; Verifiable Contacts</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="scope">Copy Section</button>
+        </div>
         <div class="briefing-box">
           <div class="briefing-meta">
             <span>SHEET // QUAD-02</span>
@@ -52,8 +66,11 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
       </section>
 
       <!-- Part I: Full Chronological Duty & Systems Log -->
-      <section class="cv-section" aria-labelledby="duty-log-heading">
-        <h2 id="duty-log-heading">Part I · Extended Service &amp; Systems Log (1999 – Present)</h2>
+      <section class="cv-section" aria-labelledby="duty-log-heading" data-section-key="duty-log">
+        <div class="section-head-row">
+          <h2 id="duty-log-heading">Part I · Extended Service &amp; Systems Log (1999 – Present)</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="duty-log">Copy Section</button>
+        </div>
         <div class="log-dossier-banner">
           <div class="briefing-meta">
             <span>CHRONOLOGY // 1999–PRESENT</span>
@@ -107,8 +124,11 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
       </section>
 
       <!-- Part II: Supervisory & Professional References -->
-      <section class="cv-section" aria-labelledby="references-heading">
-        <h2 id="references-heading">Part II · Supervisory &amp; Professional References</h2>
+      <section class="cv-section" aria-labelledby="references-heading" data-section-key="references">
+        <div class="section-head-row">
+          <h2 id="references-heading">Part II · Supervisory &amp; Professional References</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="references">Copy Section</button>
+        </div>
 
         {% for group in site.data.contacts %}
           <div class="ref-group">
@@ -167,6 +187,34 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
 
     {% include compass.svg %}
   </div>
+
+  <script>
+    (function () {
+      if (!navigator.clipboard) return;
+
+      document.querySelectorAll(".section-copy-btn").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const key = btn.getAttribute("data-copy-target");
+          const section = document.querySelector('[data-section-key="' + key + '"]');
+          if (!section) return;
+          const original = btn.textContent;
+          try {
+            const heading = section.querySelector("h2")?.textContent?.trim() || "";
+            const clone = section.cloneNode(true);
+            clone.querySelectorAll(".section-copy-btn").forEach((el) => el.remove());
+            const bodyText = clone.innerText.replace(/\n{3,}/g, "\n\n").trim();
+            await navigator.clipboard.writeText((heading ? "## " + heading + "\n\n" : "") + bodyText);
+            btn.textContent = "Copied ✓";
+          } catch (_) {
+            btn.textContent = "Failed";
+          }
+          setTimeout(() => {
+            btn.textContent = original;
+          }, 1600);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
 

@@ -124,6 +124,13 @@ body {
   border-bottom-color: var(--hunter);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.45rem;
+}
+
 .print-btn {
   margin-top: 0.5rem;
   padding: 0.38rem 0.75rem;
@@ -135,6 +142,10 @@ body {
   border: 1px solid var(--pine);
   border-radius: 4px;
   cursor: pointer;
+}
+
+.header-actions .print-btn {
+  margin-top: 0;
 }
 
 .print-btn:hover {
@@ -167,26 +178,32 @@ body {
   margin: 0;
 }
 
-/* Trail Map SVG Container */
+/* Trail Map SVG Container (Weathered USGS Quad) */
 .trail-map {
   margin: 0 0 1.25rem;
-  padding: 0.75rem 0.85rem 0.6rem;
-  background: rgba(247, 244, 235, 0.86);
-  border: 1px solid var(--rule);
+  padding: 0.65rem 0.75rem 0.55rem;
+  background-color: #efe6d2;
+  background-image:
+    radial-gradient(ellipse at center, rgba(247, 244, 235, 0.35) 55%, rgba(168, 146, 110, 0.22) 100%),
+    var(--topo-svg);
+  background-size: cover;
+  border: 1.5px solid var(--pine);
   border-left: 4px solid var(--pine);
   border-radius: 4px;
+  box-shadow: inset 0 0 18px rgba(102, 82, 52, 0.16);
 }
 
 .trail-svg {
   display: block;
   width: 100%;
   height: auto;
-  overflow: visible;
+  border: 1px solid rgba(27, 67, 50, 0.28);
+  border-radius: 2px;
 }
 
 .trail-casing {
   fill: none;
-  stroke: var(--paper);
+  stroke: #f3ecda;
   stroke-width: 6.5;
   stroke-linecap: round;
 }
@@ -256,6 +273,35 @@ body {
 }
 
 .wp-date-active {
+  fill: var(--hunter);
+}
+
+/* Interactive SVG Waypoint Links */
+.wp-link {
+  cursor: pointer;
+  outline: none;
+}
+
+.wp-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.16s ease;
+}
+
+.wp-link:hover .wp-dot,
+.wp-link:focus-visible .wp-dot {
+  fill: var(--hunter);
+}
+
+.wp-link:hover .wp-ring,
+.wp-link:focus-visible .wp-ring {
+  fill: rgba(200, 90, 23, 0.22);
+  stroke: var(--hunter);
+  stroke-width: 1.6;
+}
+
+.wp-link:hover .wp-label,
+.wp-link:focus-visible .wp-label {
   fill: var(--hunter);
 }
 
@@ -612,6 +658,164 @@ body {
   border-bottom-color: var(--hunter);
 }
 
+/* Addendum & Supervisory References */
+.ref-group + .ref-group {
+  margin-top: 1.25rem;
+}
+
+.ref-group-title {
+  margin: 0 0 0.55rem;
+  font-size: 0.94rem;
+  font-weight: 650;
+  color: var(--pine);
+}
+
+.ref-group-period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--hunter);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.contact-card {
+  padding: 0.7rem 0.85rem;
+  background: var(--surface-card);
+  border: 1px solid var(--rule);
+  border-left: 3.5px solid var(--pine);
+  border-radius: 4px;
+}
+
+.contact-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.contact-card-head h4 {
+  margin: 0;
+  font-size: 0.96rem;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.contact-role-badge {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: var(--hunter);
+  background: rgba(200, 90, 23, 0.09);
+  border: 1px solid rgba(200, 90, 23, 0.3);
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+}
+
+.contact-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.contact-details li + li {
+  margin-top: 0.2rem;
+}
+
+.contact-details strong {
+  color: var(--pine);
+  font-weight: 600;
+}
+
+.contact-details a {
+  color: var(--pine-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(27, 67, 50, 0.25);
+}
+
+.contact-details a:hover {
+  color: var(--hunter);
+  border-bottom-color: var(--hunter);
+}
+
+/* Mini Quadrangle Map Grid at Bottom */
+.quad-footer-box {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 1.75rem;
+  margin-right: 6.5rem;
+  padding: 0.45rem;
+  background: rgba(247, 244, 235, 0.92);
+  border: 1px solid var(--pine);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+}
+
+.quad-footer-label {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.quad-cells {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(7.5rem, 1fr));
+  border: 1.5px solid var(--pine);
+}
+
+.quad-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.35rem 0.5rem;
+  text-decoration: none;
+}
+
+.quad-cell + .quad-cell {
+  border-left: 1.5px solid var(--pine);
+}
+
+.quad-cell.is-active {
+  background: rgba(27, 67, 50, 0.16);
+  color: var(--pine);
+}
+
+.quad-cell.is-link {
+  background: rgba(255, 253, 248, 0.9);
+  color: var(--hunter);
+}
+
+.quad-cell.is-link:hover {
+  background: var(--hunter);
+  color: #ffffff;
+}
+
+.quad-code {
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.quad-desc {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.quad-cell.is-link:hover .quad-desc {
+  color: #ffffff;
+}
+
 /* Cartographic Compass Rose Badge */
 .compass-badge {
   position: absolute;
@@ -664,13 +868,19 @@ body {
   }
 
   .skill-row,
-  .compliance-grid {
+  .compliance-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
     gap: 0.15rem;
   }
 
-  .compliance-grid {
+  .compliance-grid,
+  .contact-grid {
     gap: 0.65rem;
+  }
+
+  .quad-footer-box {
+    margin-right: 0;
   }
 
   .compass-badge {
@@ -722,6 +932,7 @@ body {
   }
 
   .print-btn,
+  .quad-footer-box,
   .back-link {
     display: none;
   }
@@ -743,7 +954,8 @@ body {
     page-break-inside: avoid;
   }
 
-  .compliance-card {
+  .compliance-card,
+  .contact-card {
     padding: 0.45rem 0.6rem;
     break-inside: avoid;
     page-break-inside: avoid;
@@ -766,7 +978,8 @@ body {
   }
 
   h2,
-  h3 {
+  h3,
+  h4 {
     break-after: avoid;
     page-break-after: avoid;
   }

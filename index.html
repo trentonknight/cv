@@ -28,7 +28,9 @@ title: Jason N. Mansfield — Curriculum Vitae
           <a href="https://gitlab.com/trentonknight">GitLab</a> ·
           <a href="https://www.linkedin.com/in/trentonknight/">LinkedIn</a>
         </span>
-        <button type="button" class="print-btn" onclick="window.print()">Print / Save PDF</button>
+        <div class="header-actions">
+          <button type="button" class="print-btn" onclick="window.print()">Print / Save PDF</button>
+        </div>
       </address>
     </header>
 
@@ -83,8 +85,8 @@ title: Jason N. Mansfield — Curriculum Vitae
         <h2 id="skills-heading">Technical Stack &amp; Languages</h2>
         <dl class="skills-grid">
           <div class="skill-row">
-            <dt>Platform &amp; GitOps</dt>
-            <dd>Kubernetes, Helm, ArgoCD, Terraform, Keycloak, Vault, JFrog Artifactory, Anchore, Harness</dd>
+            <dt>Cloud, Platform &amp; GitOps</dt>
+            <dd>AWS (EC2, RDS, S3, Route 53), Azure, Kubernetes, Docker, Helm, ArgoCD, Terraform, Keycloak, Vault, JFrog Artifactory, Anchore, Harness</dd>
           </div>
           <div class="skill-row">
             <dt>AI / LLMOps</dt>
@@ -176,6 +178,21 @@ title: Jason N. Mansfield — Curriculum Vitae
           </li>
         </ul>
       </section>
+
+      <!-- Mini Map Quadrangle Grid at Bottom -->
+      <aside class="quad-footer-box" aria-label="Quadrangle map sheet switcher">
+        <div class="quad-footer-label">QUADRANT INDEX</div>
+        <div class="quad-cells">
+          <div class="quad-cell is-active">
+            <span class="quad-code">01 · MAIN</span>
+            <span class="quad-desc">Route &amp; Stack</span>
+          </div>
+          <a href="{{ '/addendum/' | relative_url }}" class="quad-cell is-link">
+            <span class="quad-code">02 · LOG &amp; REFS →</span>
+            <span class="quad-desc">1999–Now &amp; Contacts</span>
+          </a>
+        </div>
+      </aside>
     </main>
 
     {% include compass.svg %}

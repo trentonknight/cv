@@ -1,113 +1,66 @@
-- id: "07"
-  num: "7"
-  map_label: "24x7Systems"
-  map_sub: "35.66°N, 78.36°W"
-  map_date: "2024–Now"
-  x: 778
-  y: 102
-  active: true
+- id: "06"
   title: "Platform Engineer & Operations Team Lead"
-  org: "24x7Systems"
+  org: "24x7Systems, Inc."
   location: "Flowers · Clayton, NC (Remote)"
   coords: "35.6574° N, 78.3614° W"
-  period: "2024 – Present"
+  period: "Oct 2024 – Present"
+  compliance_anchor: "#compliance-ojt"
+  compliance_label: "DoD 8140.03 OJT"
   highlights:
-    - "Lead platform engineering and operational execution across production environments."
-    - "Standardize deployment workflows, observability, and systems reliability practices."
-
-- id: "06"
-  num: "6"
-  map_label: "CACI DevOps"
-  map_sub: "38.95°N, 77.36°W"
-  map_date: "2023–24"
-  x: 660
-  y: 58
-  active: false
-  title: "DevOps Engineer"
-  org: "CACI International"
-  location: "Reston, VA / Hybrid"
-  coords: "38.9540° N, 77.3581° W"
-  period: "2023 – 2024"
-  highlights:
-    - "Built and maintained automated CI/CD pipelines and infrastructure-as-code workflows."
+    - "Lead Kubernetes cluster reliability, AWS backend optimization (EC2, RDS, S3, Route 53), and high-stakes incident response."
+    - "Architect automated CI/CD pipelines with Harness and container vulnerability governance with Anchore and JFrog Artifactory."
+    - "Integrate Vertex AI and Gemini into platform workflows for K8s networking and Terraform state-drift root-cause analysis."
 
 - id: "05"
-  num: "5"
-  map_label: "USCG Cyber"
-  map_sub: "36.85°N, 76.29°W"
-  map_date: "2017–23"
-  x: 540
-  y: 126
-  active: false
-  title: "Cyber & Network Operations (IT1) — NOSC EOC & COA Branch"
-  org: "U.S. Coast Guard Cyber Command (Active Duty)"
-  location: "Norfolk, VA Area"
-  coords: "36.8468° N, 76.2852° W"
-  period: "2017 – 2023"
+  title: "DevOps Engineer"
+  org: "CACI International Inc."
+  location: "JSOC · Fort Bragg, NC (Hybrid)"
+  coords: "35.1390° N, 79.0060° W"
+  period: "Jul 2023 – Oct 2024"
+  compliance_anchor: "#compliance-clearance"
+  compliance_label: "TS/SCI w/ CI Poly"
   highlights:
-    - "Directed cyber and network operations across NOSC EOC (2017–2021) and COA Branch (2021–2023)."
+    - "Spearheaded TS/SCI DevOps and GitOps infrastructure supporting Joint Special Operations Command (JSOC) with GitLab, HashiCorp Vault, and ArgoCD-managed Kubernetes clusters."
+    - "Engineered automation and platform tooling in Python, Bash, and Rust."
 
 - id: "04"
-  num: "4"
-  map_label: "CGC Diligence"
-  map_sub: "E. Coast / Carib."
-  map_date: "2014–17"
-  x: 420
-  y: 54
-  active: false
-  title: "Information Systems Technician (IT2)"
-  org: "USCGC Diligence (Active Duty)"
-  location: "Sector: U.S. East Coast & Caribbean Patrols (Underway)"
-  coords: ""
-  period: "2014 – 2017"
+  title: "Information Technology Specialist 1st Class (IT1) — Cyber Command"
+  org: "U.S. Coast Guard Cyber Command (COA Branch & NOSC EOC)"
+  location: "Alexandria, VA & Kearneysville, WV"
+  coords: "38.8048° N, 77.0469° W"
+  period: "Jul 2017 – Jan 2023"
+  compliance_anchor: "#compliance-experience"
+  compliance_label: "DoD 8140.03 Work Role"
   highlights:
-    - "Maintained shipboard communications, tactical networks, and mission-critical IT systems."
+    - "COA Branch Blue Team Analyst (2021–2023): Engineered portable tactical \"Ruck Kits\" and bootable WIM images; authored web.git.mil guidance and trained incoming operators on Cisco switch programming."
+    - "NOSC EOC Watch & Operations Lead (2017–2021): Supervised junior cyber analysts, managed watch scheduling, and delivered DODIN operational defense briefings."
 
 - id: "03"
-  num: "3"
-  map_label: "FINCEN"
-  map_sub: "36.78°N, 76.29°W"
-  map_date: "2010–14"
-  x: 300
-  y: 128
-  active: false
-  title: "Information Systems Technician (IT2)"
-  org: "U.S. Coast Guard Finance Center (FINCEN) (Active Duty)"
-  location: "Chesapeake, VA"
-  coords: "36.7759° N, 76.2869° W"
-  period: "2010 – 2014"
+  title: "Information Technology Specialist 2nd Class (IT2) — USCGC Diligence & FINCEN"
+  org: "U.S. Coast Guard"
+  location: "Wilmington, NC & Chesapeake, VA"
+  coords: "34.2357° N, 77.9489° W"
+  period: "Jul 2010 – Jul 2017"
   highlights:
-    - "Supported enterprise systems and financial/operational infrastructure."
+    - "USCGC Diligence · Wilmington, NC (2014–2017): Independent Network Admin managing shipboard LAN architecture, Cisco 3750G switches, Windows Server 2008 R2, TACLANE encryption, and underway SATCOM."
+    - "USCG Finance Center · Chesapeake, VA (2010–2014): Managed enterprise IT asset custody, inventory governance, Trusted Agents, and DoD certification compliance."
 
 - id: "02"
-  num: "2"
-  map_label: "CGC Legare"
-  map_sub: "Atlantic Patrols"
-  map_date: "2007–10"
-  x: 180
-  y: 58
-  active: false
-  title: "Information Systems Technician (IT3)"
-  org: "USCGC Legare (Active Duty)"
-  location: "Sector: North Atlantic & Maritime Patrols (Underway)"
-  coords: ""
-  period: "2007 – 2010"
+  title: "Information Technology Specialist 3rd Class (IT3) — USCGC Legare"
+  org: "U.S. Coast Guard"
+  location: "USCG Base Portsmouth · Portsmouth, VA"
+  coords: "36.8268° N, 76.3372° W"
+  period: "Jul 2007 – Jul 2010"
   highlights:
-    - "Operated and maintained underway network, messaging, and shipboard IT infrastructure."
+    - "Administered Windows Exchange Server and maintained eON PBX shipboard telecommunications across North Atlantic patrols."
+    - "Installed and administered the Shipboard Command and Control System (SCCS)."
 
 - id: "01"
-  num: "1"
-  map_label: "USN VFA-81"
-  map_sub: "N. Atlantic / CV-67"
-  map_date: "2001–05"
-  x: 58
-  y: 124
-  active: false
   title: "Aviation Ordnanceman (AO3) — VFA-81 Sunliners"
-  org: "U.S. Navy (Active Duty · USS John F. Kennedy CV-67)"
-  location: "Sector: North Atlantic & Fleet Operations (Underway)"
-  coords: ""
-  period: "2001 – 2005"
+  org: "U.S. Navy (USS John F. Kennedy CV-67)"
+  location: "NAS Oceana · Virginia Beach, VA"
+  coords: "36.8207° N, 76.0335° W"
+  period: "Jul 2001 – Jul 2005"
   highlights:
-    - "Executed high-tempo flight deck and ordnance operations aboard USS John F. Kennedy (CV-67)."
+    - "Weapons systems maintenance and flight-deck ordnance loading team leader supporting Operations Iraqi Freedom, Enduring Freedom, and Al Fajr."
 

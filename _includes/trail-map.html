@@ -1,49 +1,142 @@
-<figure class="trail-map" aria-label="Career timeline plotted as a topographic trail route from 2001 to present with coordinates and operating areas">
-  <svg
-    class="trail-svg"
-    viewBox="0 0 840 190"
-    role="img"
-    aria-label="Route connecting {{ site.data.expedition | size }} career milestones from 2001 to present with locations and coordinates"
-  >
-    <!-- Subtle map grid / UTM ticks -->
-    <g stroke="#1b4332" stroke-opacity="0.14" stroke-width="1">
-      <line x1="0" y1="45" x2="840" y2="45" stroke-dasharray="3 5" />
-      <line x1="0" y1="145" x2="840" y2="145" stroke-dasharray="3 5" />
-      <line x1="120" y1="0" x2="120" y2="190" stroke-dasharray="2 6" />
-      <line x1="240" y1="0" x2="240" y2="190" stroke-dasharray="2 6" />
-      <line x1="360" y1="0" x2="360" y2="190" stroke-dasharray="2 6" />
-      <line x1="480" y1="0" x2="480" y2="190" stroke-dasharray="2 6" />
-      <line x1="600" y1="0" x2="600" y2="190" stroke-dasharray="2 6" />
-      <line x1="720" y1="0" x2="720" y2="190" stroke-dasharray="2 6" />
+<figure class="trail-map" aria-label="Career expedition route map">
+  <svg class="trail-svg" viewBox="0 0 760 165" role="img" aria-labelledby="trail-map-title">
+    <title id="trail-map-title">Career Expedition Route Map — Click any waypoint to jump to role details</title>
+
+    <defs>
+      <!-- USGS UTM / Survey Grid Pattern -->
+      <pattern id="usgs-grid" width="38" height="38" patternUnits="userSpaceOnUse">
+        <path d="M 38 0 L 0 0 0 38" fill="none" stroke="#1b4332" stroke-width="0.55" stroke-opacity="0.16" />
+        <path d="M 19 0 L 19 3 M 0 19 L 3 19" fill="none" stroke="#1b4332" stroke-width="0.5" stroke-opacity="0.22" />
+      </pattern>
+
+      <!-- Subtle Paper Grain / Grunge Noise -->
+      <filter id="topo-grain" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" seed="14" result="noise" />
+        <feColorMatrix type="matrix" values="
+          0 0 0 0 0.24
+          0 0 0 0 0.21
+          0 0 0 0 0.15
+          0 0 0 0.08 0" in="noise" result="coloredNoise" />
+        <feComposite in="coloredNoise" in2="SourceGraphic" operator="over" />
+      </filter>
+
+      <!-- Aged Map Edge Vignette -->
+      <radialGradient id="usgs-vignette" cx="50%" cy="50%" r="65%">
+        <stop offset="55%" stop-color="#f5efe0" stop-opacity="0" />
+        <stop offset="100%" stop-color="#cbbba0" stop-opacity="0.38" />
+      </radialGradient>
+    </defs>
+
+    <!-- Map Base Plate: Survey Grid + Vignette -->
+    <g filter="url(#topo-grain)">
+      <rect x="0" y="0" width="760" height="165" rx="3" fill="#f3ecda" />
+      <rect x="0" y="0" width="760" height="165" rx="3" fill="url(#usgs-grid)" />
+
+      <!-- Sepia USGS Topographic Contour Lines -->
+      <g fill="none" stroke="#8c6239" stroke-linecap="round">
+        <!-- West Ridge Contours -->
+        <path d="M -20 35 C 65 18, 120 75, 195 55 S 310 15, 385 42" stroke-width="0.8" stroke-opacity="0.26" />
+        <path d="M -15 58 C 70 42, 130 98, 205 78 S 315 38, 395 66" stroke-width="1.25" stroke-opacity="0.34" />
+        <path d="M -10 84 C 75 68, 138 122, 215 102 S 325 65, 405 92" stroke-width="0.75" stroke-opacity="0.24" />
+        <path d="M 10 128 C 95 108, 165 148, 250 128 S 360 98, 435 125" stroke-width="0.8" stroke-opacity="0.24" />
+
+        <!-- Summit / East Saddle Contours (Index Contour + Closed Peak Loops) -->
+        <path d="M 355 145 C 445 112, 515 142, 600 118 S 695 95, 780 112" stroke-width="1.2" stroke-opacity="0.32" />
+        <path d="M 410 22 C 495 42, 565 12, 650 32 S 725 48, 780 28" stroke-width="0.8" stroke-opacity="0.26" />
+        <ellipse cx="695" cy="55" rx="54" ry="30" transform="rotate(-11 695 55)" stroke-width="0.85" stroke-opacity="0.28" />
+        <ellipse cx="695" cy="55" rx="36" ry="19" transform="rotate(-11 695 55)" stroke-width="1.2" stroke-opacity="0.36" />
+        <ellipse cx="190" cy="82" rx="48" ry="26" transform="rotate(8 190 82)" stroke-width="0.8" stroke-opacity="0.24" />
+      </g>
+
+      <!-- USGS Elevation & Benchmark Callouts -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="6.5" fill="#7a5633" opacity="0.65">
+        <text x="148" y="49" transform="rotate(-8 148 49)">420m</text>
+        <text x="515" y="131" transform="rotate(-6 515 131)">680m</text>
+        <text x="728" y="29">BM 8140</text>
+        <text x="12" y="156">35°39'N</text>
+        <text x="708" y="156">78°21'W</text>
+      </g>
+
+      <!-- Aged Edge Vignette -->
+      <rect x="0" y="0" width="760" height="165" rx="3" fill="url(#usgs-vignette)" />
     </g>
 
-    <!-- Route casing & hunter-orange trail -->
-    <path
-      class="trail-casing"
-      d="M 58 124 C 115 124, 135 58, 180 58 C 230 58, 250 128, 300 128 C 350 128, 370 54, 420 54 C 470 54, 490 126, 540 126 C 590 126, 610 58, 660 58 C 708 58, 732 102, 778 102"
-    />
-    <path
-      class="trail-line"
-      d="M 58 124 C 115 124, 135 58, 180 58 C 230 58, 250 128, 300 128 C 350 128, 370 54, 420 54 C 470 54, 490 126, 540 126 C 590 126, 610 58, 660 58 C 708 58, 732 102, 778 102"
-    />
+    <!-- Trail Path Casing & Dashed Route Line -->
+    <path class="trail-casing" d="M 65 98 C 145 48, 205 118, 290 78 S 445 48, 530 88 S 645 108, 695 55" />
+    <path class="trail-line"   d="M 65 98 C 145 48, 205 118, 290 78 S 445 48, 530 88 S 645 108, 695 55" />
 
-    {% assign stops_chrono = site.data.expedition | reverse %}
-    {% for wp in stops_chrono %}
-      <g class="waypoint{% if wp.active %} waypoint-current{% endif %}" transform="translate({{ wp.x }}, {{ wp.y }})">
-        <circle r="{% if wp.active %}14{% else %}12.5{% endif %}" class="wp-ring{% if wp.active %} wp-ring-active{% endif %}" />
-        <circle r="{% if wp.active %}9.5{% else %}9{% endif %}" class="wp-dot{% if wp.active %} wp-dot-active{% endif %}" />
-        <text y="3.5" class="wp-num">{{ wp.num }}</text>
-        <text y="{% if wp.active %}-30{% else %}-28{% endif %}" class="wp-label{% if wp.active %} wp-label-active{% endif %}">{{ wp.map_label }}</text>
-        <text y="{% if wp.active %}-18{% else %}-16{% endif %}" class="wp-coord">{{ wp.map_sub }}</text>
-        <text y="{% if wp.active %}25{% else %}24{% endif %}" class="wp-date{% if wp.active %} wp-date-active{% endif %}">{{ wp.map_date }}</text>
+    <!-- Waypoint 01: U.S. Navy -->
+    <a href="#stop-01" xlink:href="#stop-01" class="wp-link" aria-label="Waypoint 01: U.S. Navy VFA-81 Sunliners">
+      <g class="wp-node" transform="translate(65, 98)">
+        <circle r="15" class="wp-ring" />
+        <circle r="10.5" class="wp-dot" />
+        <text y="3.5" class="wp-num">01</text>
+        <text y="-21" class="wp-label">USN · VFA-81</text>
+        <text y="26" class="wp-date">2001–2005</text>
       </g>
-    {% endfor %}
+    </a>
+
+    <!-- Waypoint 02: USCGC Legare -->
+    <a href="#stop-02" xlink:href="#stop-02" class="wp-link" aria-label="Waypoint 02: USCGC Legare">
+      <g class="wp-node" transform="translate(190, 85)">
+        <circle r="15" class="wp-ring" />
+        <circle r="10.5" class="wp-dot" />
+        <text y="3.5" class="wp-num">02</text>
+        <text y="-21" class="wp-label">USCGC Legare</text>
+        <text y="26" class="wp-date">2007–2010</text>
+      </g>
+    </a>
+
+    <!-- Waypoint 03: USCG FINCEN -->
+    <a href="#stop-03" xlink:href="#stop-03" class="wp-link" aria-label="Waypoint 03: USCG Finance Center">
+      <g class="wp-node" transform="translate(315, 69)">
+        <circle r="15" class="wp-ring" />
+        <circle r="10.5" class="wp-dot" />
+        <text y="3.5" class="wp-num">03</text>
+        <text y="-21" class="wp-label">USCG FINCEN</text>
+        <text y="26" class="wp-date">2010–2014</text>
+      </g>
+    </a>
+
+    <!-- Waypoint 04: USCGC Diligence -->
+    <a href="#stop-04" xlink:href="#stop-04" class="wp-link" aria-label="Waypoint 04: USCGC Diligence">
+      <g class="wp-node" transform="translate(445, 63)">
+        <circle r="15" class="wp-ring" />
+        <circle r="10.5" class="wp-dot" />
+        <text y="3.5" class="wp-num">04</text>
+        <text y="-21" class="wp-label">USCGC Diligence</text>
+        <text y="26" class="wp-date">2014–2017</text>
+      </g>
+    </a>
+
+    <!-- Waypoint 05: USCG Cyber Command -->
+    <a href="#stop-05" xlink:href="#stop-05" class="wp-link" aria-label="Waypoint 05: USCG Cyber Command">
+      <g class="wp-node" transform="translate(570, 95)">
+        <circle r="15" class="wp-ring" />
+        <circle r="10.5" class="wp-dot" />
+        <text y="3.5" class="wp-num">05</text>
+        <text y="-21" class="wp-label">USCG Cyber</text>
+        <text y="26" class="wp-date">2017–2023</text>
+      </g>
+    </a>
+
+    <!-- Waypoint 06: 24x7Systems / CACI (Current Summit) -->
+    <a href="#stop-06" xlink:href="#stop-06" class="wp-link" aria-label="Waypoint 06: Platform Engineer & Lead at 24x7Systems">
+      <g class="wp-node" transform="translate(695, 55)">
+        <circle r="15" class="wp-ring-active" />
+        <circle r="10.5" class="wp-dot-active" />
+        <text y="3.5" class="wp-num">06</text>
+        <text y="-21" class="wp-label wp-label-active">24x7Systems</text>
+        <text y="26" class="wp-date wp-date-active">2023–Present</text>
+      </g>
+    </a>
   </svg>
+
   <figcaption class="trail-caption">
-    <span>LEGEND:</span>
-    <i class="legend-swatch"></i> Trail Progression (01 → {{ site.data.expedition.first.id }})
+    <span class="legend-swatch" aria-hidden="true"></span>
+    <span>USGS QUAD ROUTE · CONTOUR INT. 20m</span>
     <span class="legend-sep">·</span>
-    <span>Coords: WGS84 / Patrol Sectors</span>
+    <span>CLICK ANY WAYPOINT TO JUMP TO LOG ENTRY</span>
   </figcaption>
 </figure>
 

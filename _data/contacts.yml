@@ -1,0 +1,92 @@
+- org: "24x7Systems Inc"
+  role: "Platform Engineer / Operations Team Lead"
+  period: "2024 – Present"
+  people:
+    - name: "Warren Haskins"
+      relation: "Supervisor"
+      mobile: "(505) 331-0983"
+      email: ""
+      linkedin: "https://www.linkedin.com/in/warrenthaskins/"
+
+    - name: "Elvis (Kuzong) Vusoh"
+      relation: "Co-Worker"
+      mobile: "(202) 839-1813"
+      email: ""
+      linkedin: ""
+
+    - name: "Genevieve Bita"
+      relation: "Co-Worker"
+      mobile: "(405) 361-6487"
+      email: "bitagenevieve@gmail.com"
+      linkedin: ""
+
+    - name: "Joel Rop"
+      relation: "Co-Worker"
+      mobile: "(205) 239-8167"
+      email: ""
+      linkedin: "https://www.linkedin.com/in/joelrop/"
+
+    - name: "Adam Alley"
+      relation: "Co-Worker"
+      mobile: "(909) 377-2255"
+      email: ""
+      linkedin: "https://www.linkedin.com/in/adam-alley/"
+
+- org: "CACI International Inc"
+  role: "DevOps Engineer"
+  period: "2023 – 2024"
+  people:
+    - name: "Holland Turner"
+      relation: "Supervisor"
+      mobile: "(910) 551-8424"
+      email: "holland.turner@caci.com"
+      linkedin: ""
+
+- org: "ARSIEM"
+  role: "DevSecOps Intern"
+  period: "2023"
+  people:
+    - name: "Nick Saba"
+      relation: "Supervisor"
+      mobile: "(410) 562-1050"
+      email: "saba_nick@arsiem.com"
+      linkedin: ""
+
+- org: "U.S. Coast Guard Cyber Command (COA Branch)"
+  role: "Information Technology Specialist 1st Class (IT1)"
+  period: "2021 – 2023"
+  people:
+    - name: "Austin Favor"
+      relation: "Supervisor"
+      mobile: "(208) 946-8878"
+      email: "Austin.J.Favor@uscg.mil"
+      linkedin: "https://www.linkedin.com/in/austin-favor-8b52b0187/"
+
+- org: "U.S. Coast Guard Cyber Command (NOSC EOC)"
+  role: "Information Technology Specialist 1st Class (IT1)"
+  period: "2017 – 2023"
+  people:
+    - name: "Drew Cheneler"
+      relation: "Supervisor (2017 – 2021)"
+      mobile: "(571) 529-0035"
+      email: "Drew.M.Cheneler@uscg.mil"
+      linkedin: "https://www.linkedin.com/in/drew-cheneler/"
+
+    - name: "Kurt Kuppert"
+      relation: "Supervisor (2018 – 2020)"
+      mobile: "(540) 729-3534"
+      email: "Kurt.M.Kuppert@uscg.mil"
+      linkedin: "https://www.linkedin.com/in/kurt-kuppert-8637331a4/"
+
+    - name: "Jason S. Southworth"
+      relation: "Supervisor (2020 – 2023)"
+      mobile: "(740) 876-1154"
+      email: "Jason.S.Southworth@uscg.mil"
+      linkedin: "https://www.linkedin.com/in/jason-southworth/"
+
+    - name: "Nick Armstrong"
+      relation: "Supervisor (2020 – 2023)"
+      mobile: "(843) 877-6390"
+      email: "Nickolas.A.Armstrong@uscg.mil"
+      linkedin: "https://www.linkedin.com/in/nickolas-nick-armstrong-1476a819a/"
+

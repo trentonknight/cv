@@ -15,29 +15,37 @@ title: Jason N. Mansfield — Curriculum Vitae
     <header class="cv-header">
       <div class="cv-header-main">
         <h1>Jason N. Mansfield</h1>
-        <p class="role-headline">Platform Engineer &amp; Operations Team Lead</p>
+        <p class="role-headline">Platform Engineer &amp; DevOps · GitOps, LLMOps &amp; DevSecOps</p>
+        <a href="#compliance-clearance" class="clearance-tag">
+          {{ site.data.standards.clearance.badge_text }} ↘
+        </a>
       </div>
       <address class="cv-contact">
         <span>Flowers · Clayton, NC · 35.6574° N, 78.3614° W</span>
-        <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a>
-        <a href="https://github.com/trentonknight">github.com/trentonknight</a>
+        <span>(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
+        <span>
+          <a href="https://github.com/trentonknight">GitHub</a> ·
+          <a href="https://gitlab.com/trentonknight">GitLab</a> ·
+          <a href="https://www.linkedin.com/in/trentonknight/">LinkedIn</a>
+        </span>
         <button type="button" class="print-btn" onclick="window.print()">Print / Save PDF</button>
       </address>
     </header>
 
     <main class="cv-body">
       <section class="cv-section" aria-labelledby="summary-heading">
-        <h2 id="summary-heading">Summary</h2>
+        <h2 id="summary-heading">About &amp; Specialization</h2>
         <p>
-          Platform and DevOps engineer with 22+ years of continuous active-duty U.S. Navy and
-          U.S. Coast Guard service and a B.S. in Computer Science. Focused on resilient
-          infrastructure, automation, and practical systems engineering.
+          Platform Engineer with expertise in designing secure, cloud-native systems. Specialized in
+          <strong>GitOps / DevOps</strong>, <strong>Platform Engineering</strong>,
+          <strong>LLMOps / AI Infrastructure</strong>, and <strong>DevSecOps</strong>, backed by
+          22+ years of continuous active-duty U.S. Navy and U.S. Coast Guard service.
         </p>
       </section>
 
       <!-- Cartographic Career Route Map -->
       <section class="cv-section route-section" aria-labelledby="route-heading">
-        <h2 id="route-heading">Career Expedition Route &amp; Coordinates</h2>
+        <h2 id="route-heading">Career Expedition Route &amp; Experience</h2>
 
         {% include trail-map.html %}
 
@@ -53,6 +61,9 @@ title: Jason N. Mansfield — Curriculum Vitae
                     <p class="entry-org">{{ stop.org }}</p>
                     <p class="entry-sector">
                       {{ stop.location }}{% if stop.coords and stop.coords != "" %} · <code>{{ stop.coords }}</code>{% endif %}
+                      {% if stop.compliance_anchor and stop.compliance_anchor != "" %}
+                        · <a href="{{ stop.compliance_anchor }}" class="compliance-chip">{{ stop.compliance_label }} ↘</a>
+                      {% endif %}
                     </p>
                   </div>
                   <time class="entry-period">{{ stop.period }}</time>
@@ -69,19 +80,41 @@ title: Jason N. Mansfield — Curriculum Vitae
       </section>
 
       <section class="cv-section" aria-labelledby="skills-heading">
-        <h2 id="skills-heading">Technical Skills</h2>
+        <h2 id="skills-heading">Technical Stack &amp; Languages</h2>
         <dl class="skills-grid">
           <div class="skill-row">
+            <dt>Platform &amp; GitOps</dt>
+            <dd>Kubernetes, Helm, ArgoCD, Terraform, Keycloak, Vault, JFrog Artifactory, Anchore, Harness</dd>
+          </div>
+          <div class="skill-row">
+            <dt>AI / LLMOps</dt>
+            <dd>Llama Stack, Ollama, Vertex AI, Gemini, Docling, Pandas, Hugging Face Diffusers, SDXL</dd>
+          </div>
+          <div class="skill-row">
             <dt>Languages</dt>
-            <dd>Rust, Shell, SQL, YAML, LaTeX</dd>
+            <dd>Python, Bash / Shell, JavaScript, Rust, SQL, YAML, LaTeX (Sphinx)</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="cv-section" aria-labelledby="ai-research-heading">
+        <h2 id="ai-research-heading">Technical Research &amp; Applied AI</h2>
+        <dl class="skills-grid">
+          <div class="skill-row">
+            <dt>LLMOps</dt>
+            <dd>Orchestrating local model deployments via <strong>Llama Stack</strong> and <strong>Ollama</strong>; engineering custom Modelfiles and external prompting strategies to tune model behaviors.</dd>
           </div>
           <div class="skill-row">
-            <dt>Platform &amp; Ops</dt>
-            <dd>Linux, Git, CI/CD, Containerization, Infrastructure Automation</dd>
+            <dt>RAG &amp; ETL</dt>
+            <dd>Utilizing <strong>Docling</strong> for high-fidelity document parsing and <strong>Pandas</strong> for structured data transformation to optimize RAG context-window precision.</dd>
           </div>
           <div class="skill-row">
-            <dt>Data &amp; Systems</dt>
-            <dd>SQLite, Local Inference Workflows, Network &amp; Systems Operations</dd>
+            <dt>Generative Art</dt>
+            <dd>Exploring <strong>Hugging Face Diffusers</strong> and SDXL pipelines for procedural game textures and automated concept generation.</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Systems Tooling</dt>
+            <dd>Implementing high-performance utility tools in <strong>Rust</strong> to enhance existing Python-based infrastructure automation and CLI tooling.</dd>
           </div>
         </dl>
       </section>
@@ -91,13 +124,45 @@ title: Jason N. Mansfield — Curriculum Vitae
         <article class="entry">
           <div class="entry-head">
             <div>
-              <h3 class="entry-title">B.S. in Computer Science</h3>
-              <p class="entry-org">Regis University · Denver, CO / Distance · <code>39.7875° N, 105.0325° W</code></p>
+              <h3 class="entry-title">B.S. in Computer Science — Regis University</h3>
+              <p class="entry-org">
+                ABET Accredited · NSA Center of Academic Excellence · <code>39.7875° N, 105.0325° W</code> ·
+                <a href="#compliance-degree" class="compliance-chip">DoD 8140.03 Degree Recency Waiver ↘</a>
+              </p>
             </div>
             <time class="entry-period">2007 – 2013</time>
           </div>
+          <ul class="entry-points">
+            <li><strong>Academics:</strong> Dean’s List (Spring 2013), GPA 3.413.</li>
+            <li><strong>Mathematics (17 Cr.):</strong> Calculus, Linear Algebra, Discrete Math.</li>
+            <li><strong>CS Core:</strong> Systems Architecture, Algorithms, Data Structures, Software Engineering, OOP (Java/C++).</li>
+          </ul>
         </article>
       </section>
+
+      <!-- Dedicated Clearance, Standards & Qualification Progression Section -->
+      <section class="cv-section standards-section" aria-labelledby="standards-heading">
+        <h2 id="standards-heading">Clearance &amp; Standards Governance (DoD 8140.03)</h2>
+        <p class="standards-intro">{{ site.data.standards.intro }}</p>
+
+        <div class="compliance-grid">
+          {% for item in site.data.standards.provisions %}
+            <article class="compliance-card{% if item.featured %} compliance-featured{% endif %}" id="{{ item.id }}">
+              <div class="compliance-head">
+                <h3>{{ item.title }}</h3>
+                <span class="compliance-cite">{{ item.cite }}</span>
+              </div>
+              <p>
+                {{ item.description }}
+                {% if item.back_anchor and item.back_anchor != "" %}
+                  <a href="{{ item.back_anchor }}" class="back-link">↑ {{ item.back_label }}</a>
+                {% endif %}
+              </p>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
       <section class="cv-section" aria-labelledby="publications-heading">
         <h2 id="publications-heading">Publications</h2>
         <ul class="pub-list">
@@ -111,7 +176,6 @@ title: Jason N. Mansfield — Curriculum Vitae
           </li>
         </ul>
       </section>
-
     </main>
 
     {% include compass.svg %}

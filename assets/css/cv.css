@@ -23,6 +23,7 @@
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -81,6 +82,25 @@ body {
   color: var(--hunter);
   font-size: 0.98rem;
   font-weight: 600;
+}
+
+.clearance-tag {
+  display: inline-block;
+  margin: 0.45rem 0 0;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--pine);
+  background: rgba(27, 67, 50, 0.1);
+  border: 1px solid rgba(27, 67, 50, 0.3);
+  border-radius: 3px;
+}
+
+.clearance-tag:hover {
+  color: #ffffff;
+  background: var(--pine);
 }
 
 .cv-contact {
@@ -292,10 +312,16 @@ body {
   background: var(--surface-card);
   border: 1px solid var(--rule);
   border-radius: 4px;
+  scroll-margin-top: 1.25rem;
 }
 
 .stop-card:last-child {
   margin-bottom: 0;
+}
+
+.stop-card:target {
+  border-color: var(--hunter);
+  box-shadow: 0 0 0 2px rgba(200, 90, 23, 0.25);
 }
 
 .stop-marker {
@@ -367,6 +393,25 @@ body {
   border-radius: 3px;
 }
 
+.compliance-chip {
+  display: inline-block;
+  padding: 0.06rem 0.42rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--hunter);
+  background: rgba(200, 90, 23, 0.09);
+  border: 1px solid rgba(200, 90, 23, 0.32);
+  border-radius: 3px;
+}
+
+.compliance-chip:hover {
+  color: #ffffff;
+  background: var(--hunter);
+  border-color: var(--hunter);
+}
+
 .entry-period {
   font-family: var(--font-mono);
   font-size: 0.84rem;
@@ -411,6 +456,141 @@ body {
   color: var(--muted);
 }
 
+/* Cartographic Field Permit / Restricted Sector Frame */
+.standards-section {
+  position: relative;
+  padding: 1.15rem 1.25rem 1.25rem;
+  background: rgba(247, 244, 235, 0.92);
+  border: 2px solid var(--pine);
+  outline: 1px solid rgba(27, 67, 50, 0.35);
+  outline-offset: -5px;
+  border-radius: 3px;
+}
+
+/* Corner survey registration marks */
+.standards-section::before,
+.standards-section::after {
+  content: "+";
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--hunter);
+  pointer-events: none;
+}
+
+.standards-section::before {
+  top: 0.35rem;
+  right: 0.5rem;
+}
+
+.standards-section::after {
+  bottom: 0.35rem;
+  left: 0.5rem;
+}
+
+.standards-intro {
+  margin: 0 0 0.9rem;
+  font-size: 0.93rem;
+}
+
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.compliance-card {
+  padding: 0.7rem 0.85rem;
+  background: var(--surface-card);
+  border: 1px solid var(--rule);
+  border-left: 3.5px solid var(--pine);
+  border-radius: 4px;
+  scroll-margin-top: 1.25rem;
+}
+
+/* Featured TS/SCI Clearance Card with Cartographic Stamp */
+.compliance-card.compliance-featured {
+  position: relative;
+  overflow: hidden;
+  grid-column: 1 / -1;
+  background:
+    linear-gradient(135deg, rgba(27, 67, 50, 0.06) 0%, rgba(200, 90, 23, 0.06) 100%),
+    var(--surface-card);
+  border: 1.5px solid var(--pine);
+  border-left: 5px solid var(--hunter);
+}
+
+/* Subtle angled clearance stamp watermark */
+.compliance-card.compliance-featured::after {
+  content: "RESTRICTED ACCESS // TS-SCI";
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.55rem;
+  padding: 0.15rem 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--hunter);
+  border: 1.5px solid var(--hunter);
+  border-radius: 2px;
+  opacity: 0.28;
+  transform: rotate(-3deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+.compliance-card:target {
+  border-color: var(--hunter);
+  box-shadow: 0 0 0 2px rgba(200, 90, 23, 0.28);
+}
+
+.compliance-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+.compliance-head h3 {
+  margin: 0;
+  font-size: 0.94rem;
+  font-weight: 650;
+  color: var(--pine);
+}
+
+.compliance-cite {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--hunter);
+}
+
+.compliance-card p {
+  margin: 0;
+  font-size: 0.87rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.back-link {
+  margin-left: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--pine-mid);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--hunter);
+  text-decoration: underline;
+}
+
 /* Publications */
 .pub-list {
   margin: 0;
@@ -431,8 +611,6 @@ body {
   color: var(--hunter);
   border-bottom-color: var(--hunter);
 }
-
-
 
 /* Cartographic Compass Rose Badge */
 .compass-badge {
@@ -485,9 +663,14 @@ body {
     align-items: flex-start;
   }
 
-  .skill-row {
+  .skill-row,
+  .compliance-grid {
     grid-template-columns: 1fr;
     gap: 0.15rem;
+  }
+
+  .compliance-grid {
+    gap: 0.65rem;
   }
 
   .compass-badge {
@@ -501,10 +684,6 @@ body {
 
 /* Print / PDF Export */
 @media print {
-  .pub-list a {
-    color: #000000;
-    border-bottom: none;
-  }
   @page {
     size: letter;
     margin: 0.5in 0.55in;
@@ -542,7 +721,8 @@ body {
     background-repeat: no-repeat, no-repeat;
   }
 
-  .print-btn {
+  .print-btn,
+  .back-link {
     display: none;
   }
 
@@ -554,6 +734,23 @@ body {
   .stop-card {
     padding: 0.45rem 0.65rem;
     margin-bottom: 0.45rem;
+  }
+
+  .standards-section {
+    padding: 0.75rem 0.85rem;
+    outline-offset: -4px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .compliance-card {
+    padding: 0.45rem 0.6rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .compliance-card.compliance-featured::after {
+    opacity: 0.22;
   }
 
   .cv-section {
@@ -572,6 +769,11 @@ body {
   h3 {
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  .pub-list a {
+    color: #000000;
+    border-bottom: none;
   }
 
   .compass-badge {

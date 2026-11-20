@@ -202,8 +202,16 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
             const heading = section.querySelector("h2")?.textContent?.trim() || "";
             const clone = section.cloneNode(true);
             clone.querySelectorAll(".section-copy-btn").forEach((el) => el.remove());
-            const bodyText = clone.innerText.replace(/\n{3,}/g, "\n\n").trim();
-            await navigator.clipboard.writeText((heading ? "## " + heading + "\n\n" : "") + bodyText);
+
+            const cleanBody = clone.innerText
+              .split("\n")
+              .map((line) => line.replace(/^[ \t]+/, "").replace(/[ \t]{2,}/g, " ").trim())
+              .filter((line, idx, arr) => line !== "" || (idx > 0 && arr[idx - 1] !== ""))
+              .join("\n")
+              .replace(/\n{3,}/g, "\n\n")
+              .trim();
+
+            await navigator.clipboard.writeText((heading ? "## " + heading + "\n\n" : "") + cleanBody);
             btn.textContent = "Copied ✓";
           } catch (_) {
             btn.textContent = "Failed";

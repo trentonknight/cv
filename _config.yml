@@ -2,7 +2,7 @@
 title: "Jason N. Mansfield — Curriculum Vitae"
 description: "Platform Engineer & Operations Team Lead"
 url: "https://trentonknight.github.io"
-baseurl: "" # Set to "/cv" if hosted as a project site rather than a user/org site
+baseurl: "/cv" # Set to "/cv" if hosted as a project site rather than a user/org site
 
 # Native HTML/CSS workflow (no theme wrapping required)
 theme: null

@@ -1,7 +1,0 @@
-# Minimal Gemfile for GitHub Pages
-source 'https://rubygems.org'
-
-gem 'jekyll', '~> 4.2.0'
-
-# Use GitHub Pages gem (includes most dependencies)
-gem 'github-pages', '~> 2.2.0'

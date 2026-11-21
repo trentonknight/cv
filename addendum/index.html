@@ -158,6 +158,9 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
                     {% if person.email and person.email != "" %}
                       <li><strong>Email:</strong> <a href="mailto:{{ person.email }}">{{ person.email }}</a></li>
                     {% endif %}
+                    {% if person.linkedin and person.linkedin != "" %}
+                      <li><strong>LinkedIn:</strong> <a href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer">{{ person.linkedin }} ↗</a></li>
+                    {% endif %}
                     {% if person.notes and person.notes != "" %}
                       <li><strong>Note:</strong> {{ person.notes }}</li>
                     {% endif %}

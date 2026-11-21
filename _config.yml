@@ -1,0 +1,29 @@
+# Site identity and GitHub Pages URLs
+title: "Jason N. Mansfield — Curriculum Vitae"
+description: "Platform Engineer & Operations Team Lead"
+url: "https://trentonknight.github.io"
+baseurl: "/cv" # Set to "/cv" if hosted as a project site rather than a user/org site
+
+# Native HTML/CSS workflow (no theme wrapping required)
+theme: null
+markdown: kramdown
+highlighter: rouge
+
+# Keep build artifacts, source LaTeX files, and tooling out of _site
+exclude:
+  - OrgTex/
+  - topo/
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - .ruby-version
+  - .gitignore
+  - .gitattributes
+
+# Explicitly include dotfiles that should be published in _site (if any)
+include:
+  - .nojekyll
+

@@ -1,0 +1,418 @@
+---
+layout: null
+title: Jason N. Mansfield — Curriculum Vitae
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}" />
+</head>
+<body>
+  <div class="page">
+    <header class="cv-header">
+      <div class="cv-header-main">
+        <h1>Jason N. Mansfield</h1>
+        <p class="role-headline">Platform Engineer &amp; DevOps · GitOps, LLMOps &amp; DevSecOps</p>
+        <a href="#compliance-clearance" class="clearance-tag">
+          {{ site.data.standards.clearance.badge_text }} ↘
+        </a>
+        <div class="header-actions">
+          <button type="button" class="action-btn" id="copy-md-btn" data-md-url="{{ '/resume.txt' | relative_url }}">Copy Full .md</button>
+        </div>
+      </div>
+      <address class="cv-contact beacon-card">
+        <span class="beacon-tag">COMMS // WAYPOINT &amp; LINKS</span>
+        <span class="beacon-line">Flowers · Clayton, NC · <code>35.6574° N, 78.3614° W</code></span>
+        <span class="beacon-line">(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
+        <span class="beacon-line beacon-links">
+          <a href="https://github.com/trentonknight" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          <a href="https://gitlab.com/trentonknight" target="_blank" rel="noopener noreferrer">GitLab</a> ·
+          <a href="https://www.linkedin.com/in/trentonknight/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </span>
+      </address>
+    </header>
+
+    <nav class="quick-jump" aria-label="Jump to resume section">
+      <span class="quick-jump-label">JUMP TO //</span>
+      <a href="#summary-heading">Briefing</a>
+      <a href="#route-heading">Experience</a>
+      <a href="#skills-heading">Stack</a>
+      <a href="#ai-research-heading">AI Recon</a>
+      <a href="#education-heading">Education</a>
+      <a href="#standards-heading">Clearance</a>
+      <a href="#publications-heading">Publications</a>
+      <a href="{{ '/addendum/' | relative_url }}">1999–Now &amp; Refs →</a>
+      <a href="{{ '/resume.txt' | relative_url }}">Full .md ↗</a>
+    </nav>
+
+    <main class="cv-body">
+      <!-- Mission Briefing: About & Specialization -->
+      <section class="cv-section" aria-labelledby="summary-heading" data-section-key="briefing">
+        <div class="section-head-row">
+          <h2 id="summary-heading">Mission Briefing · About &amp; Specialization</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="briefing">Copy Section</button>
+        </div>
+        <div class="briefing-box">
+          <div class="briefing-meta">
+            <span>DATUM // WGS84</span>
+            <span>SERVICE // 22+ YRS USN &amp; USCG</span>
+            <span>STATUS // REMOTE · ≤25% TRAVEL</span>
+          </div>
+          <p>
+            Platform Engineer with expertise in designing secure, cloud-native systems. Specialized in
+            <strong>GitOps / DevOps</strong>, <strong>Platform Engineering</strong>,
+            <strong>LLMOps / AI Infrastructure</strong>, and <strong>DevSecOps</strong>, backed by
+            22+ years of continuous active-duty U.S. Navy and U.S. Coast Guard service.
+          </p>
+          <ul class="briefing-pillars" aria-label="Core engineering disciplines">
+            <li>GitOps &amp; DevOps</li>
+            <li>Platform Engineering</li>
+            <li>LLMOps &amp; AI Infra</li>
+            <li>DevSecOps</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Cartographic Career Route Map -->
+      <section class="cv-section route-section" aria-labelledby="route-heading" data-section-key="experience">
+        <div class="section-head-row">
+          <h2 id="route-heading">Career Expedition Route &amp; Experience</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="experience">Copy Section</button>
+        </div>
+
+        {% include trail-map.html %}
+
+        <!-- Waypoint-Linked Timeline Stops -->
+        <ol class="route-stops">
+          {% for stop in site.data.expedition %}
+            <li class="stop-card" id="stop-{{ stop.id }}">
+              <span class="stop-marker">{{ stop.id }}</span>
+              <div class="stop-content">
+                <div class="entry-head">
+                  <div>
+                    <h3 class="entry-title">{{ stop.title }}</h3>
+                    <p class="entry-org">
+                      {% if stop.org_url and stop.org_url != "" %}
+                        <a href="{{ stop.org_url }}" target="_blank" rel="noopener noreferrer" class="org-link">{{ stop.org }} ↗</a>
+                      {% else %}
+                        {{ stop.org }}
+                      {% endif %}
+                    </p>
+                    <p class="entry-sector">
+                      {{ stop.location }}{% if stop.coords and stop.coords != "" %} · <code>{{ stop.coords }}</code>{% endif %}
+                      {% if stop.compliance_anchor and stop.compliance_anchor != "" %}
+                        · <a href="{{ stop.compliance_anchor }}" class="compliance-chip">{{ stop.compliance_label }} ↘</a>
+                      {% endif %}
+                    </p>
+                  </div>
+                  <time class="entry-period">{{ stop.period }}</time>
+                </div>
+                <ul class="entry-points">
+                  {% for bullet in stop.highlights %}
+                    <li>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+
+      <!-- Technical Stack: Cartographic Gear Manifest -->
+      <section class="cv-section" aria-labelledby="skills-heading" data-section-key="stack">
+        <div class="section-head-row">
+          <h2 id="skills-heading">Field Loadout · Technical Stack &amp; Languages</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="stack">Copy Section</button>
+        </div>
+        <div class="gear-manifest">
+          <article class="gear-sector">
+            <header class="gear-sector-head">
+              <span class="gear-code">SEC-01 · INFRASTRUCTURE</span>
+              <h3>Cloud, Platform &amp; GitOps</h3>
+            </header>
+            <ul class="gear-tags">
+              <li class="is-core"><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" class="gear-link">AWS (EC2, RDS, S3) ↗</a></li>
+              <li class="is-core"><a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer" class="gear-link">Kubernetes ↗</a></li>
+              <li class="is-core"><a href="https://www.terraform.io/" target="_blank" rel="noopener noreferrer" class="gear-link">Terraform ↗</a></li>
+              <li class="is-core"><a href="https://argo-cd.readthedocs.io/" target="_blank" rel="noopener noreferrer" class="gear-link">ArgoCD ↗</a></li>
+              <li class="is-core"><a href="https://helm.sh/" target="_blank" rel="noopener noreferrer" class="gear-link">Helm ↗</a></li>
+              <li><a href="https://rafay.co/" target="_blank" rel="noopener noreferrer" class="gear-link">Rafay ↗</a></li>
+              <li><a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer" class="gear-link">Azure ↗</a></li>
+              <li><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" class="gear-link">Docker ↗</a></li>
+              <li><a href="https://www.keycloak.org/" target="_blank" rel="noopener noreferrer" class="gear-link">Keycloak ↗</a></li>
+              <li><a href="https://www.openbao.org/" target="_blank" rel="noopener noreferrer" class="gear-link">Vault / OpenBao ↗</a></li>
+              <li><a href="https://jfrog.com/" target="_blank" rel="noopener noreferrer" class="gear-link">JFrog Artifactory ↗</a></li>
+              <li><a href="https://www.anchore.com/" target="_blank" rel="noopener noreferrer" class="gear-link">Anchore ↗</a></li>
+              <li><a href="https://www.harness.io/" target="_blank" rel="noopener noreferrer" class="gear-link">Harness ↗</a></li>
+            </ul>
+          </article>
+
+          <article class="gear-sector">
+            <header class="gear-sector-head">
+              <span class="gear-code">SEC-02 · INTELLIGENCE</span>
+              <h3>AI / LLMOps</h3>
+            </header>
+            <ul class="gear-tags">
+              <li class="is-core"><a href="https://github.com/meta-llama/llama-stack" target="_blank" rel="noopener noreferrer" class="gear-link">Llama Stack ↗</a></li>
+              <li class="is-core"><a href="https://ollama.com/" target="_blank" rel="noopener noreferrer" class="gear-link">Ollama ↗</a></li>
+              <li class="is-core"><a href="https://cloud.google.com/vertex-ai" target="_blank" rel="noopener noreferrer" class="gear-link">Vertex AI ↗</a></li>
+              <li class="is-core"><a href="https://ai.google.dev/" target="_blank" rel="noopener noreferrer" class="gear-link">Gemini ↗</a></li>
+              <li><a href="https://docling-project.github.io/docling/" target="_blank" rel="noopener noreferrer" class="gear-link">Docling ↗</a></li>
+              <li><a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" class="gear-link">Pandas ↗</a></li>
+              <li><a href="https://huggingface.co/docs/diffusers" target="_blank" rel="noopener noreferrer" class="gear-link">Hugging Face Diffusers ↗</a></li>
+              <li><a href="https://stability.ai/" target="_blank" rel="noopener noreferrer" class="gear-link">SDXL ↗</a></li>
+            </ul>
+          </article>
+
+          <article class="gear-sector">
+            <header class="gear-sector-head">
+              <span class="gear-code">SEC-03 · LANGUAGES</span>
+              <h3>Languages &amp; Markup</h3>
+            </header>
+            <ul class="gear-tags">
+              <li class="is-core"><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="gear-link">Python ↗</a></li>
+              <li class="is-core"><a href="https://www.rust-lang.org/" target="_blank" rel="noopener noreferrer" class="gear-link">Rust ↗</a></li>
+              <li class="is-core"><a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer" class="gear-link">Bash / Shell ↗</a></li>
+              <li>SQL</li>
+              <li><a href="https://yaml.org/" target="_blank" rel="noopener noreferrer" class="gear-link">YAML ↗</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="gear-link">JavaScript ↗</a></li>
+              <li><a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener noreferrer" class="gear-link">LaTeX (Sphinx) ↗</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Technical Research: Field Trials Grid -->
+      <section class="cv-section" aria-labelledby="ai-research-heading" data-section-key="recon">
+        <div class="section-head-row">
+          <h2 id="ai-research-heading">Field Recon · Technical Research &amp; Applied AI</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="recon">Copy Section</button>
+        </div>
+        <div class="recon-grid">
+          <article class="recon-card">
+            <div class="recon-head">
+              <h3>LLMOps &amp; Local Inference</h3>
+              <span class="recon-tag">RECON // 01</span>
+            </div>
+            <p>
+              Orchestrating local model deployments via <strong>Llama Stack</strong> and
+              <strong>Ollama</strong>; engineering custom Modelfiles and external prompting
+              strategies to tune model behaviors.
+            </p>
+          </article>
+
+          <article class="recon-card">
+            <div class="recon-head">
+              <h3>RAG &amp; ETL Pipelines</h3>
+              <span class="recon-tag">RECON // 02</span>
+            </div>
+            <p>
+              Utilizing <strong>Docling</strong> for high-fidelity document parsing and
+              <strong>Pandas</strong> for structured data transformation to optimize RAG
+              context-window precision.
+            </p>
+          </article>
+
+          <article class="recon-card">
+            <div class="recon-head">
+              <h3>Systems Tooling</h3>
+              <span class="recon-tag">RECON // 03</span>
+            </div>
+            <p>
+              Implementing high-performance utility tools in <strong>Rust</strong> to enhance
+              existing Python-based infrastructure automation and CLI tooling.
+            </p>
+          </article>
+
+          <article class="recon-card">
+            <div class="recon-head">
+              <h3>Generative Art Pipelines</h3>
+              <span class="recon-tag">RECON // 04</span>
+            </div>
+            <p>
+              Exploring <strong>Hugging Face Diffusers</strong> and <strong>SDXL</strong>
+              pipelines for procedural game textures and automated concept generation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Academic Basecamp Quadrant: Education -->
+      <section class="cv-section" aria-labelledby="education-heading" data-section-key="education">
+        <div class="section-head-row">
+          <h2 id="education-heading">Academic Basecamp · Education</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="education">Copy Section</button>
+        </div>
+        <article class="edu-quad">
+          <div class="edu-quad-head">
+            <div>
+              <span class="edu-code">QUAD // EDU-01 · DENVER, CO</span>
+              <h3 class="entry-title">B.S. in Computer Science — Regis University</h3>
+              <p class="entry-org">
+                ABET Accredited · NSA Center of Academic Excellence · <code>39.7875° N, 105.0325° W</code> ·
+                <a href="#compliance-degree" class="compliance-chip">DoD 8140.03 Degree Recency Waiver ↘</a>
+              </p>
+            </div>
+            <time class="entry-period">2007 – 2013</time>
+          </div>
+
+          <div class="edu-specs">
+            <div class="edu-spec-item">
+              <span class="edu-spec-label">HONORS &amp; STANDING</span>
+              <p>Dean’s List (Spring 2013) · GPA 3.413</p>
+            </div>
+            <div class="edu-spec-item">
+              <span class="edu-spec-label">MATHEMATICS (17 CR.)</span>
+              <p>Calculus, Linear Algebra, Discrete Math</p>
+            </div>
+            <div class="edu-spec-item">
+              <span class="edu-spec-label">COMPUTER SCIENCE CORE</span>
+              <p>Systems Architecture, Algorithms, Data Structures, Software Engineering, OOP (Java/C++)</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Dedicated Clearance, Standards & Qualification Progression Section -->
+      <section class="cv-section standards-section" aria-labelledby="standards-heading" data-section-key="clearance">
+        <div class="section-head-row">
+          <h2 id="standards-heading">Clearance &amp; Standards Governance (DoD 8140.03)</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="clearance">Copy Section</button>
+        </div>
+        <p class="standards-intro">{{ site.data.standards.intro }}</p>
+
+        <div class="compliance-grid">
+          {% for item in site.data.standards.provisions %}
+            <article class="compliance-card{% if item.featured %} compliance-featured{% endif %}" id="{{ item.id }}">
+              <div class="compliance-head">
+                <h3>{{ item.title }}</h3>
+                <span class="compliance-cite">{{ item.cite }}</span>
+              </div>
+              <p>
+                {{ item.description }}
+                {% if item.back_anchor and item.back_anchor != "" %}
+                  <a href="{{ item.back_anchor }}" class="back-link">↑ {{ item.back_label }}</a>
+                {% endif %}
+              </p>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <!-- Field Dispatches: Publications -->
+      <section class="cv-section" aria-labelledby="publications-heading" data-section-key="publications">
+        <div class="section-head-row">
+          <h2 id="publications-heading">Field Dispatches · Publications</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="publications">Copy Section</button>
+        </div>
+        <article class="dispatch-card">
+          <div class="dispatch-meta">
+            <span class="dispatch-code">DISPATCH // USNI-2021-11</span>
+            <span class="dispatch-journal">U.S. NAVAL INSTITUTE PROCEEDINGS · VOL. 147/11/1,425</span>
+          </div>
+          <div class="dispatch-body">
+            <div>
+              <h3 class="dispatch-title">
+                <a
+                  href="https://www.usni.org/magazines/proceedings/2021/november/monolithic-it-architecture-were-not-stonehenge-anymore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >“Monolithic IT Architecture: We’re Not Stonehenge Anymore.”</a>
+              </h3>
+              <p class="dispatch-desc">
+                Peer-reviewed naval defense commentary examining legacy monolithic enterprise systems and modular cloud-native modernization across maritime &amp; joint command networks.
+              </p>
+            </div>
+            <a
+              href="https://www.usni.org/magazines/proceedings/2021/november/monolithic-it-architecture-were-not-stonehenge-anymore"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="dispatch-btn"
+            >Read Article ↗</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Mini Map Quadrangle Grid at Bottom -->
+      <aside class="quad-footer-box" aria-label="Quadrangle map sheet switcher">
+        <div class="quad-footer-label">QUADRANT INDEX</div>
+        <div class="quad-cells">
+          <div class="quad-cell is-active">
+            <span class="quad-code">01 · MAIN</span>
+            <span class="quad-desc">Route &amp; Stack</span>
+          </div>
+          <a href="{{ '/addendum/' | relative_url }}" class="quad-cell is-link">
+            <span class="quad-code">02 · LOG &amp; REFS →</span>
+            <span class="quad-desc">1999–Now &amp; Contacts</span>
+          </a>
+        </div>
+      </aside>
+    </main>
+
+    {% include compass.svg %}
+  </div>
+
+  <script>
+    (function () {
+      if (!navigator.clipboard) return;
+
+      const fullBtn = document.getElementById("copy-md-btn");
+      if (fullBtn) {
+        fullBtn.addEventListener("click", async () => {
+          const original = fullBtn.textContent;
+          try {
+            const res = await fetch(fullBtn.dataset.mdUrl);
+            if (!res.ok) throw new Error("Failed to fetch Markdown");
+            let text = await res.text();
+            if (/^\s*</.test(text)) {
+              const doc = new DOMParser().parseFromString(text, "text/html");
+              text = doc.body.innerText.replace(/\n{3,}/g, "\n\n").trim();
+            }
+            await navigator.clipboard.writeText(text);
+            fullBtn.textContent = "Copied .md ✓";
+          } catch (_) {
+            fullBtn.textContent = "Copy Failed";
+          }
+          setTimeout(() => {
+            fullBtn.textContent = original;
+          }, 1800);
+        });
+      }
+
+      document.querySelectorAll(".section-copy-btn").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const key = btn.getAttribute("data-copy-target");
+          const section = document.querySelector('[data-section-key="' + key + '"]');
+          if (!section) return;
+          const original = btn.textContent;
+          try {
+            const heading = section.querySelector("h2")?.textContent?.trim() || "";
+            const clone = section.cloneNode(true);
+            clone.querySelectorAll(".section-copy-btn, .trail-map, .back-link").forEach((el) => el.remove());
+
+            const cleanBody = clone.innerText
+              .split("\n")
+              .map((line) => line.replace(/^[ \t]+/, "").replace(/[ \t]{2,}/g, " ").trim())
+              .filter((line, idx, arr) => line !== "" || (idx > 0 && arr[idx - 1] !== ""))
+              .join("\n")
+              .replace(/\n{3,}/g, "\n\n")
+              .trim();
+
+            await navigator.clipboard.writeText((heading ? "## " + heading + "\n\n" : "") + cleanBody);
+            btn.textContent = "Copied ✓";
+          } catch (_) {
+            btn.textContent = "Failed";
+          }
+          setTimeout(() => {
+            btn.textContent = original;
+          }, 1600);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+

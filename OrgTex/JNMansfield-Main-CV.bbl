@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Department of Defense}(2023)]{dod814003}
+{Department of Defense}.
+\newblock \emph{DoD Manual 8140.03: Cyberspace Workforce Qualification and
+  Management Program}.
+\newblock Office of the Under Secretary of Defense for Acquisition and
+  Sustainment, 2023.
+\newblock Section 3, Paragraphs 3.2.b(1)(a), 3.2.b(1)(a)(3), and 3.2.b(3).
+
+\end{thebibliography}

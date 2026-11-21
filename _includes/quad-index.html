@@ -1,0 +1,33 @@
+<aside class="quad-index" aria-label="Survey quadrangle sheet index">
+  <div class="quad-caption">
+    <span class="quad-title">INDEX TO SHEETS</span>
+    <span class="quad-sub">WGS84 · CLICK ADJOINING QUAD</span>
+  </div>
+
+  <div class="quad-grid" role="group" aria-label="Map sheets">
+    {% if include.active_sheet == "01" %}
+      <div class="quad-tile quad-current" aria-current="page">
+        <span class="quad-id">QUAD 01</span>
+        <span class="quad-name">Executive Route</span>
+        <span class="quad-state">CURRENT SHEET</span>
+      </div>
+      <a href="{{ '/addendum/' | relative_url }}" class="quad-tile quad-adjacent" title="Open Quad 02: Full Service Log & Supervisory References">
+        <span class="quad-id">QUAD 02 ↗</span>
+        <span class="quad-name">Addendum &amp; Refs</span>
+        <span class="quad-state">1999–PRES · CONTACTS</span>
+      </a>
+    {% else %}
+      <a href="{{ '/' | relative_url }}" class="quad-tile quad-adjacent" title="Return to Quad 01: Executive Route & Trail Map">
+        <span class="quad-id">← QUAD 01</span>
+        <span class="quad-name">Executive Route</span>
+        <span class="quad-state">MAP · STACK · 8140.03</span>
+      </a>
+      <div class="quad-tile quad-current" aria-current="page">
+        <span class="quad-id">QUAD 02</span>
+        <span class="quad-name">Addendum &amp; Refs</span>
+        <span class="quad-state">CURRENT SHEET</span>
+      </div>
+    {% endif %}
+  </div>
+</aside>
+

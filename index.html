@@ -67,6 +67,11 @@ title: Jason N. Mansfield — Curriculum Vitae
             <strong>LLMOps / AI Infrastructure</strong>, and <strong>DevSecOps</strong>, backed by
             22+ years of continuous active-duty U.S. Navy and U.S. Coast Guard service.
           </p>
+          <p>
+            Built for fast scanning and clean ingestion—use <strong>Copy Section</strong> for structured
+            Markdown snippets in recruiter notes or LLM prompts, grab the full raw export via
+            <code>/resume.txt</code>, or follow the trail markers (small woodland creatures welcome).
+          </p>
           <ul class="briefing-pillars" aria-label="Core engineering disciplines">
             <li>GitOps &amp; DevOps</li>
             <li>Platform Engineering</li>
@@ -289,7 +294,11 @@ title: Jason N. Mansfield — Curriculum Vitae
             <article class="compliance-card{% if item.featured %} compliance-featured{% endif %}" id="{{ item.id }}">
               <div class="compliance-head">
                 <h3>{{ item.title }}</h3>
-                <span class="compliance-cite">{{ item.cite }}</span>
+                {% if item.cite_url and item.cite_url != "" %}
+                  <a href="{{ item.cite_url }}" target="_blank" rel="noopener noreferrer" class="compliance-cite">{{ item.cite }} ↗</a>
+                {% else %}
+                  <span class="compliance-cite">{{ item.cite }}</span>
+                {% endif %}
               </div>
               <p>
                 {{ item.description }}

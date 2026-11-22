@@ -11,6 +11,7 @@ provisions:
     featured: true
     title: "Security Clearance & Vetting"
     cite: "Active TS/SCI w/ CI Poly"
+    cite_url: ""
     description: "Active Top Secret / Sensitive Compartmented Information (TS/SCI) with Counterintelligence Polygraph, validated across U.S. Coast Guard Cyber Command and Fort Bragg / JSOC platform operations."
     back_anchor: ""
     back_label: ""
@@ -19,6 +20,7 @@ provisions:
     featured: false
     title: "Academic Qualification, Foundational Gate & Recency Waiver"
     cite: "DoD 8140 CWQP · § 3.2.b(1)(a)(3)"
+    cite_url: "https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf"
     description: "ABET-accredited B.S. in Computer Science (Regis University, NSA Center of Academic Excellence), meeting DoD 8140 CWQP Foundational Qualification criteria via the Education pathway alongside approved military/DoD training. Under § 3.2.b(1)(a)(3), 20+ years of continuous qualified service waives initial degree recency and continuing education currency thresholds."
     back_anchor: "#education-heading"
     back_label: "Education"
@@ -27,6 +29,7 @@ provisions:
     featured: false
     title: "Legacy Commercial Certs → Education & Service Pathways"
     cite: "DoD 8140.03 § 3.2.b(1)(a)"
+    cite_url: "https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf"
     description: "Previously held CompTIA Security+ and CompTIA CySA+ under legacy DoD 8570 mandates. Under DoD 8140 CWQP, Education, Training, and Personnel Certification serve as co-equal foundational pathways, and under § 3.2.b(1)(a), 22+ years of active-duty Navy and Coast Guard IT/Cyber operations supersede baseline commercial certificate renewal."
     back_anchor: "#stop-05"
     back_label: "Waypoint 05"
@@ -35,6 +38,7 @@ provisions:
     featured: false
     title: "Cyberspace Operations Experience & Portability"
     cite: "DoD 8140.03 § 1.2(6–7) & § 3.2.b(1)(b)"
+    cite_url: "https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf"
     description: "Architected and operated TS/SCI GitLab, Vault, and ArgoCD Kubernetes infrastructure at CACI International (Fort Bragg / JSOC), bringing direct Cyberspace Operations Forces environment experience aligned with § 1.2(6–7) and § 3.2.b(1)(b)."
     back_anchor: "#stop-06"
     back_label: "Waypoint 06"
@@ -43,6 +47,7 @@ provisions:
     featured: false
     title: "DevSecOps & Applied Practice Alignment"
     cite: "DoD 8140.03 § 3.2.b(3)"
+    cite_url: "https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf"
     description: "Engineered custom Anchore/Harness automated container vulnerability scanning and JFrog Artifactory hardened UBI governance at 24x7Systems, demonstrating hands-on DevSecOps and automated pipeline compliance aligned with § 3.2.b(3)."
     back_anchor: "#stop-07"
     back_label: "Waypoint 07"
@@ -51,6 +56,7 @@ provisions:
     featured: false
     title: "Contractor Residential Qualification Scope"
     cite: "DoD 8140 CWQP Desk Guide"
+    cite_url: "https://www.cyberworkforce.mil/DoD-8140/Document-Library/"
     description: "Under DoD 8140 CWQP guidance, contractors are not required to meet residential qualification requirements unless required by the OSW or Component and explicitly stated in applicable contract / Task Order language."
     back_anchor: ""
     back_label: ""

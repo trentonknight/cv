@@ -1,10 +1,10 @@
 clearance:
   level: "TS/SCI w/ CI Poly"
-  badge_text: "Active TS/SCI w/ CI Poly · DoD 8140.03 Qualified"
+  badge_text: "Active TS/SCI w/ CI Poly · DoD 8140.03 Aligned"
   status: "Active"
   summary: "Top Secret / Sensitive Compartmented Information (TS/SCI) with Counterintelligence Polygraph, validated across U.S. Coast Guard Cyber Command and Fort Bragg / JSOC platform operations."
 
-intro: "Transitioned from baseline commercial DoD 8570 certifications (CompTIA Security+, CompTIA CySA+) to full DoD Manual 8140.03 qualification via accredited Computer Science education, 22+ years of continuous active-duty IT/Cyber service, and documented DevSecOps engineering practice."
+intro: "Transitioned from legacy DoD 8570 baseline certifications (CompTIA Security+, CompTIA CySA+) to DoD Manual 8140.03 / CWQP alignment backed by an ABET-accredited Computer Science degree, approved military/DoD cyber training, 22+ years of continuous active-duty IT/Cyber service, and hands-on DevSecOps engineering."
 
 provisions:
   - id: "compliance-clearance"
@@ -17,33 +17,41 @@ provisions:
 
   - id: "compliance-degree"
     featured: false
-    title: "Academic Qualification & Recency Waiver"
-    cite: "DoD 8140.03 § 3.2.b(1)(a)(3)"
-    description: "ABET-accredited B.S. in Computer Science (Regis University, NSA Center of Academic Excellence). Under § 3.2.b(1)(a)(3), 20+ years of continuous qualified service waives initial degree recency and continuing education currency thresholds."
+    title: "Academic Qualification, Foundational Gate & Recency Waiver"
+    cite: "DoD 8140 CWQP · § 3.2.b(1)(a)(3)"
+    description: "ABET-accredited B.S. in Computer Science (Regis University, NSA Center of Academic Excellence), meeting DoD 8140 CWQP Foundational Qualification criteria via the Education pathway alongside approved military/DoD training. Under § 3.2.b(1)(a)(3), 20+ years of continuous qualified service waives initial degree recency and continuing education currency thresholds."
     back_anchor: "#education-heading"
     back_label: "Education"
 
   - id: "compliance-certs"
     featured: false
-    title: "Legacy Commercial Certs → Service Equivalency"
+    title: "Legacy Commercial Certs → Education & Service Pathways"
     cite: "DoD 8140.03 § 3.2.b(1)(a)"
-    description: "Previously maintained CompTIA Security+ and CompTIA CySA+ under legacy DoD 8570 mandates. Under DoD 8140.03 § 3.2.b(1)(a), 22+ years of active-duty Navy and Coast Guard IT/Cyber operations supersede baseline commercial certificate renewal."
+    description: "Previously held CompTIA Security+ and CompTIA CySA+ under legacy DoD 8570 mandates. Under DoD 8140 CWQP, Education, Training, and Personnel Certification serve as co-equal foundational pathways, and under § 3.2.b(1)(a), 22+ years of active-duty Navy and Coast Guard IT/Cyber operations supersede baseline commercial certificate renewal."
     back_anchor: "#stop-05"
     back_label: "Waypoint 05"
 
   - id: "compliance-reciprocity"
     featured: false
-    title: "Cyberspace Operations Enterprise Reciprocity"
+    title: "Cyberspace Operations Experience & Portability"
     cite: "DoD 8140.03 § 1.2(6–7) & § 3.2.b(1)(b)"
-    description: "Architected and operated TS/SCI GitLab, Vault, and ArgoCD Kubernetes infrastructure at CACI International (Fort Bragg / JSOC), satisfying enterprise reciprocity for Cyberspace Operations Forces."
+    description: "Architected and operated TS/SCI GitLab, Vault, and ArgoCD Kubernetes infrastructure at CACI International (Fort Bragg / JSOC), bringing direct Cyberspace Operations Forces environment experience aligned with § 1.2(6–7) and § 3.2.b(1)(b)."
     back_anchor: "#stop-06"
     back_label: "Waypoint 06"
 
   - id: "compliance-ojt"
     featured: false
-    title: "DevSecOps & OJT Pipeline Equivalency"
+    title: "DevSecOps & Applied Practice Alignment"
     cite: "DoD 8140.03 § 3.2.b(3)"
-    description: "Engineered custom Anchore/Harness automated container vulnerability scanning and JFrog Artifactory hardened UBI governance at 24x7Systems, fulfilling on-the-job training (OJT) and automated pipeline compliance criteria."
+    description: "Engineered custom Anchore/Harness automated container vulnerability scanning and JFrog Artifactory hardened UBI governance at 24x7Systems, demonstrating hands-on DevSecOps and automated pipeline compliance aligned with § 3.2.b(3)."
     back_anchor: "#stop-07"
     back_label: "Waypoint 07"
+
+  - id: "compliance-residential"
+    featured: false
+    title: "Contractor Residential Qualification Scope"
+    cite: "DoD 8140 CWQP Desk Guide"
+    description: "Under DoD 8140 CWQP guidance, contractors are not required to meet residential qualification requirements unless required by the OSW or Component and explicitly stated in applicable contract / Task Order language."
+    back_anchor: ""
+    back_label: ""
 

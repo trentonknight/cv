@@ -1,0 +1,128 @@
+- code: "SEC-01 · INFRASTRUCTURE"
+  title: "Cloud, Platform & GitOps"
+  md_label: "Cloud, Platform & GitOps"
+  items:
+    - name: "AWS (EC2, RDS, S3, EKS)"
+      url: "https://aws.amazon.com/"
+      core: true
+    - name: "Kubernetes"
+      url: "https://kubernetes.io/"
+      core: true
+    - name: "Terraform"
+      url: "https://www.terraform.io/"
+      core: true
+    - name: "ArgoCD"
+      url: "https://argo-cd.readthedocs.io/"
+      core: true
+    - name: "Helm"
+      url: "https://helm.sh/"
+      core: true
+    - name: "Rafay"
+      url: "https://rafay.co/"
+      core: false
+    - name: "Azure"
+      url: "https://azure.microsoft.com/"
+      core: false
+    - name: "Docker"
+      url: "https://www.docker.com/"
+      core: false
+    - name: "Docker Compose"
+      url: "https://docs.docker.com/compose/"
+      core: false
+    - name: "k3s"
+      url: "https://k3s.io/"
+      core: false
+    - name: "Keycloak"
+      url: "https://www.keycloak.org/"
+      core: false
+    - name: "Vault / OpenBao"
+      url: "https://www.openbao.org/"
+      core: false
+    - name: "JFrog Artifactory"
+      url: "https://jfrog.com/"
+      core: false
+    - name: "Anchore"
+      url: "https://www.anchore.com/"
+      core: false
+    - name: "Harness"
+      url: "https://www.harness.io/"
+      core: false
+
+- code: "SEC-02 · INTELLIGENCE"
+  title: "AI / LLMOps & Vector Data"
+  md_label: "AI / LLMOps & Vector Data"
+  items:
+    - name: "Rig (rig-core)"
+      url: "https://docs.rs/rig-core"
+      core: true
+    - name: "MCP"
+      md_name: "Model Context Protocol (MCP)"
+      url: "https://modelcontextprotocol.io/"
+      core: true
+    - name: "Llama Stack"
+      url: "https://github.com/meta-llama/llama-stack"
+      core: true
+    - name: "Ollama / oMLX"
+      url: "https://ollama.com/"
+      core: true
+    - name: "Vertex AI / Gemini"
+      url: "https://cloud.google.com/vertex-ai"
+      core: true
+    - name: "sqlite-vec"
+      url: "https://github.com/asg017/sqlite-vec"
+      core: false
+    - name: "rusqlite"
+      url: "https://docs.rs/rusqlite"
+      core: false
+    - name: "Docling"
+      url: "https://docling-project.github.io/docling/"
+      core: false
+    - name: "Pandas"
+      url: "https://pandas.pydata.org/"
+      core: false
+    - name: "USDA SDA / NASS CropScape"
+      url: "https://sdmdataaccess.nrcs.usda.gov/"
+      core: false
+    - name: "EPA SRS / NC DEQ GIS"
+      url: "https://www.epa.gov/srs"
+      core: false
+
+- code: "SEC-03 · LANGUAGES"
+  title: "Languages, Runtimes & Markup"
+  md_label: "Languages, Runtimes & Markup"
+  items:
+    - name: "Rust (tokio, axum)"
+      md_name: "Rust (tokio, axum, rusqlite)"
+      url: "https://www.rust-lang.org/"
+      core: true
+    - name: "Python"
+      url: "https://www.python.org/"
+      core: true
+    - name: "Bash / Shell"
+      url: "https://www.gnu.org/software/bash/"
+      core: true
+    - name: "HCL (Terraform / Vault)"
+      url: "https://github.com/hashicorp/hcl"
+      core: true
+    - name: "SQL / SQLite"
+      url: "https://www.sqlite.org/"
+      core: false
+    - name: "YAML"
+      url: "https://yaml.org/"
+      core: false
+    - name: "JavaScript"
+      url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      core: false
+    - name: "LaTeX"
+      url: "https://www.latex-project.org/"
+      core: false
+    - name: "Sphinx (reST / HTML)"
+      url: "https://www.sphinx-doc.org/"
+      core: false
+    - name: "cargo-deny / cosign"
+      url: "https://embarkstudios.github.io/cargo-deny/"
+      core: false
+    - name: "NIST FIPS 203/204 (PQC)"
+      url: "https://csrc.nist.gov/projects/post-quantum-cryptography"
+      core: false
+

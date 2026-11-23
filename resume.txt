@@ -28,19 +28,17 @@ permalink: /resume.txt
 ---
 
 ## Technical Stack & Languages
-
-- **Cloud, Platform & GitOps:** AWS (EC2, RDS, S3, EKS), Kubernetes, Terraform, ArgoCD, Helm, Rafay, Azure, Docker, Keycloak, Vault / OpenBao, JFrog Artifactory, Anchore, Harness
-- **AI / LLMOps:** Llama Stack, Ollama, oMLX, Vertex AI, Gemini, Docling, Pandas, Hugging Face Diffusers, SDXL
-- **Languages & Markup:** Python, Rust, Bash / Shell, SQL, YAML, JavaScript, LaTeX (Sphinx)
+{% for sector in site.data.stack %}
+- **{{ sector.md_label | default: sector.title }}:** {% for item in sector.items %}{{ item.md_name | default: item.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endfor %}
 
 ---
 
 ## Applied AI & Systems Engineering
 
-- **Local Inference & Orchestration:** Deploying local inference runtimes and custom Modelfiles with structured prompting for deterministic operational workflows.
-- **Document ETL & RAG Optimization:** Parsing technical documentation and structuring tabular datasets to improve retrieval context precision.
-- **Systems Tooling:** Building compiled CLI and API utilities in Rust (Axum, tokio, SQLite / sqlite-vec) to augment Python-based platform automation.
-- **Procedural Asset Pipelines:** Automating texture and visual concept generation via diffusion pipelines.
+- **LLMOps & MCP Orchestration:** Deploying local inference runtimes (`oMLX`, `Ollama`, `Llama Stack`) and `rig-core` agents with native Model Context Protocol (MCP) tool interfaces.
+- **Hybrid RAG & Vector ETL:** Pairing `Docling` document parsing and `Pandas` ETL pipelines with embedded `SQLite` and `sqlite-vec` in-process vector search for offline-capable retrieval.
+- **Deterministic Rust Systems:** Building compiled `Rust` (`tokio`, `axum`, `rusqlite`) services and CLI utilities that isolate probabilistic LLM intent extraction from deterministic rule and compliance checks.
+- **Supply-Chain & Audit Hardening:** Implementing SBOM auditing (`cargo-deny`, `cosign`), hardened UBI container images, and cryptographically signed execution audit logs.
 
 ---
 

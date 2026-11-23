@@ -55,9 +55,18 @@ provisions:
   - id: "compliance-residential"
     featured: false
     title: "Contractor Residential Qualification Scope"
-    cite: "DoD 8140 CWQP Desk Guide"
-    cite_url: "https://www.cyberworkforce.mil/DoD-8140/Document-Library/"
+    cite: "DoD 8140 Requirements for Contractors (27 May 2026)"
+    cite_url: "https://www.cyberworkforce.mil/DoD-8140/Document-Library/#:~:text=27%C2%A0May%C2%A026-,Download,-WarU%20DCWF%20Learning"
     description: "Under DoD 8140 CWQP guidance, contractors are not required to meet residential qualification requirements unless required by the OSW or Component and explicitly stated in applicable contract / Task Order language."
+    back_anchor: ""
+    back_label: ""
+
+  - id: "compliance-dfars-dev39"
+    featured: false
+    title: "DFARS Class Deviation 39 & DCWF Contract Alignment"
+    cite: "DFARS Class Deviation 39 · DoW CIO Memo (27 May 2026)"
+    cite_url: "https://www.cyberworkforce.mil/DoD-8140/Document-Library/#:~:text=27%C2%A0May%C2%A026-,Download,-WarU%20DCWF%20Learning"
+    description: "Reflects the February 1, 2026 DFARS Class Deviation 39 transition retiring legacy DoD 8570.01-M and DFARS 252.239-7001 references in favor of DoDM 8140.03 qualification by assigned DCWF work role and applicable contract / Task Order terms."
     back_anchor: ""
     back_label: ""
 

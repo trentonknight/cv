@@ -1,6 +1,7 @@
 ---
 layout: null
-title: Jason N. Mansfield — Career Addendum & Supervisory References
+title: Jason N. Mansfield — Professional & Command References
+permalink: /addendum/
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,23 +10,69 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}" />
+  <style>
+    .ref-group {
+      border: 1px solid var(--border, #c8c2b4);
+      background: var(--surface, #fbf9f4);
+      margin-bottom: 0.85rem;
+      padding: 0.85rem 1rem;
+    }
+    .ref-group-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+    .ref-group-summary::-webkit-details-marker {
+      display: none;
+    }
+    .ref-group-title {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .ref-group-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: monospace;
+      font-size: 0.78rem;
+    }
+    .ref-count-tag {
+      padding: 0.14rem 0.45rem;
+      border: 1px solid currentColor;
+      background: #fffdf9;
+    }
+    .ref-group[open] .ref-group-summary {
+      border-bottom: 1px solid var(--border, #c8c2b4);
+      padding-bottom: 0.55rem;
+      margin-bottom: 0.85rem;
+    }
+    .head-actions-group {
+      display: flex;
+      gap: 0.45rem;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
   <div class="page">
     <header class="cv-header">
       <div class="cv-header-main">
         <h1>Jason N. Mansfield</h1>
-        <p class="role-headline">Extended Service Log, Systems Addendum &amp; Supervisory References</p>
-        <a href="{{ '/#compliance-clearance' | relative_url }}" class="clearance-tag">
+        <p class="role-headline">Professional &amp; Command References</p>
+        <a href="{{ '/compliance/' | relative_url }}#compliance-clearance" class="clearance-tag">
           {{ site.data.standards.clearance.badge_text }} ↘
         </a>
         <div class="header-actions">
           <a href="{{ '/' | relative_url }}" class="action-btn">← Main CV</a>
-          <a href="{{ '/resume.txt' | relative_url }}" class="action-btn">Full .md ↗</a>
+          <button type="button" class="action-btn" id="copy-refs-md-btn" data-md-url="{{ '/references.txt' | relative_url }}">Copy Full .md</button>
         </div>
       </div>
       <address class="cv-contact beacon-card">
-        <span class="beacon-tag">COMMS // WAYPOINT &amp; LINKS</span>
+        <span class="beacon-tag">CONTACT // LOCATION &amp; LINKS</span>
         <span class="beacon-line">Flowers · Clayton, NC · <code>35.6574° N, 78.3614° W</code></span>
         <span class="beacon-line">(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
         <span class="beacon-line beacon-links">
@@ -36,154 +83,87 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
       </address>
     </header>
 
-    <nav class="quick-jump" aria-label="Jump to addendum section">
-      <span class="quick-jump-label">JUMP TO //</span>
-      <a href="#addendum-intro-heading">Scope</a>
-      <a href="#duty-log-heading">Service Log (1999–Now)</a>
+    <nav class="quick-jump" aria-label="Jump to reference section">
+      <span class="quick-jump-label">SECTIONS //</span>
       <a href="#references-heading">References</a>
-      <a href="{{ '/' | relative_url }}">Main CV ←</a>
-      <a href="{{ '/resume.txt' | relative_url }}">Full .md ↗</a>
+      <a href="{{ '/' | relative_url }}">01 · Main CV</a>
+      <a href="{{ '/compliance/' | relative_url }}">03 · DoD 8140.03 Ref →</a>
+      <a href="{{ '/references.txt' | relative_url }}">Refs .md ↗</a>
     </nav>
 
     <main class="cv-body">
-      <section class="cv-section" aria-labelledby="addendum-intro-heading" data-section-key="scope">
-        <div class="section-head-row">
-          <h2 id="addendum-intro-heading">Quad 02 Scope · Full Chronological Log &amp; Verifiable Contacts</h2>
-          <button type="button" class="section-copy-btn" data-copy-target="scope">Copy Section</button>
-        </div>
-        <div class="briefing-box">
-          <div class="briefing-meta">
-            <span>SHEET // QUAD-02</span>
-            <span>SPAN // 1999–PRESENT</span>
-            <span>SCOPE // DUTY STATIONS &amp; REFS</span>
-          </div>
-          <p>
-            Companion reference sheet to the main Curriculum Vitae, providing complete duty-station
-            chronology, shore and afloat commands, systems/tooling coverage, and supervisory or
-            professional points of contact grouped by organization.
-          </p>
-        </div>
-      </section>
-
-      <!-- Part I: Full Chronological Duty & Systems Log -->
-      <section class="cv-section" aria-labelledby="duty-log-heading" data-section-key="duty-log">
-        <div class="section-head-row">
-          <h2 id="duty-log-heading">Part I · Extended Service &amp; Systems Log (1999 – Present)</h2>
-          <button type="button" class="section-copy-btn" data-copy-target="duty-log">Copy Section</button>
-        </div>
-        <div class="log-dossier-banner">
-          <div class="briefing-meta">
-            <span>CHRONOLOGY // 1999–PRESENT</span>
-            <span>SERVICE // USN · USCG · SKILLBRIDGE · INDUSTRY</span>
-            <span>SCOPE // AFLOAT, SHORE &amp; RUNTIME PLATFORMS</span>
-          </div>
-          <p class="log-dossier-summary">
-            Complete chronological record of duty stations, maritime patrols, shore commands,
-            security/compliance roles, and cloud/runtime engineering assignments from pre-service
-            basecamps through current <strong>24x7Systems, Inc.</strong> runtime operations.
-          </p>
-          <ul class="briefing-pillars" aria-label="Service log sectors">
-            <li>09 · Runtime &amp; DevOps (2023–Now)</li>
-            <li>06–02 · USCG Active Duty (2007–2023)</li>
-            <li>01 · USN VFA-81 (2001–2005)</li>
-            <li>00 · Basecamp (1999–2001)</li>
-          </ul>
-        </div>
-
-        <ol class="route-stops">
-          {% for stop in site.data.addendum %}
-            <li class="stop-card" id="log-{{ stop.id }}">
-              <span class="stop-marker">{{ stop.id }}</span>
-              <div class="stop-content">
-                <div class="entry-head">
-                  <div>
-                    <h3 class="entry-title">{{ stop.title }}</h3>
-                    <p class="entry-org">
-                      {% if stop.org_url and stop.org_url != "" %}
-                        <a href="{{ stop.org_url }}" target="_blank" rel="noopener noreferrer" class="org-link">{{ stop.org }} ↗</a>
-                      {% else %}
-                        {{ stop.org }}
-                      {% endif %}
-                    </p>
-                    <p class="entry-sector">
-                      {{ stop.location }}{% if stop.coords and stop.coords != "" %} · <code>{{ stop.coords }}</code>{% endif %}
-                      {% if stop.category and stop.category != "" %} · <code>{{ stop.category }}</code>{% endif %}
-                    </p>
-                  </div>
-                  <time class="entry-period">{{ stop.period }}</time>
-                </div>
-                <ul class="entry-points">
-                  {% for bullet in stop.highlights %}
-                    <li>{{ bullet }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </li>
-          {% endfor %}
-        </ol>
-      </section>
-
-      <!-- Part II: Supervisory & Professional References -->
+      <!-- Professional & Command References -->
       <section class="cv-section" aria-labelledby="references-heading" data-section-key="references">
         <div class="section-head-row">
-          <h2 id="references-heading">Part II · Supervisory &amp; Professional References</h2>
-          <button type="button" class="section-copy-btn" data-copy-target="references">Copy Section</button>
+          <h2 id="references-heading">Professional &amp; Command References</h2>
+          <div class="head-actions-group">
+            <button type="button" class="section-copy-btn" id="toggle-all-refs">Expand All</button>
+            <button type="button" class="section-copy-btn" data-copy-target="references">Copy Section</button>
+          </div>
         </div>
+        <p class="standards-intro">
+          Supervisory, engineering, and active-duty U.S. Coast Guard command references grouped by organization and service period. Select an organization to view contact details.
+        </p>
 
         {% for group in site.data.contacts %}
-          <div class="ref-group">
-            <h3 class="ref-group-title">
-              {{ group.organization }}
-              {% if group.period and group.period != "" %}
-                <span class="ref-group-period">({{ group.period }})</span>
-              {% endif %}
-            </h3>
-
-            <div class="contact-grid">
+          <details class="ref-group"{% if forloop.first %} open{% endif %}>
+            <summary class="ref-group-summary">
+              <span class="ref-group-title">{{ group.organization }}</span>
+              <span class="ref-group-meta">
+                <span class="ref-group-period">{{ group.period }}</span>
+                <span class="ref-count-tag">CONTACTS ({{ group.people.size }}) ▾</span>
+              </span>
+            </summary>
+            <div class="recon-grid">
               {% for person in group.people %}
-                <article class="contact-card">
-                  <div class="contact-card-head">
-                    <h4>{{ person.name }}</h4>
+                {% assign has_contact = false %}
+                {% if person.phone and person.phone != "" %}{% assign has_contact = true %}{% endif %}
+                {% if person.email and person.email != "" %}{% assign has_contact = true %}{% endif %}
+                <article class="recon-card">
+                  <div class="recon-head">
+                    <h3>{{ person.name }}</h3>
                     {% if person.relationship and person.relationship != "" %}
-                      <span class="contact-role-badge">{{ person.relationship }}</span>
+                      <span class="recon-tag">{{ person.relationship | upcase }}</span>
                     {% endif %}
                   </div>
-                  <ul class="contact-details">
-                    {% if person.role and person.role != "" %}
-                      <li><strong>Role:</strong> {{ person.role }}</li>
-                    {% endif %}
-                    {% if person.phone and person.phone != "" %}
-                      <li><strong>Phone:</strong> <a href="tel:{{ person.phone | remove: ' ' | remove: '-' | remove: '(' | remove: ')' }}">{{ person.phone }}</a></li>
-                    {% endif %}
-                    {% if person.email and person.email != "" %}
-                      <li><strong>Email:</strong> <a href="mailto:{{ person.email }}">{{ person.email }}</a></li>
-                    {% endif %}
+                  {% if person.role and person.role != "" %}
+                    <p class="ref-role"><strong>{{ person.role }}</strong></p>
+                  {% endif %}
+                  <p class="ref-contact-line">
+                    {% if person.phone and person.phone != "" %}<span class="ref-phone">{{ person.phone }}</span>{% endif %}
+                    {% if person.phone and person.phone != "" and person.email and person.email != "" %} · {% endif %}
+                    {% if person.email and person.email != "" %}<a class="ref-email" href="mailto:{{ person.email }}">{{ person.email }}</a>{% endif %}
                     {% if person.linkedin and person.linkedin != "" %}
-                      <li><strong>LinkedIn:</strong> <a href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer">{{ person.linkedin }} ↗</a></li>
+                      {% if has_contact %} · {% endif %}
+                      <a class="ref-linkedin" href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
                     {% endif %}
-                    {% if person.notes and person.notes != "" %}
-                      <li><strong>Note:</strong> {{ person.notes }}</li>
-                    {% endif %}
-                  </ul>
+                  </p>
+                  {% if person.notes and person.notes != "" %}
+                    <p class="ref-notes">{{ person.notes }}</p>
+                  {% endif %}
                 </article>
               {% endfor %}
             </div>
-          </div>
+          </details>
         {% endfor %}
       </section>
 
-      <!-- Mini Map Quadrangle Grid at Bottom -->
-      <aside class="quad-footer-box" aria-label="Quadrangle map sheet switcher">
-        <div class="quad-footer-label">QUADRANT INDEX</div>
+      <!-- Document Index -->
+      <aside class="quad-footer-box" aria-label="Document sheet switcher">
+        <div class="quad-footer-label">DOCUMENT INDEX</div>
         <div class="quad-cells">
           <a href="{{ '/' | relative_url }}" class="quad-cell is-link">
-            <span class="quad-code">01 · MAIN ←</span>
-            <span class="quad-desc">Route &amp; Stack</span>
+            <span class="quad-code">01 · MAIN CV</span>
+            <span class="quad-desc">Experience &amp; Stack</span>
           </a>
           <div class="quad-cell is-active">
-            <span class="quad-code">02 · LOG &amp; REFS</span>
-            <span class="quad-desc">1999–Now &amp; Contacts</span>
+            <span class="quad-code">02 · REFERENCES</span>
+            <span class="quad-desc">Command &amp; Peer Contacts</span>
           </div>
+          <a href="{{ '/compliance/' | relative_url }}" class="quad-cell is-link">
+            <span class="quad-code">03 · DOD 8140.03 REF →</span>
+            <span class="quad-desc">Qualification &amp; Terms</span>
+          </a>
         </div>
       </aside>
     </main>
@@ -193,28 +173,88 @@ title: Jason N. Mansfield — Career Addendum & Supervisory References
 
   <script>
     (function () {
+      const toggleAllBtn = document.getElementById("toggle-all-refs");
+      if (toggleAllBtn) {
+        toggleAllBtn.addEventListener("click", () => {
+          const groups = Array.from(document.querySelectorAll(".ref-group"));
+          const anyClosed = groups.some((g) => !g.open);
+          groups.forEach((g) => {
+            g.open = anyClosed;
+          });
+          toggleAllBtn.textContent = anyClosed ? "Collapse All" : "Expand All";
+        });
+      }
+
       if (!navigator.clipboard) return;
 
-      document.querySelectorAll(".section-copy-btn").forEach((btn) => {
+      function formatReferencesMarkdown(section) {
+        const heading = section.querySelector("h2")?.textContent?.trim() || "Professional & Command References";
+        const lines = ["## " + heading, ""];
+
+        section.querySelectorAll(".ref-group").forEach((group) => {
+          const org = group.querySelector(".ref-group-title")?.textContent?.trim() || "";
+          const period = group.querySelector(".ref-group-period")?.textContent?.trim() || "";
+          lines.push("### " + org + (period ? " (" + period + ")" : ""));
+
+          group.querySelectorAll(".recon-card").forEach((card) => {
+            const name = card.querySelector("h3")?.textContent?.trim() || "";
+            const rel = card.querySelector(".recon-tag")?.textContent?.trim() || "";
+            const role = card.querySelector(".ref-role")?.textContent?.trim() || "";
+            const phone = card.querySelector(".ref-phone")?.textContent?.trim() || "";
+            const email = card.querySelector(".ref-email")?.textContent?.trim() || "";
+            const linkedinUrl = card.querySelector(".ref-linkedin")?.getAttribute("href") || "";
+            const notes = card.querySelector(".ref-notes")?.textContent?.trim() || "";
+
+            const headerParts = ["**" + name + "**"];
+            if (rel) headerParts.push("(" + rel + ")");
+            if (role) headerParts.push("— " + role);
+
+            const contactParts = [];
+            if (phone) contactParts.push(phone);
+            if (email) contactParts.push(email);
+            if (linkedinUrl) contactParts.push("[LinkedIn](" + linkedinUrl + ")");
+
+            let bullet = "- " + headerParts.join(" ");
+            if (contactParts.length) bullet += " | " + contactParts.join(" · ");
+            lines.push(bullet);
+
+            if (notes) lines.push("  - *Notes:* " + notes);
+          });
+
+          lines.push("");
+        });
+
+        return lines.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+      }
+
+      const fullBtn = document.getElementById("copy-refs-md-btn");
+      if (fullBtn) {
+        fullBtn.addEventListener("click", async () => {
+          const original = fullBtn.textContent;
+          try {
+            const res = await fetch(fullBtn.dataset.mdUrl);
+            if (!res.ok) throw new Error("Failed to fetch Markdown");
+            const text = (await res.text()).replace(/\n{3,}/g, "\n\n").trim();
+            await navigator.clipboard.writeText(text);
+            fullBtn.textContent = "Copied .md ✓";
+          } catch (_) {
+            fullBtn.textContent = "Copy Failed";
+          }
+          setTimeout(() => {
+            fullBtn.textContent = original;
+          }, 1800);
+        });
+      }
+
+      document.querySelectorAll(".section-copy-btn[data-copy-target]").forEach((btn) => {
         btn.addEventListener("click", async () => {
           const key = btn.getAttribute("data-copy-target");
           const section = document.querySelector('[data-section-key="' + key + '"]');
           if (!section) return;
           const original = btn.textContent;
           try {
-            const heading = section.querySelector("h2")?.textContent?.trim() || "";
-            const clone = section.cloneNode(true);
-            clone.querySelectorAll(".section-copy-btn").forEach((el) => el.remove());
-
-            const cleanBody = clone.innerText
-              .split("\n")
-              .map((line) => line.replace(/^[ \t]+/, "").replace(/[ \t]{2,}/g, " ").trim())
-              .filter((line, idx, arr) => line !== "" || (idx > 0 && arr[idx - 1] !== ""))
-              .join("\n")
-              .replace(/\n{3,}/g, "\n\n")
-              .trim();
-
-            await navigator.clipboard.writeText((heading ? "## " + heading + "\n\n" : "") + cleanBody);
+            const md = key === "references" ? formatReferencesMarkdown(section) : section.innerText.trim();
+            await navigator.clipboard.writeText(md);
             btn.textContent = "Copied ✓";
           } catch (_) {
             btn.textContent = "Failed";

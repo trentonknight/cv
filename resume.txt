@@ -7,27 +7,27 @@ permalink: /resume.txt
 **Clearance & Compliance:** {{ site.data.standards.clearance.badge_text }}
 **Location:** Flowers · Clayton, NC (`35.6574° N, 78.3614° W`)
 **Contact:** (757) 753-0085 · trentonknight@gmail.com
-**Links:** [GitHub](https://github.com/trentonknight) · [GitLab](https://gitlab.com/trentonknight) · [LinkedIn](https://www.linkedin.com/in/trentonknight/) · [Web CV](https://trentonknight.github.io/cv/) · [1999–Now Addendum & Refs](https://trentonknight.github.io/cv/addendum/)
+**Links:** [GitHub](https://github.com/trentonknight) · [GitLab](https://gitlab.com/trentonknight) · [LinkedIn](https://www.linkedin.com/in/trentonknight/) · [Web CV](https://trentonknight.github.io/cv/) · [Professional & Command References](https://trentonknight.github.io/cv/addendum/) · [DoD 8140.03 & Contracting Reference](https://trentonknight.github.io/cv/compliance/)
 
 ---
 
-## Mission Briefing · About & Specialization
+## Summary
 
 - **Datum:** WGS84 | **Service:** 22+ Years Continuous Active-Duty USN & USCG | **Availability:** Remote · ≤25% Travel
-- Platform Engineer with expertise in designing secure, cloud-native systems across **GitOps / DevOps**, **Platform Engineering**, **LLMOps / AI Infrastructure**, and **DevSecOps**, backed by 22+ years of continuous active-duty U.S. Navy and U.S. Coast Guard service.
-- Formatted as pure Markdown for recruiters, LLM context windows, and small woodland creatures.
+- Platform Engineer experienced in designing and operating secure, cloud-native infrastructure across **GitOps / DevOps**, **Platform Engineering**, **LLMOps / AI Infrastructure**, and **DevSecOps**, backed by 22+ years of continuous active-duty U.S. Navy and U.S. Coast Guard IT and cybersecurity service.
 
 ---
 
-## Career Expedition Route & Experience
+## Professional & Military Experience
 {% for stop in site.data.expedition %}
 ### {{ stop.id }} · {{ stop.title }} — {{ stop.org }}
 **Period:** {{ stop.period }} | **Location:** {{ stop.location }}{% if stop.coords and stop.coords != "" %} (`{{ stop.coords }}`){% endif %}{% if stop.compliance_label and stop.compliance_label != "" %} | **Governance:** {{ stop.compliance_label }}{% endif %}
-{% for bullet in stop.highlights %}- {{ bullet }}
+{% if stop.summary and stop.summary != "" %}{{ stop.summary }}
+{% endif %}{% for bullet in stop.highlights %}- {{ bullet }}
 {% endfor %}{% endfor %}
 ---
 
-## Field Loadout · Technical Stack & Languages
+## Technical Stack & Languages
 
 - **Cloud, Platform & GitOps:** AWS (EC2, RDS, S3, EKS), Kubernetes, Terraform, ArgoCD, Helm, Rafay, Azure, Docker, Keycloak, Vault / OpenBao, JFrog Artifactory, Anchore, Harness
 - **AI / LLMOps:** Llama Stack, Ollama, oMLX, Vertex AI, Gemini, Docling, Pandas, Hugging Face Diffusers, SDXL
@@ -35,16 +35,16 @@ permalink: /resume.txt
 
 ---
 
-## Field Recon · Technical Research & Applied AI
+## Applied AI & Systems Engineering
 
-- **LLMOps & Local Inference:** Orchestrating local model deployments via Llama Stack, Ollama, and oMLX; engineering custom Modelfiles and structured prompting strategies to tune model behaviors.
-- **RAG & ETL Pipelines:** Utilizing Docling for high-fidelity document parsing and Pandas for structured data transformation to optimize RAG context-window precision.
-- **Systems Tooling:** Implementing high-performance utility tools in Rust (Axum, tokio, SQLite / sqlite-vec) to enhance Python-based infrastructure automation and deterministic CLI/API tooling.
-- **Generative Art Pipelines:** Exploring Hugging Face Diffusers and SDXL pipelines for procedural game textures and automated concept generation.
+- **Local Inference & Orchestration:** Deploying local inference runtimes and custom Modelfiles with structured prompting for deterministic operational workflows.
+- **Document ETL & RAG Optimization:** Parsing technical documentation and structuring tabular datasets to improve retrieval context precision.
+- **Systems Tooling:** Building compiled CLI and API utilities in Rust (Axum, tokio, SQLite / sqlite-vec) to augment Python-based platform automation.
+- **Procedural Asset Pipelines:** Automating texture and visual concept generation via diffusion pipelines.
 
 ---
 
-## Academic Basecamp · Education
+## Education
 
 ### B.S. in Computer Science — Regis University (Denver, CO · `39.7875° N, 105.0325° W`)
 - **Period:** 2007 – 2013 | **Accreditation:** ABET Accredited · NSA Center of Academic Excellence
@@ -62,7 +62,7 @@ permalink: /resume.txt
 
 ---
 
-## Field Dispatches · Publications
+## Publications
 
 - **“Monolithic IT Architecture: We’re Not Stonehenge Anymore.”** — *U.S. Naval Institute Proceedings*, Vol. 147/11/1,425 (November 2021). [Read Article](https://www.usni.org/magazines/proceedings/2021/november/monolithic-it-architecture-were-not-stonehenge-anymore)
 

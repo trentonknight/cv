@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /references.txt
+---
+# Jason N. Mansfield — Professional & Command References
+**Candidate:** Jason N. Mansfield · Platform Engineer & DevOps (`TS/SCI w/ CI Poly`)
+**Contact:** (757) 753-0085 · trentonknight@gmail.com
+**Links:** [Web CV](https://trentonknight.github.io/cv/) · [References Page](https://trentonknight.github.io/cv/addendum/) · [DoD 8140.03 Reference](https://trentonknight.github.io/cv/compliance/)
+
+---
+{% for group in site.data.contacts %}
+## {{ group.organization }} ({{ group.period }})
+{% for person in group.people %}{% assign has_contact = false %}{% if person.phone and person.phone != "" %}{% assign has_contact = true %}{% endif %}{% if person.email and person.email != "" %}{% assign has_contact = true %}{% endif %}
+- **{{ person.name }}**{% if person.relationship and person.relationship != "" %} ({{ person.relationship }}){% endif %}{% if person.role and person.role != "" %} — {{ person.role }}{% endif %}{% if has_contact or person.linkedin != "" %} | {% if person.phone and person.phone != "" %}{{ person.phone }}{% endif %}{% if person.phone and person.phone != "" and person.email and person.email != "" %} · {% endif %}{% if person.email and person.email != "" %}{{ person.email }}{% endif %}{% if person.linkedin and person.linkedin != "" %}{% if has_contact %} · {% endif %}[LinkedIn]({{ person.linkedin }}){% endif %}{% endif %}{% if person.notes and person.notes != "" %}
+  - *Notes:* {{ person.notes }}{% endif %}{% endfor %}
+{% endfor %}
+

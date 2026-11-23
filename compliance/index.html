@@ -1,0 +1,444 @@
+---
+layout: null
+title: Jason N. Mansfield — DoD 8140.03 & Contracting Qualification Reference
+permalink: /compliance/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}" />
+  <style>
+    .spec-ledger-wrap {
+      border: 1px solid var(--border, #c8c2b4);
+      background: var(--surface, #fbf9f4);
+      overflow-x: auto;
+      margin-bottom: 1.25rem;
+    }
+    .spec-ledger {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .spec-ledger th,
+    .spec-ledger td {
+      padding: 0.85rem 0.9rem;
+      border-bottom: 1px solid var(--border, #c8c2b4);
+      vertical-align: top;
+    }
+    .spec-ledger th {
+      font-family: monospace;
+      font-size: 0.74rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.04);
+      border-bottom: 1.5px solid var(--border, #c8c2b4);
+    }
+    .spec-ledger tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .spec-ledger tbody tr:target {
+      background: rgba(180, 140, 60, 0.12);
+      outline: 1.5px solid currentColor;
+    }
+    .spec-code {
+      display: inline-block;
+      font-family: monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      opacity: 0.75;
+      margin-bottom: 0.25rem;
+    }
+    .spec-pill {
+      display: inline-block;
+      font-family: monospace;
+      font-size: 0.74rem;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      padding: 0.14rem 0.45rem;
+      border: 1px solid currentColor;
+      background: #fffdf9;
+      margin-bottom: 0.35rem;
+    }
+    .spec-cite-link {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-family: monospace;
+      font-size: 0.78rem;
+      text-decoration: underline;
+    }
+    .verify-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.65rem;
+    }
+    .verify-item {
+      display: grid;
+      grid-template-columns: 3.2rem 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      border: 1px solid var(--border, #c8c2b4);
+      background: #fffdf9;
+      padding: 0.75rem 0.85rem;
+    }
+    .verify-num {
+      font-family: monospace;
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.4rem;
+      border: 1px solid currentColor;
+      text-align: center;
+      background: var(--surface, #fbf9f4);
+    }
+    .verify-text {
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="cv-header">
+      <div class="cv-header-main">
+        <h1>Jason N. Mansfield</h1>
+        <p class="role-headline">DoD 8140.03 / CWQP &amp; Contracting Qualification Reference</p>
+        <a href="#compliance-clearance" class="clearance-tag">
+          {{ site.data.standards.clearance.badge_text }} ↘
+        </a>
+        <div class="header-actions">
+          <a href="{{ '/' | relative_url }}" class="action-btn">← Main CV</a>
+          <button type="button" class="action-btn" id="copy-table-md-btn" data-md-url="{{ '/table.txt' | relative_url }}">Copy Full .md</button>
+        </div>
+      </div>
+      <address class="cv-contact beacon-card">
+        <span class="beacon-tag">CONTACT // LOCATION &amp; LINKS</span>
+        <span class="beacon-line">Flowers · Clayton, NC · <code>35.6574° N, 78.3614° W</code></span>
+        <span class="beacon-line">(757) 753-0085 · <a href="mailto:trentonknight@gmail.com">trentonknight@gmail.com</a></span>
+        <span class="beacon-line beacon-links">
+          <a href="https://github.com/trentonknight" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          <a href="https://gitlab.com/trentonknight" target="_blank" rel="noopener noreferrer">GitLab</a> ·
+          <a href="https://www.linkedin.com/in/trentonknight/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </span>
+      </address>
+    </header>
+
+    <nav class="quick-jump" aria-label="Jump to compliance section">
+      <span class="quick-jump-label">SECTIONS //</span>
+      <a href="#matrix-heading">Qualification Matrix</a>
+      <a href="#questions-heading">Verification Questions</a>
+      <a href="#glossary-heading">Contract Terms &amp; Refs</a>
+      <a href="{{ '/' | relative_url }}">01 · Main CV</a>
+      <a href="{{ '/addendum/' | relative_url }}">02 · References →</a>
+      <a href="{{ '/table.txt' | relative_url }}">Table .md ↗</a>
+    </nav>
+
+    <main class="cv-body">
+      <!-- Section 1: Qualification Matrix -->
+      <section class="cv-section" aria-labelledby="matrix-heading" data-section-key="matrix">
+        <div class="section-head-row">
+          <h2 id="matrix-heading">DoD 8140.03 / CWQP Qualification Matrix</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="matrix">Copy Table</button>
+        </div>
+
+        <div class="briefing-box" style="margin-bottom: 1rem;">
+          <div class="briefing-meta">
+            <span>AUTHORITY // DODM 8140.03</span>
+            <span>DEVIATION // DFARS CLASS DEV 39</span>
+            <span>CLEARANCE // ACTIVE TS/SCI w/ CI POLY</span>
+          </div>
+          <p>{{ site.data.standards.intro }}</p>
+        </div>
+
+        <div class="spec-ledger-wrap">
+          <table class="spec-ledger">
+            <thead>
+              <tr>
+                <th style="width: 24%;">Requirement Area</th>
+                <th style="width: 36%;">Candidate Baseline</th>
+                <th style="width: 40%;">Contract / Billet Rule &amp; Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="compliance-clearance">
+                <td>
+                  <span class="spec-code">ITEM // 01</span><br />
+                  <strong>Security Clearance</strong>
+                </td>
+                <td>
+                  <span class="spec-pill">ACTIVE TS/SCI w/ CI POLY</span><br />
+                  Validated across U.S. Coast Guard Cyber Command and Fort Bragg / JSOC platform operations.
+                </td>
+                <td>
+                  Eligible for Secret, Top Secret, and TS/SCI billets. Confirm whether customer-specific program indoctrination (read-on) applies.
+                </td>
+              </tr>
+              <tr id="compliance-degree">
+                <td>
+                  <span class="spec-code">ITEM // 02</span><br />
+                  <strong>Foundational Qualification &amp; Recency Waiver</strong>
+                </td>
+                <td>
+                  <span class="spec-pill">EDUCATION &amp; TRAINING PATHWAYS</span><br />
+                  ABET-accredited B.S. in Computer Science (Regis University, NSA CAE) and 22+ years continuous active-duty USN/USCG IT/Cyber service.
+                </td>
+                <td>
+                  Satisfies Cyberspace Workforce Qualification Program (CWQP) foundational criteria across DCWF work roles without commercial certification (e.g., CompTIA Security+) renewal.<br />
+                  <a href="https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf" target="_blank" rel="noopener noreferrer" class="spec-cite-link">DoDM 8140.03 § 3.2.b(1)(a) ↗</a>
+                </td>
+              </tr>
+              <tr id="compliance-reciprocity">
+                <td>
+                  <span class="spec-code">ITEM // 03</span><br />
+                  <strong>Cyberspace Operations &amp; DevSecOps Practice</strong>
+                </td>
+                <td>
+                  <span class="spec-pill">OPERATIONAL EXPERIENCE</span><br />
+                  TS/SCI GitLab, Vault, and ArgoCD Kubernetes at CACI (JSOC); Anchore/Harness vulnerability scanning and hardened UBI governance at 24x7Systems.
+                </td>
+                <td>
+                  Demonstrates Cyberspace Operations Forces environment experience and automated pipeline compliance.<br />
+                  <a href="https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf" target="_blank" rel="noopener noreferrer" class="spec-cite-link">DoDM 8140.03 § 1.2(6–7), § 3.2.b(1)(b) &amp; § 3.2.b(3) ↗</a>
+                </td>
+              </tr>
+              <tr id="compliance-residential">
+                <td>
+                  <span class="spec-code">ITEM // 04</span><br />
+                  <strong>Contractor Residential Qualification</strong>
+                </td>
+                <td>
+                  <span class="spec-pill">EXEMPT BY DEFAULT</span><br />
+                  Per DoD 8140 CWQP Desk Guide and May 27, 2026 contractor guidance.
+                </td>
+                <td>
+                  Not required for contractors unless mandated by the OSW or Component and explicitly stated in contract or Task Order language.<br />
+                  <a href="https://www.cyberworkforce.mil/DoD-8140/Document-Library/#:~:text=27%C2%A0May%C2%A026-,Download,-WarU%20DCWF%20Learning" target="_blank" rel="noopener noreferrer" class="spec-cite-link">DoD 8140 Requirements for Contractors ↗</a>
+                </td>
+              </tr>
+              <tr id="compliance-dfars-dev39">
+                <td>
+                  <span class="spec-code">ITEM // 05</span><br />
+                  <strong>DFARS Class Deviation 39</strong>
+                </td>
+                <td>
+                  <span class="spec-pill">EFFECTIVE FEB 1, 2026</span><br />
+                  Removes DoD 8570.01-M, DoD 8140.01, and DFARS 252.239-7001 references.
+                </td>
+                <td>
+                  Qualification attaches to the assigned DCWF work role and updated contract or Task Order terms.<br />
+                  <a href="https://www.cyberworkforce.mil/DoD-8140/Document-Library/#:~:text=27%C2%A0May%C2%A026-,Download,-WarU%20DCWF%20Learning" target="_blank" rel="noopener noreferrer" class="spec-cite-link">DoW CIO Memo · 27 May 2026 ↗</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2: Position Qualification Verification Questions -->
+      <section class="cv-section" aria-labelledby="questions-heading" data-section-key="questions">
+        <div class="section-head-row">
+          <h2 id="questions-heading">Position Qualification Verification Questions</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="questions">Copy Questions</button>
+        </div>
+        <ol class="verify-list">
+          <li class="verify-item">
+            <span class="verify-num">Q-01</span>
+            <div class="verify-text"><strong>Contract Vehicle:</strong> Is the position billed under a direct DoD/IC Task Order (governed by a PWS and LCAT) or a commercial contract?</div>
+          </li>
+          <li class="verify-item">
+            <span class="verify-num">Q-02</span>
+            <div class="verify-text"><strong>DCWF Work Role:</strong> Which Department Cyber Workforce Framework (DCWF) work role code is assigned to the billet, if applicable?</div>
+          </li>
+          <li class="verify-item">
+            <span class="verify-num">Q-03</span>
+            <div class="verify-text"><strong>Task Order Qualification Clauses:</strong> Does the Task Order or PWS explicitly mandate a named commercial certification (e.g., CompTIA Security+) or contractor residential qualification, or does an ABET-accredited B.S. in Computer Science satisfy DoDM 8140.03 foundational criteria?</div>
+          </li>
+          <li class="verify-item">
+            <span class="verify-num">Q-04</span>
+            <div class="verify-text"><strong>Clearance &amp; Indoctrination:</strong> Is an active TS/SCI with CI Poly immediately eligible for the billet, or is a customer-specific program read-on required prior to onboarding?</div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Section 3: Contract Terms & Primary References -->
+      <section class="cv-section" aria-labelledby="glossary-heading" data-section-key="glossary">
+        <div class="section-head-row">
+          <h2 id="glossary-heading">Contracting Terms &amp; Primary Policy References</h2>
+          <button type="button" class="section-copy-btn" data-copy-target="glossary">Copy Terms</button>
+        </div>
+        <div class="recon-grid">
+          <article class="recon-card">
+            <div class="recon-head">
+              <h3>Task Order (TO) &amp; PWS</h3>
+              <span class="recon-tag">TERM // 01</span>
+            </div>
+            <p>
+              The specific order and Performance Work Statement defining scope, labor categories, and binding contractor qualification clauses under a contract vehicle.
+            </p>
+          </article>
+
+          <article class="recon-card">
+            <div class="recon-head">
+              <h3>Labor Category (LCAT)</h3>
+              <span class="recon-tag">TERM // 02</span>
+            </div>
+            <p>
+              The contractual job classification specifying minimum education, years of experience, security clearance, and any mandatory credentials required for billing against a billet.
+            </p>
+          </article>
+
+          <article class="recon-card">
+            <div class="recon-head">
+              <h3>DCWF Work Role</h3>
+              <span class="recon-tag">TERM // 03</span>
+            </div>
+            <p>
+              The standardized DoD Cyber Workforce Framework role assigned to cyberspace duties. Under DoDM 8140.03, qualification requirements attach to the assigned work role rather than a generic job title.
+            </p>
+          </article>
+
+          <article class="recon-card">
+            <div class="recon-head">
+              <h3>Primary Policy References</h3>
+              <span class="recon-tag">REF // 01</span>
+            </div>
+            <p>
+              <a href="https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf" target="_blank" rel="noopener noreferrer">DoDM 8140.03 Manual (Feb 15, 2023) ↗</a><br />
+              <a href="https://www.cyberworkforce.mil/DoD-8140/Document-Library/#:~:text=27%C2%A0May%C2%A026-,Download,-WarU%20DCWF%20Learning" target="_blank" rel="noopener noreferrer">DoD 8140 Requirements for Contractors (May 27, 2026) ↗</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Document Index -->
+      <aside class="quad-footer-box" aria-label="Document sheet switcher">
+        <div class="quad-footer-label">DOCUMENT INDEX</div>
+        <div class="quad-cells">
+          <a href="{{ '/' | relative_url }}" class="quad-cell is-link">
+            <span class="quad-code">01 · MAIN CV</span>
+            <span class="quad-desc">Experience &amp; Stack</span>
+          </a>
+          <a href="{{ '/addendum/' | relative_url }}" class="quad-cell is-link">
+            <span class="quad-code">02 · REFERENCES</span>
+            <span class="quad-desc">Command &amp; Peer Contacts</span>
+          </a>
+          <div class="quad-cell is-active">
+            <span class="quad-code">03 · DOD 8140.03 REF</span>
+            <span class="quad-desc">Qualification &amp; Terms</span>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    {% include compass.svg %}
+  </div>
+
+  <script>
+    (function () {
+      if (!navigator.clipboard) return;
+
+      const fullBtn = document.getElementById("copy-table-md-btn");
+      if (fullBtn) {
+        fullBtn.addEventListener("click", async () => {
+          const original = fullBtn.textContent;
+          try {
+            const res = await fetch(fullBtn.dataset.mdUrl);
+            if (!res.ok) throw new Error("Failed to fetch Markdown");
+            const text = (await res.text()).replace(/\n{3,}/g, "\n\n").trim();
+            await navigator.clipboard.writeText(text);
+            fullBtn.textContent = "Copied .md ✓";
+          } catch (_) {
+            fullBtn.textContent = "Copy Failed";
+          }
+          setTimeout(() => {
+            fullBtn.textContent = original;
+          }, 1800);
+        });
+      }
+
+      function formatMatrixMarkdown(section) {
+        const heading = section.querySelector("h2")?.textContent?.trim() || "DoD 8140.03 / CWQP Qualification Matrix";
+        const intro = section.querySelector(".briefing-box p")?.textContent?.trim() || "";
+        const lines = [
+          "## " + heading,
+          "",
+          intro,
+          "",
+          "| Item | Requirement Area | Candidate Baseline | Contract / Billet Rule & Reference |",
+          "| :--- | :--- | :--- | :--- |"
+        ];
+
+        section.querySelectorAll(".spec-ledger tbody tr").forEach((tr) => {
+          const cells = tr.querySelectorAll("td");
+          if (cells.length < 3) return;
+
+          const code = cells[0].querySelector(".spec-code")?.textContent?.replace("ITEM // ", "").trim() || "";
+          const area = cells[0].querySelector("strong")?.textContent?.trim() || "";
+
+          const pill = cells[1].querySelector(".spec-pill")?.textContent?.trim() || "";
+          const baseClone = cells[1].cloneNode(true);
+          baseClone.querySelector(".spec-pill")?.remove();
+          const baseDesc = baseClone.innerText.replace(/\s+/g, " ").trim();
+          const baseline = (pill ? "**" + pill + "** — " : "") + baseDesc;
+
+          const ruleClone = cells[2].cloneNode(true);
+          const link = ruleClone.querySelector("a.spec-cite-link");
+          let linkMd = "";
+          if (link) {
+            const label = link.textContent.replace(/\s*↗\s*$/, "").trim();
+            const href = link.getAttribute("href") || "";
+            linkMd = " ([" + label + "](" + href + "))";
+            link.remove();
+          }
+          const ruleDesc = ruleClone.innerText.replace(/\s+/g, " ").trim() + linkMd;
+
+          lines.push("| `" + code + "` | **" + area + "** | " + baseline + " | " + ruleDesc + " |");
+        });
+
+        return lines.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+      }
+
+      document.querySelectorAll(".section-copy-btn[data-copy-target]").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const key = btn.getAttribute("data-copy-target");
+          const section = document.querySelector('[data-section-key="' + key + '"]');
+          if (!section) return;
+          const original = btn.textContent;
+          try {
+            let output = "";
+            if (key === "matrix") {
+              output = formatMatrixMarkdown(section);
+            } else {
+              const heading = section.querySelector("h2")?.textContent?.trim() || "";
+              const clone = section.cloneNode(true);
+              clone.querySelectorAll(".section-copy-btn").forEach((el) => el.remove());
+              const cleanBody = clone.innerText
+                .split("\n")
+                .map((line) => line.replace(/^[ \t]+/, "").replace(/[ \t]{2,}/g, " ").trim())
+                .filter((line, idx, arr) => line !== "" || (idx > 0 && arr[idx - 1] !== ""))
+                .join("\n")
+                .replace(/\n{3,}/g, "\n\n")
+                .trim();
+              output = (heading ? "## " + heading + "\n\n" : "") + cleanBody;
+            }
+            await navigator.clipboard.writeText(output);
+            btn.textContent = "Copied ✓";
+          } catch (_) {
+            btn.textContent = "Failed";
+          }
+          setTimeout(() => {
+            btn.textContent = original;
+          }, 1600);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+

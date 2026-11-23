@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /table.txt
+---
+# Jason N. Mansfield — DoD 8140.03 / CWQP Qualification Reference
+**Candidate:** Jason N. Mansfield · Platform Engineer & DevOps (`{{ site.data.standards.clearance.badge_text }}`)
+**Authority:** DoDM 8140.03 (Cyberspace Workforce Qualification Program) · DFARS Class Deviation 39 (Effective Feb 1, 2026)
+**Contact:** (757) 753-0085 · trentonknight@gmail.com
+**Links:** [Web CV](https://trentonknight.github.io/cv/) · [Compliance Reference](https://trentonknight.github.io/cv/compliance/) · [Full Resume .md](https://trentonknight.github.io/cv/resume.txt)
+
+---
+
+## DoD 8140.03 / CWQP Qualification Matrix
+
+{{ site.data.standards.intro }}
+
+| Item | Requirement Area | Candidate Baseline | Contract / Billet Rule & Reference |
+| :--- | :--- | :--- | :--- |
+| `01` | **Security Clearance** | **ACTIVE TS/SCI w/ CI POLY** — Validated across U.S. Coast Guard Cyber Command and Fort Bragg / JSOC platform operations. | Eligible for Secret, Top Secret, and TS/SCI billets. Confirm whether customer-specific program indoctrination (read-on) applies. |
+| `02` | **Foundational Qualification & Recency Waiver** | **EDUCATION & TRAINING PATHWAYS** — ABET-accredited B.S. in Computer Science (Regis University, NSA CAE) and 22+ years continuous active-duty USN/USCG IT/Cyber service. | Satisfies Cyberspace Workforce Qualification Program (CWQP) foundational criteria across DCWF work roles without commercial certification (e.g., CompTIA Security+) renewal. ([DoDM 8140.03 § 3.2.b(1)(a)](https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf)) |
+| `03` | **Cyberspace Operations & DevSecOps Practice** | **OPERATIONAL EXPERIENCE** — TS/SCI GitLab, Vault, and ArgoCD Kubernetes at CACI (JSOC); Anchore/Harness vulnerability scanning and hardened UBI governance at 24x7Systems. | Demonstrates Cyberspace Operations Forces environment experience and automated pipeline compliance. ([DoDM 8140.03 § 1.2(6–7), § 3.2.b(1)(b) & § 3.2.b(3)](https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf)) |
+| `04` | **Contractor Residential Qualification** | **EXEMPT BY DEFAULT** — Per DoD 8140 CWQP Desk Guide and May 27, 2026 contractor guidance. | Not required for contractors unless mandated by the OSW or Component and explicitly stated in contract or Task Order language. ([DoD 8140 Requirements for Contractors](https://www.cyberworkforce.mil/DoD-8140/Document-Library/#:~:text=27%C2%A0May%C2%A026-,Download,-WarU%20DCWF%20Learning)) |
+| `05` | **DFARS Class Deviation 39** | **EFFECTIVE FEB 1, 2026** — Removes DoD 8570.01-M, DoD 8140.01, and DFARS 252.239-7001 references. | Qualification attaches to the assigned DCWF work role and updated contract or Task Order terms. ([DoW CIO Memo · 27 May 2026](https://www.cyberworkforce.mil/DoD-8140/Document-Library/#:~:text=27%C2%A0May%C2%A026-,Download,-WarU%20DCWF%20Learning)) |
+
+---
+
+## Position Qualification Verification Questions
+
+1. **Contract Vehicle:** Is the position billed under a direct DoD/IC Task Order (governed by a PWS and LCAT) or a commercial contract?
+2. **DCWF Work Role:** Which Department Cyber Workforce Framework (DCWF) work role code is assigned to the billet, if applicable?
+3. **Task Order Qualification Clauses:** Does the Task Order or PWS explicitly mandate a named commercial certification (e.g., CompTIA Security+) or contractor residential qualification, or does an ABET-accredited B.S. in Computer Science satisfy DoDM 8140.03 foundational criteria?
+4. **Clearance & Indoctrination:** Is an active TS/SCI with CI Poly immediately eligible for the billet, or is a customer-specific program read-on required prior to onboarding?
+
+---
+
+## Contracting Terms & Primary Policy References
+
+- **Task Order (TO) & PWS:** The specific order and Performance Work Statement defining scope, labor categories, and binding contractor qualification clauses under a contract vehicle.
+- **Labor Category (LCAT):** The contractual job classification specifying minimum education, years of experience, security clearance, and any mandatory credentials required for billing against a billet.
+- **DCWF Work Role:** The standardized DoD Cyber Workforce Framework role assigned to cyberspace duties. Under DoDM 8140.03, qualification requirements attach to the assigned work role rather than a generic job title.
+- **Primary Policy References:** [DoDM 8140.03 Manual (Feb 15, 2023)](https://dodcio.defense.gov/Portals/0/Documents/Library/DoDM-8140-03.pdf) · [DoD 8140 Requirements for Contractors (May 27, 2026)](https://www.cyberworkforce.mil/DoD-8140/Document-Library/#:~:text=27%C2%A0May%C2%A026-,Download,-WarU%20DCWF%20Learning)
+
